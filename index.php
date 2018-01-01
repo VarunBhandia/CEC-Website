@@ -16,13 +16,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Admin-Login-CEC</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="header">
-		<h2>Home Page</h2>
-	</div>
 	<div class="content">
 
 		<!-- notification message -->
@@ -39,8 +41,14 @@
 
 		<!-- logged in user information -->
 		<?php  if (isset($_SESSION['username'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-			<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+            </div>            
+            <div class="col-md-6">			
+                <p style="float:  right;"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+            </div>
+        </div>
 		<?php endif ?>
 	</div>
 		
