@@ -67,7 +67,7 @@ print_r($_POST);
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <?php 
-                echo $row['id'];
+                //echo $row['id'];
                 $edit_id = $_POST['id'];
                 if(isset($_POST['edit']))
                 {

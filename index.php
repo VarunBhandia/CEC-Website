@@ -32,7 +32,6 @@
 			<div class="error success" >
 				<h3>
 					<?php 
-						echo $_SESSION['success']; 
 						unset($_SESSION['success']);
 					?>
 				</h3>
@@ -41,14 +40,9 @@
 
 		<!-- logged in user information -->
 		<?php  if (isset($_SESSION['username'])) : ?>
-        <div class="row">
-            <div class="col-md-6">
-                <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-            </div>            
-            <div class="col-md-6">			
+        		
                 <p style="float:  right;"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
-            </div>
-        </div>
+    
 		<?php endif ?>
 	</div>
 		
