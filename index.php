@@ -2,7 +2,7 @@
     <head>
         <title>CEC HOMEPAGE</title> 
         <link href="blog.css" type="text/css" rel="stylesheet">
-        <link href="navbar.css" type="text/css" rel="stylesheet">
+        <link href="css/navbar.css" type="text/css" rel="stylesheet">
     </head>
     <style type="text/css">
         .paratitle{
@@ -111,7 +111,7 @@
     <body>
         <?php include("navbar.php"); ?>
         <div id="about">
-            <div class="paratitle">about us</div>
+            <div class="paratitle">About us</div>
             <p>Civil Engineering Consortium is a Student Affair Committee of department of Civil Engineering, that is responsible to promote safe and intellectually stimulating learning environment that encourages not only the academic success of civil engineering students but also focus on personal development, sports and other extracurriculars student activities. With the chain of activities going round the year, students get ample opportunity to flash, flourosh and furnish their talents.</p>
         
         </div>

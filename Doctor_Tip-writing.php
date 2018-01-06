@@ -1,18 +1,9 @@
 <?php
-//ini_set("display_errors",'off');
-require("C:/xampp/htdocs/DocConsult/doc_panel/functions/functions.php");
-$con = mysqli_connect('localhost','root','');
-if(!$con)
-{
-    echo 'Not Connected to Server';
-}
-if(!mysqli_select_db($con,'docconsu_db'))
-{   
-    echo 'Database not selected';
-}
-print_r($_POST);
+//if(basename($_SERVER['PHP_SELF']) == basename(__FILE__)){ die('Access denied');};
+
+ini_set("display_errors",'on');
+require("../../doc_panel/functions/functions.php");
 ?>
-<?php print_r($_POST); ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -59,7 +50,7 @@ print_r($_POST);
             
             <div class="col-md-1">
                 <div class="go-back">
-                    <a href="http://localhost/DocConsult/doctor-tip-Blog/line-control-master/Doctor_Tip-dashboard.php" class="btn btn-info">Back</a>
+                    <a href="<?php echo base_url_admin; ?>admin-blog/Doctor_Tip-dashboard.php" class="btn btn-info">Back</a>
                 </div>
             </div>
         </div>
@@ -67,16 +58,17 @@ print_r($_POST);
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <?php 
-                //echo $row['id'];
+                $row['id'];
                 $edit_id = $_POST['id'];
                 if(isset($_POST['edit']))
                 {
                     //$edit_id = $_POST['id'];
                     $sql = "SELECT * FROM doctor_tip1 where id='$edit_id'"; 
-                    $result = $con->query($sql);
-                    $row = mysqli_fetch_assoc($result);
+                    $result = $functions->db->query($sql);
+                    $row = $result->fetch_assoc();
                     
-                } 
+                }
+                
                 ?>
                 <form method="POST" action="" enctype="multipart/form-data" data-toggle="validator" role="form" id="fileForm">
                     <div class="form-group">
@@ -90,20 +82,17 @@ print_r($_POST);
                     </div>
                         <div class="form-group">
                             <label for="select" class="control-label">Select A Category:</label>
-                            <select class="form-control" onchange="restore()" id="category" name="Category" value="<?php echo $row['Category'];?>" required>
-                                <?php
-                                        $category = $row['Category'];
-                                        $sql1 = "SELECT * from condition WHERE id = $category";
-                                        $result1 = mysqli_query($conn, $sql1);
-                                            while($row1 = mysqli_fetch_assoc($result1))
-                                            {
-                                                echo $row1['name'] ;
-                                            } ?>
-
-                                <?php echo $row['Category'];?>
+                            <select class="form-control" onchange="restore()" id="category" name="Category" required>                                                          
                                 <option value="">Select A Category</option>
                                 <?php
-                                $sql11 = "SELECT * FROM `condition";
+                                if(isset($_POST['edit_submit']))
+                                {
+                                    $category = $row['Category'];
+                                    $sql11 = "SELECT * FROM `condition` where id = '$category' ";
+                                }else{
+                                    $sql11 = "SELECT * FROM `condition`";    
+                                }
+                                
                                 $category_res11 = $functions->getdistrict($sql11);
                                 foreach($category_res11 as $cat_r11)
                                 {	
@@ -129,9 +118,20 @@ print_r($_POST);
                         </div>
                         <small id="emailHelp" class="form-text text-muted">Please Enter Your Topic Descriptions. </small>
                     </div>
+                   <?php
+                    if(isset($_POST['edit']))
+                    {?>
+                       <input type="hidden" name="edit_id" value="<?php echo $row['id']; ?>">
+                       <input id="blogSubmit" name="edit_submit" type="submit" class="btn btn-primary submit_data" value="Update">
+                    <?php
+                    }else{
+                    ?>
                     <input id="blogSubmit" name="edit_submit" type="submit" class="btn btn-primary submit_data" value="Submit">
                     <input id="blogSave" name="edit_submit" type="submit" class="btn btn-primary submit_data" value="Save">
-
+                    <?php }?>
+                    
+                    
+                    
                     <input type="hidden" name="texteditor" value="<?php echo $row['Texteditor']; ?>" id="texteditor">
                 </form>
             </div>
@@ -145,45 +145,108 @@ print_r($_POST);
                     move_uploaded_file($tmp_name,$location.$image_name);
                     
         if(isset($_POST['edit_submit']))
-        {
-            if($_POST['edit_submit'] == 'Submit')
+        {                      
+            $Topic = $_POST['title'];
+            $Texteditor = htmlspecialchars($_POST['texteditor']);
+            $imagename = $image_name;
+            $Category = $_POST['Category'];
+            $edit_id = $_POST['edit_id'];
+            $sqlcond = "SELECT * FROM doctor_tip1 where Category = '$Category'";
+            $resultcond = $functions->db->query($sqlcond);
+            $num_rows = $resultcond->num_rows;
+            $rowcond = $resultcond->fetch_assoc();
+            
+            if($_POST['edit_submit'] == 'Update')
             {
                 $status = 1;
-            }else{
-                $status = 2;
+                $sql = "update doctor_tip1 set Topic = '$Topic', Texteditor = '$Texteditor', imagename = '$imagename', status = '$status', Category = '$Category', modified_time=now() where id = '$edit_id' ";
+                $message = "Successfully Update !! ";
             }
-    
-            $Topic = $_POST['title'];
-            $Texteditor = $_POST['texteditor'];
-            $imagename = $image_name;
-            $Category= $_POST['Category'];
-            $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
-            if ($con->query($sql) === TRUE) {
-                echo "New record created successfully "; 
-                echo "svhch".$status;
-             } 
-            else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-            //die();
-        }
-
-$con->close();
+            else{
                 
+                
+                if($_POST['edit_submit'] == 'Submit')
+                {
+                    echo $num_rows;
+                    if($num_rows == 0)
+                    {
+                        $status = 1;
+                        $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
+                        print_r($sql);
+                        echo 'Blog Not Exists';
+                        if ($functions->db->query($sql) === TRUE) {
+                            
+                            //print $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
+                            $message = "New record created successfully ";
+                            echo $message; 
+                            echo $status;
+                            $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
+                            echo "<script>location.href = '".$url_re."'</script>";
+                        }
+                        else {
+                            echo "Error: ";
+                        }
+                
+                
+                    }
+                    else
+                    {
+                        echo 'Exist ';
+                    } 
+                }
+                
+                elseif($_POST['edit_submit'] == 'Save')
+                {
+                    if($num_rows == 0)
+                    {
+                        echo 'Blog Not Exists';
+                        $status = 2;
+                        $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
+                        if ($functions->db->query($sql) === TRUE) {
+                            
+                            $message = "New record Saveds successfully "; 
+                            //echo $status;
+                            $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
+                            echo "<script>location.href = '".$url_re."'</script>";
+                 }
+                else {
+                    echo "Error: ";
+                }
+                
+                
+            }
+                    else
+                    {
+                echo 'Exist ';
+            }   
+                }
+                
+            }
+//            if($num_rows == 0)
+//            {
+//                echo 'Blog Not Exists';
+//                
+//                if ($functions->db->query($sql) === TRUE) {
+//                   $status = 2;
+//                    $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
+//                    $message = "New record Saveds successfully "; 
+//                    //echo $status;
+//                    $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
+//                    echo "<script>location.href = '".$url_re."'</script>";
+//                 }
+//                else {
+//                    echo "Error: " . $sql . "<br>" . $conn->error;
+//                }
+//                
+//                
+//            }
+//            else
+//            {
+//                echo 'Exist ';
+//            }    
+        }
+              
         ?>
-            <script>
-                if("<?php echo $_POST['edit_submit'] ?>" == "Submit"){
-                    window.location.href = "http://localhost/DocConsult/doctor-tip-Blog/line-control-master/Doctor_Tip-dashboard.php";
-                    
-                   }
-        </script>
-        <script>
-                if("<?php echo $_POST['edit_submit'] ?>" == "Save"){
-                   
-                    window.location.href = "http://localhost/DocConsult/doctor-tip-Blog/line-control-master/Doctor_Tip-dashboard.php";
-                    
-                   }
-        </script>
         <script>
             function restore()
             {

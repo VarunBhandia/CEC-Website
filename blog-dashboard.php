@@ -1,3 +1,7 @@
+<?php
+require('../functions/functions.php');
+//if(basename($_SERVER['PHP_SELF']) == basename(__FILE__)){ die('Access denied');};
+?>
 <head>
     <link href="http://localhost/docconsult/doc_panel/cs.css" rel="stylesheet" type="text/css">
     <link href="http://localhost/docconsult/doc_panel/responsive.css" rel="stylesheet" type="text/css">
@@ -15,24 +19,14 @@
     <div class="row">
 		<div class="col-sm-12 col-xs-12"> 
 			<div class="col-sm-12 col-xs-12">
-				<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "docconsu_db";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-if($_POST['update'] == 'Publish')
+<?php
+                if($_POST['update'] == 'Publish')
 {
     $row_id = $_POST['id'];
     echo $row_id;
     $sql3 = "UPDATE doctor_tip1 SET status = '1' WHERE id = '$row_id' ";
-    $result3 = mysqli_query($conn, $sql3);                                        
+    $result3 = $functions->db->query($sql3);                                        
 }
                 
 if(isset($_POST['search_condition']))
@@ -44,7 +38,7 @@ if(isset($_POST['search_condition']))
 }
 $sql = "SELECT * FROM doctor_tip1 $search ";
 
-$result = mysqli_query($conn, $sql);
+$result = $functions->db->query($sql);
                 ?>
                 <div class="row">
                     <div class="col-md-10">
@@ -115,9 +109,9 @@ document.getElementById('condition-search').nextSibling.style.width="70%";
                                 </thead>
                                 <tbody>
                                     <?php
-                                    if (mysqli_num_rows($result) > 0) {
+                                    if ($result) {
                                         // output data of each row
-                                        while($row = mysqli_fetch_assoc($result)) { 
+                                        while($row = $result->fetch_assoc()) { 
                                     ?>
                                     <tr>
                                         <td><?php echo $row['id'] ?></td>		
@@ -125,10 +119,10 @@ document.getElementById('condition-search').nextSibling.style.width="70%";
 										<td><?php
                                         
                                         $category = $row['Category'];
-                                            //echo $category;
+                                        //echo $category;
                                         $sql1 = "SELECT * FROM `condition` WHERE id = $category";
-                                        $result1 = mysqli_query($conn, $sql1);
-                                            while($row1 = mysqli_fetch_assoc($result1))
+                                        $result1 = $functions->db->query($sql1);
+                                            while($row1 = $result1->fetch_assoc())
                                             {
                                                 //echo $category;
                                                 echo $row1['name'] ;
