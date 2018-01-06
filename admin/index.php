@@ -1,3 +1,18 @@
+<?php 
+	session_start(); 
+
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+	}
+
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		unset($_SESSION['username']);
+		header("location: login.php");
+	}
+
+?>
 <?php
 require('../functions/functions.php');
 //if(basename($_SERVER['PHP_SELF']) == basename(__FILE__)){ die('Access denied');};
@@ -15,6 +30,24 @@ require('../functions/functions.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 </head>
+<div class="content">
+
+		<!-- notification message -->
+		<?php if (isset($_SESSION['success'])) : ?>
+			<div class="error success" >
+				<h3>
+					<?php 
+						unset($_SESSION['success']);
+					?>
+				</h3>
+			</div>
+		<?php endif ?>
+
+		<!-- logged in user information -->
+		<?php  if (isset($_SESSION['username'])) : ?>
+        		
+                <p style="float:  right;"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+    
 <div class="tab-content">
     <div class="row">
 		<div class="col-sm-12 col-xs-12"> 
@@ -173,7 +206,7 @@ document.getElementById('condition-search').nextSibling.style.width="70%";
                                         </td>
                                     </tr>
                                     <?php 
-                                    } mysqli_close($conn); 
+                                    } 
                                     ?>
                                 </tbody>
                             </table>
@@ -184,3 +217,5 @@ document.getElementById('condition-search').nextSibling.style.width="70%";
     </div>
     <hr>
     </div>
+    		<?php endif ?>
+	</div>

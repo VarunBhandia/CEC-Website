@@ -7,7 +7,7 @@
         var r=p&&p.slideshow_window_height?p.slideshow_window_height:"400";
         var sf=p&&p.soldeshow_foreColor?p.soldeshow_foreColor:"#000";
         var stc=p&&p.slideshow_title_color?p.slideshow_title_color:"#17CCCC";
-        var d=p&&p.directory?p.directory:"images/";
+        var d=p&&p.directory?p.directory:"img/slider-images/";
         q += "px";
         r += "px";
         var v;
@@ -30,11 +30,11 @@
             x.find(".slides_box").after('<div class="title_thumb_box"></div>');
             x.find(".title_thumb_box").append('<div class="title_box"></div>');
             x.find(".title_thumb_box").append('<div class="thumb_box"></div>');
-            x.find(".thumb_box").append('<span><img src="'+d+'carousel_back_normal.png" alt="previous"  class="thumb_p"/></span>');
+            x.find(".thumb_box").append('<span><img src="img/slider-'+d+'carousel_back_normal.png" alt="previous"  class="thumb_p"/></span>');
             x.find(".title_thumb_box").css("background-color",sf);
             for (i = 0; i <= y-1; i++)
             {
-                x.find(".thumb_box").append('<span><img src="'+d+'carousel_circle_normal.png" class="thumb_num" alt="'+i+'" /></span>');
+                x.find(".thumb_box").append('<span><img src="img/slider-'+d+'carousel_circle_normal.png" class="thumb_num" alt="'+i+'" /></span>');
             }
             x.find(".thumb_box").append('<span><img src="'+d+'carousel_next_normal.png" alt="next"  class="thumb_n"/></span>');
             x.find(".thumb_box").children("span").children("img").click(

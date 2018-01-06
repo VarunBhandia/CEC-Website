@@ -1,9 +1,12 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>CEC HOMEPAGE</title> 
-        <link href="blog.css" type="text/css" rel="stylesheet">
+        <title>CEC HOMEPAGE</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <link href="css/blog.css" type="text/css" rel="stylesheet">
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
-        <script type="text/javascript" src="js/jquery.js"></script>
+        <link href="css/webwidget_slideshow_dot.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/webwidget_slideshow_dot.js"></script>
     </head>
     <style type="text/css">
         .paratitle{
@@ -110,8 +113,6 @@
         }
     </style>
     <body>
-        <link href="css/webwidget_slideshow_dot.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="js/webwidget_slideshow_dot.js"></script>
         <?php include("navbar.php"); ?>
         <div id="about">
             <div class="paratitle">About us</div>
