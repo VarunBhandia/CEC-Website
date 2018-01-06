@@ -54,7 +54,7 @@ public function get_doctor_mob() {
     }
 
 public function searchconditions($parm) {
-    $res=$this->db->query("select distinct t1.name, t1.id from `condition` as t1 inner join doctor_tip1 as t2 on t1.id = t2.category where t1.name like '%$parm%' group by t1.name limit 5");
+    $res=$this->db->query("select distinct t1.name, t1.id from `category` as t1 inner join cec-blog as t2 on t1.id = t2.category where t1.name like '%$parm%' group by t1.name limit 5");
         
     $rows = array();
     while($r = mysqli_fetch_array($res)){

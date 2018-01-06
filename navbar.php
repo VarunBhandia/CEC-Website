@@ -11,7 +11,4 @@
             
                 
             </div>
-    <div id="ceclogo">
-        <a href="index.html"><p>Civil Engineering<br>Consortium</p></a>
-    </div>
 </div>

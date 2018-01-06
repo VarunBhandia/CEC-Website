@@ -1,15 +1,31 @@
 <?php
-//if(basename($_SERVER['PHP_SELF']) == basename(__FILE__)){ die('Access denied');};
-
 ini_set("display_errors",'on');
-require("../../doc_panel/functions/functions.php");
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "cec";
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) 
+      {
+          die("Connection failed: " . mysqli_connect_error());
+      }
+    $sqlcat = "SELECT * FROM category where id=2";
+    $resultcat = mysqli_query($conn, $sqlcat );
+    $rowcat = mysqli_fetch_assoc($resultcat);
+    var_dump($resultcat);
+    echo '<br>';
+    var_dump($rowcat); 
+    echo $rowcat['name'];
+
 ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="editor.js"></script>
+		<script src="../admin/editor.js"></script>
 		<script>
 			$(document).ready(function() {
 				$("#txtEditor").Editor();
@@ -17,14 +33,15 @@ require("../../doc_panel/functions/functions.php");
 		</script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link href="editor.css" type="text/css" rel="stylesheet"/>
-		<title>Doctor's Tip</title>
+		<link href="../admin/editor.css" type="text/css" rel="stylesheet"/>
+		<title>Admin-Blog-Writing</title>
         <style>
             .txtarea
             {
                 width: 70%;
                 height: 20vh;
             }
+    
             .main-admin-heading
             {
                 margin-left: 1vh
@@ -50,7 +67,7 @@ require("../../doc_panel/functions/functions.php");
             
             <div class="col-md-1">
                 <div class="go-back">
-                    <a href="<?php echo base_url_admin; ?>admin-blog/Doctor_Tip-dashboard.php" class="btn btn-info">Back</a>
+                    <a href="" class="btn btn-info">Back</a>
                 </div>
             </div>
         </div>
@@ -62,11 +79,9 @@ require("../../doc_panel/functions/functions.php");
                 $edit_id = $_POST['id'];
                 if(isset($_POST['edit']))
                 {
-                    //$edit_id = $_POST['id'];
-                    $sql = "SELECT * FROM doctor_tip1 where id='$edit_id'"; 
-                    $result = $functions->db->query($sql);
-                    $row = $result->fetch_assoc();
-                    
+                    $sqlblog = "SELECT * FROM cec-blog where id='$edit_id'"; 
+                    $resultblog = mysqli_query($conn, $sqlblog );
+                    $rowblog = mysqli_fetch_assoc($resultblog);
                 }
                 
                 ?>
@@ -82,18 +97,18 @@ require("../../doc_panel/functions/functions.php");
                     </div>
                         <div class="form-group">
                             <label for="select" class="control-label">Select A Category:</label>
-                            <select class="form-control" onchange="restore()" id="category" name="Category" required>                                                          
+                            <select class="form-control" onchange="restore()" id="category" name="Category">                                                          
                                 <option value="">Select A Category</option>
                                 <?php
                                 if(isset($_POST['edit_submit']))
                                 {
                                     $category = $row['Category'];
-                                    $sql11 = "SELECT * FROM `condition` where id = '$category' ";
+                                    $sql11 = "SELECT * FROM `category` where id = '$category' ";
                                 }else{
-                                    $sql11 = "SELECT * FROM `condition`";    
+                                    $sql11 = "SELECT * FROM `category`";    
                                 }
                                 
-                                $category_res11 = $functions->getdistrict($sql11);
+                                $category_res11 = $functions->htdocs($sql11);
                                 foreach($category_res11 as $cat_r11)
                                 {	
                                     if($cat_blog11 == $cat_r11['id']){$sel11 = 'selected';}else{$sel11 = '';}				
@@ -137,129 +152,10 @@ require("../../doc_panel/functions/functions.php");
             </div>
             <div class="col-md-3"></div>
         </div>
-        
-        <?php
-        $image_name = $_FILES['image']['name'];
-                    $tmp_name = $_FILES['image']['tmp_name'];
-                    $location = 'C:/xampp/htdocs/DocConsult/Doctor-tip-Blog/line-control-master/doctor-tips-images/';
-                    move_uploaded_file($tmp_name,$location.$image_name);
-                    
-        if(isset($_POST['edit_submit']))
-        {                      
-            $Topic = $_POST['title'];
-            $Texteditor = htmlspecialchars($_POST['texteditor']);
-            $imagename = $image_name;
-            $Category = $_POST['Category'];
-            $edit_id = $_POST['edit_id'];
-            $sqlcond = "SELECT * FROM doctor_tip1 where Category = '$Category'";
-            $resultcond = $functions->db->query($sqlcond);
-            $num_rows = $resultcond->num_rows;
-            $rowcond = $resultcond->fetch_assoc();
-            
-            if($_POST['edit_submit'] == 'Update')
-            {
-                $status = 1;
-                $sql = "update doctor_tip1 set Topic = '$Topic', Texteditor = '$Texteditor', imagename = '$imagename', status = '$status', Category = '$Category', modified_time=now() where id = '$edit_id' ";
-                $message = "Successfully Update !! ";
-            }
-            else{
-                
-                
-                if($_POST['edit_submit'] == 'Submit')
-                {
-                    echo $num_rows;
-                    if($num_rows == 0)
-                    {
-                        $status = 1;
-                        $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
-                        print_r($sql);
-                        echo 'Blog Not Exists';
-                        if ($functions->db->query($sql) === TRUE) {
-                            
-                            //print $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
-                            $message = "New record created successfully ";
-                            echo $message; 
-                            echo $status;
-                            $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
-                            echo "<script>location.href = '".$url_re."'</script>";
-                        }
-                        else {
-                            echo "Error: ";
-                        }
-                
-                
-                    }
-                    else
-                    {
-                        echo 'Exist ';
-                    } 
-                }
-                
-                elseif($_POST['edit_submit'] == 'Save')
-                {
-                    if($num_rows == 0)
-                    {
-                        echo 'Blog Not Exists';
-                        $status = 2;
-                        $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
-                        if ($functions->db->query($sql) === TRUE) {
-                            
-                            $message = "New record Saveds successfully "; 
-                            //echo $status;
-                            $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
-                            echo "<script>location.href = '".$url_re."'</script>";
-                 }
-                else {
-                    echo "Error: ";
-                }
-                
-                
-            }
-                    else
-                    {
-                echo 'Exist ';
-            }   
-                }
-                
-            }
-//            if($num_rows == 0)
-//            {
-//                echo 'Blog Not Exists';
-//                
-//                if ($functions->db->query($sql) === TRUE) {
-//                   $status = 2;
-//                    $sql = "INSERT INTO doctor_tip1 (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
-//                    $message = "New record Saveds successfully "; 
-//                    //echo $status;
-//                    $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
-//                    echo "<script>location.href = '".$url_re."'</script>";
-//                 }
-//                else {
-//                    echo "Error: " . $sql . "<br>" . $conn->error;
-//                }
-//                
-//                
-//            }
-//            else
-//            {
-//                echo 'Exist ';
-//            }    
-        }
-              
-        ?>
         <script>
-            function restore()
-            {
-               category_index = document.getElementById('category').value;
-            }
-            //console.log(category_index);
-        </script>
-            <script>
 			$(document).ready(function() {
 				//$("#txtEditor").Editor();
-				
-			  	 
-				 $(".submit_data").click(function(){
+				$(".submit_data").click(function(){
                    var value = $(".Editor-editor").html(); 
                    $("#texteditor").val(value);
                 });
@@ -283,5 +179,71 @@ require("../../doc_panel/functions/functions.php");
 			});
 			$("texteditor").val();
 		</script>
+        
+        <?php
+        $image_name = $_FILES['image']['name'];
+                    $tmp_name = $_FILES['image']['tmp_name'];
+                    $location = 'C:/xampp/htdocs/DocConsult/Doctor-tip-Blog/line-control-master/doctor-tips-images/';
+                    move_uploaded_file($tmp_name,$location.$image_name);
+                    
+        if(isset($_POST['edit_submit']))
+        {                      
+            $Topic = $_POST['title'];
+            $Texteditor = htmlspecialchars($_POST['texteditor']);
+            $imagename = $image_name;
+            $Category = $_POST['Category'];
+            $edit_id = $_POST['edit_id'];
+            $sqlcond = "SELECT * FROM cec-blog where Category = '$Category'";
+            $resultcond = mysqli_query($conn, $sqlcond);
+            $rowcond = mysqli_fetch_assoc($resultcond);
+            
+            if($_POST['edit_submit'] == 'Update')
+            {
+                $status = 1;
+                $sql = "update cec-blog set Topic = '$Topic', Texteditor = '$Texteditor', imagename = '$imagename', status = '$status', Category = '$Category', modified_time=now() where id = '$edit_id' ";
+                $message = "Successfully Update !! ";
+            }
+            else
+            {
+                if($_POST['edit_submit'] == 'Submit')
+                {
+                    $status = 1;
+                    $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
+                    print_r($sql);
+                    if (mysqli_query($sql) === TRUE) 
+                    {
+                        //print $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
+                        $message = "New record created successfully ";
+                        echo $message; 
+                        echo $status;
+                        $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
+                        echo "<script>location.href = '".$url_re."'</script>";
+                    }
+                    else {echo "Error: ";}
+                }
+                
+                elseif($_POST['edit_submit'] == 'Save')
+                {
+                    $status = 2;
+                    $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
+                    if (mysqli_query($sql) === TRUE) {
+                        $message = "New record Saveds successfully "; 
+                        //echo $status;
+                        $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
+                        echo "<script>location.href = '".$url_re."'</script>";
+                    }
+                else {echo "Error: ";}
+                } 
+            }
+        }      
+        ?>
+        <script>
+            function restore()
+            {
+               category_index = document.getElementById('category').value;
+            }
+            //console.log(category_index);
+        </script>
+        
     </body>
 </html>

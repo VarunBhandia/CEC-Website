@@ -1,4 +1,17 @@
-<?php 
+<?php
+ini_set("display_errors",'on');
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "cec";
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) 
+      {
+          die("Connection failed: " . mysqli_connect_error());
+      }
+
 	session_start(); 
 
 	if (!isset($_SESSION['username'])) {
@@ -14,7 +27,7 @@
 
 ?>
 <?php
-require('../functions/functions.php');
+//require('../functions/functions.php');
 //if(basename($_SERVER['PHP_SELF']) == basename(__FILE__)){ die('Access denied');};
 ?>
 <head>
@@ -46,7 +59,7 @@ require('../functions/functions.php');
 		<!-- logged in user information -->
 		<?php  if (isset($_SESSION['username'])) : ?>
         		
-                <p style="float:  right;"> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+                <p style="float:  right;"> <a href="login.php" style="color: red;">logout</a> </p>
     
 <div class="tab-content">
     <div class="row">
@@ -59,6 +72,8 @@ require('../functions/functions.php');
     $row_id = $_POST['id'];
     echo $row_id;
     $sql3 = "UPDATE cec-blog SET status = '1' WHERE id = '$row_id' ";
+    $resultblog = mysqli_query($conn, $sqlblog );
+    $rowblog = mysqli_fetch_assoc($resultblog);
     $result3 = $functions->db->query($sql3);                                        
 }
                 
@@ -90,7 +105,7 @@ $result = $functions->db->query($sql);
         <script>
             $("#condition-search").select2({
   ajax: {
-    url: "http://localhost/DocConsult/get_condition.php",
+    url: "http://localhost/cec-Website/admin/get_category.php",
     dataType: 'json',
     delay: 250,
     data: function (params) {
