@@ -3,6 +3,7 @@
         <title>CEC HOMEPAGE</title> 
         <link href="blog.css" type="text/css" rel="stylesheet">
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery.js"></script>
     </head>
     <style type="text/css">
         .paratitle{
@@ -109,6 +110,8 @@
         }
     </style>
     <body>
+        <link href="css/webwidget_slideshow_dot.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/webwidget_slideshow_dot.js"></script>
         <?php include("navbar.php"); ?>
         <div id="about">
             <div class="paratitle">About us</div>
@@ -117,41 +120,35 @@
         </div>
         <div id="blog">
             <div class="paratitle">blog<br></div>
-            <div id="wrapper">
-                <div id="boxOne" class="content">
-                    <div class="cover2"><img src="img/cover3.jpg" width="100%"></div>
-                    <div class="cContent"></div>
-                </div>
-                <div id="boxTwo" class="content">
-                </div>
-                <div id="boxThree" class="content">
-                </div>
-            </div>
-        
         </div>
-    
-
-               
+        <script language="javascript" type="text/javascript">
+        $(function() {
+        $("#demo1").webwidget_slideshow_dot({
+        slideshow_time_interval: '5000',
+        slideshow_window_width: '200',
+        slideshow_window_height: '200',
+        slideshow_title_color: '#17CCCC',
+        soldeshow_foreColor: '#000',
+        directory: 'images/'
+        });
+        });
+    </script>
+        <div id="demo1" class="webwidget_slideshow_dot">
+            <ul>
+                <li><a href="link1" title="Sky"><img src="img/slider-images/slideshow_large_1.jpg" width="407" height="301" alt="slideshow_large"/></a></li>
+                <li><a href="link2" title="Sea"><img src="img/slider-images/slideshow_large_2.jpg" width="407" height="301" alt="slideshow_large"/></a></li>
+                <li><a href="link3" title="Flower"><img src="img/slider-images/slideshow_large_3.jpg" width="407" height="301" alt="slideshow_large"/></a></li>
+                <li><a href="link4" title="Treelink4"><img src="img/slider-images/slideshow_large_4.jpg" width="407" height="301" alt="slideshow_large"/></a></li>
+            </ul>
             
-    
-    
+        <div style="clear: both"></div>
+        </div>
+        
         <footer>
             <div id="contact">
                 <p>Contact<br>Phone +91 9999 9999999<br>Email abc@gmaiil.com</p>
-            
-            
-          
             </div>
-        
         </footer>
-    
     </body>
-
-
-
-
-
-
-
-
+    
 </html>
