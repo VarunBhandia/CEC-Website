@@ -3,9 +3,9 @@ require('../functions/functions.php');
 //if(basename($_SERVER['PHP_SELF']) == basename(__FILE__)){ die('Access denied');};
 ?>
 <head>
-    <link href="http://localhost/docconsult/doc_panel/cs.css" rel="stylesheet" type="text/css">
-    <link href="http://localhost/docconsult/doc_panel/responsive.css" rel="stylesheet" type="text/css">
-    <link href="http://localhost/docconsult/doc_panel/css/newcs.css" rel="stylesheet" type="text/css">
+    <link href="css/cs.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="css/newcs.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,7 +25,7 @@ require('../functions/functions.php');
 {
     $row_id = $_POST['id'];
     echo $row_id;
-    $sql3 = "UPDATE doctor_tip1 SET status = '1' WHERE id = '$row_id' ";
+    $sql3 = "UPDATE cec-blog SET status = '1' WHERE id = '$row_id' ";
     $result3 = $functions->db->query($sql3);                                        
 }
                 
@@ -36,7 +36,7 @@ if(isset($_POST['search_condition']))
 }else{
     $search = '';
 }
-$sql = "SELECT * FROM doctor_tip1 $search ";
+$sql = "SELECT * FROM cec-blog $search ";
 
 $result = $functions->db->query($sql);
                 ?>
@@ -45,14 +45,13 @@ $result = $functions->db->query($sql);
                         <h1><strong>Recent Blogs</strong></h1>
                     </div>
                     <div class="col-md-1">
-                        <h5><a href="<?php echo base_url_admin; ?>admin-blog/Doctor_Tip-writing.php" class="btn btn-info">Create a Blog</a></h5>
+                        <h5><a href="" class="btn btn-info">Create a Blog</a></h5>
                     </div>
                 </div>
                 </div></div></div>
     <div>
         <form id="searchForm" method="post">
             <select id="condition-search" onchange="this.form.submit()" name="search_condition">
-
             </select>
         </form>
         <script>
@@ -77,7 +76,7 @@ $result = $functions->db->query($sql);
     },
     cache: true
   },
-  placeholder: 'Search for a condition',
+  placeholder: 'Search for a blog',
 });
 document.getElementById('condition-search').nextSibling.style.width="70%";
             $("#condition-search").on("select2:select", function (e) { 
@@ -110,7 +109,6 @@ document.getElementById('condition-search').nextSibling.style.width="70%";
                                 <tbody>
                                     <?php
                                     if ($result) {
-                                        // output data of each row
                                         while($row = $result->fetch_assoc()) { 
                                     ?>
                                     <tr>
@@ -120,7 +118,7 @@ document.getElementById('condition-search').nextSibling.style.width="70%";
                                         
                                         $category = $row['Category'];
                                         //echo $category;
-                                        $sql1 = "SELECT * FROM `condition` WHERE id = $category";
+                                        $sql1 = "SELECT * FROM `category` WHERE id = $category";
                                         $result1 = $functions->db->query($sql1);
                                             while($row1 = $result1->fetch_assoc())
                                             {
@@ -164,8 +162,6 @@ document.getElementById('condition-search').nextSibling.style.width="70%";
                                             }
                                             
                                             ?>
-                                                
-                                            
                                         </td>
                                     </tr>
                                     <?php  

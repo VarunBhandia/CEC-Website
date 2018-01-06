@@ -1,0 +1,455 @@
+#full-main .nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #2F5894 !important;
+}
+#sidebarhead .nav>li>a:focus, #sidebarhead .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #2F5894 !important;
+}
+@media (min-width:2200px) {
+.col-sm-10.full-sidebar, .col-sm-10.page.Dashboard, .col-xs-12.page, .col-sm-10.page {
+   
+    width: 95.2% !important;
+}
+.full-sidebar.aftersidebar_remove, .page.Dashboard.page_remove, .page.page_remove   {
+    width: 98.90% !important;
+}
+
+}
+
+@media (min-width:1900px) {
+.col-sm-10.full-sidebar, .col-sm-10.page.Dashboard, .col-xs-12.page, .col-sm-10.page {
+   
+    width: 86.95%;
+}
+.full-sidebar.aftersidebar_remove, .page.Dashboard.page_remove, .page.page_remove {
+    width: 96.8% ;
+}
+
+}
+@media (max-width:1300px) and (min-width:1201px){}
+
+@media (min-width:1200px){
+
+    .col-sm-8.col-xs-12.page.Calendar {
+    width: 64%;
+    float: left;
+}
+
+.col-sm-2.col-xs-12.page.cal-activity {
+    width: 18%;
+}
+	.col-sm-8.page.Setting {
+    width: 63%;
+}
+
+	.col-sm-10.full-sidebar, .col-sm-10.page.Dashboard, .col-xs-12.page, .col-sm-10.page {
+ 
+     width: 83.33333333%;
+}
+
+.full-sidebar.aftersidebar_remove, .page.Dashboard.page_remove, .page.page_remove {
+     width: 94.3%;
+}
+
+}
+@media (max-width:1200px){
+
+	
+}
+@media (max-width:1199px) and (min-width:1101px){}
+@media (max-width:1100px){}
+
+@media (max-width:1099px) and (min-width:1025px){}
+@media (max-width:1024px){
+.col-sm-10.full-sidebar, .col-sm-10.page.Dashboard, .col-xs-12.page, .col-sm-10.page {
+      width: 80%;
+}
+.full-sidebar .top-navigation {
+
+    height: 5s.5vh;
+}
+.img-circle.profile.dropdown-toggle {
+    height: 3vh!important;
+    width: 3vh !important;
+    margin-left: 0;
+}
+.full-sidebar.aftersidebar_remove, .page.Dashboard.page_remove, .page.page_remove {
+    width: 94.99999%;
+}
+.Dashboard .dashboar-flex-boxes {
+        width: 21%;
+}
+.trending-blog-div .blog-button {
+      font-size: 12px;
+}
+
+.top-header-bar .dropdown.doc_panel {
+     float: none; 
+      width: 100%;
+}
+}
+@media (max-width:1023px) and (min-width:981px){}
+@media (max-width:980px){}
+
+@media (max-width:979px) and (min-width:901px){}
+@media (max-width:900px){}
+@media (max-width:899px) and (min-width:801px){}
+
+
+
+
+@media (max-width:801px){
+#sidebarhead.active {
+    margin-left: -170px;
+}
+.wrapper #sidebarhead {
+   
+    min-width: 16.66666667%;
+    max-width: 27.666667% !important;
+}	
+}
+@media (max-width:800px){
+
+
+.Dashboard .dashboar-flex-boxes {
+    width: 19%;
+}
+
+.col-sm-2.sidebar.sidebar-menu {
+    width: 25%;
+}
+
+
+.col-sm-10.full-sidebar, .col-sm-10.page.Dashboard, .col-xs-12.page, .col-sm-10.page {
+         width: 74.4%;
+}
+.full-sidebar.aftersidebar_remove, .page.Dashboard.page_remove, .page.page_remove {
+        width: 93.7%;
+}
+
+  .trending-blog-div .blog-button {
+    font-size: 8px;
+    margin-top: -12px;
+} 
+
+.appoint-card .doctor2-image {
+       margin: 20px auto 30px auto;
+}
+
+.top-header-bar .dropdown.doc_panel {
+    float: none;
+    width: 100%;
+}
+
+.profile {
+    height: 30px !important;
+    width: 30px  !important;
+}
+
+.full-sidebar .top-navigation {
+
+
+    height: 5.5vh ;
+}
+
+}
+
+@media (max-width:799px) and (min-width:769px){}
+@media (max-width:768px){
+.full-sidebar .top-navigation {
+
+
+    height: 7.5vh ;
+}
+
+	.educationdiv .col-sm-3, .educationdiv .col-sm-5, .educationdiv .col-sm-2 {
+    width: 30%;
+    float: left;
+}
+
+.col-sm-10.full-sidebar, .col-sm-10.page.Dashboard, .col-xs-12.page, .col-sm-10.page {
+        width: 73.4%;
+}
+
+.col-sm-8.page.Setting {
+    width: 50%;
+}
+
+.full-sidebar.aftersidebar_remove, .page.Dashboard.page_remove, .page.page_remove {
+    width: 93.4% ;
+}
+.res-float .live-token-div {
+    width: 48%;
+    margin-left: 0;
+}
+
+.col-sm-9.res-float {
+    width: 100%;
+}
+
+.Dashboard .dashboar-flex-boxes {
+    height: 125px;
+    width: 21%;
+    margin: 10px -2% 10px 3%;
+}
+
+.sidebar.sidebar-menu {
+    width: 24%;
+}
+
+}
+
+@media (max-width:767px){}
+@media (max-width:767px) and (min-width:737px){}
+
+
+@media (min-width:737px){
+	.sidebar-headers.Mobview {
+
+    display: none;
+   
+}
+
+
+}
+
+
+@media (max-width:736px){
+.contentTable table > thead > tr> th {
+    height: 30px;
+    font-size: 9px;
+    padding: 10px 4px;
+}
+    div#settings-cat {
+    padding: 0 10px !important;
+}
+
+.col-sm-8.page.Setting {
+    width: 100%;
+    /* margin-left: -20px; */
+}
+
+.remove_field, .remove_field_new {
+    cursor: pointer;
+    margin-top: 10px !important;
+    background: #ccc;
+    padding: 10px;
+    width: 5%;
+    float: right;
+
+}
+
+
+#editRegistration .col-sm-6, #editExperience .col-sm-4 {
+    width: 88%;
+    float: left;
+}
+#editaward .patient-form-input, #editAarticle .patient-form-input {
+    width: 84%;
+}
+.report_an_error .m-less-padding {
+    padding: 15px;
+}
+
+#sidebarhead {
+        margin-left: -250px;
+    }
+
+
+.pop-width .modal-footer {
+   
+    text-align: center;
+    
+}
+
+#gallery .tab-content {
+    padding: 10px;
+}
+
+	div#gallery {
+    padding: 30px 0;
+}
+
+.pop-width {
+    width: 90%!important;
+    margin: 8% 4%;
+}
+
+.doc-profile-title-box .modal-body {
+    position: relative;
+    padding: 30px;
+}
+
+.doc-profile-title-box .modal-dialog.pop-width1 {
+    width: 100%;
+    margin: 10%;
+}
+
+.col-sm-2.sidebar.sidebar-menu {
+    width: 100%;
+}
+
+.col-sm-10.full-sidebar, .col-sm-10.page.Dashboard, .col-xs-12.page, .col-sm-10.page {
+    width: 100%;
+}
+
+/*.col-sm-10.full-sidebar, .col-sm-10.page.Dashboard {
+    width: 100%;
+}*/
+.full-sidebar .top-navigation {
+
+
+    height: 14vh;
+}
+
+.appoint-card  {
+       padding: 20px 0px 20px 12px !important;
+    width: 98%;
+}
+
+
+.res-float .live-token-div {
+    width: 96%;
+    margin-left: 2%;
+}
+
+.trending-blog-div .blog-button {
+    font-size: 14px;
+    margin-top: -12px;
+}
+
+.Dashboard .trending-blog-div {
+    width: 96.5%;
+    margin-left: 2%;
+}
+
+
+}
+@media (max-width:735px) and (min-width:668px){}
+@media (max-width:667px){
+
+ .remove_field, .remove_field_new.edu {
+    cursor: pointer;
+    background: #ccc;
+    padding: 10px;
+    width: 10%;
+    float: right;
+          margin-top: -40px  !important;  
+}
+
+.remove_field, .remove_field_new {
+    cursor: pointer;
+    background: #ccc;
+    padding: 10px;
+    width: 9%;
+    float: right;
+    margin-top: 10px  !important;  
+}
+.educationdiv .col-sm-3, .educationdiv .col-sm-5, .educationdiv .col-sm-2 {
+    width: 100%;
+    float: none;
+}
+	.appoint-card {
+    padding: 20px 0px 20px 0px !important;
+    width: 100%;
+}
+
+.full-sidebar .top-navigation {
+
+
+    height: 15vh;
+}
+	
+
+.Dashboard .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: auto;
+    max-height: 100%;
+    overflow: unset;
+}
+
+.top-header-bar .dropdown.doc_panel {
+    float: right;
+    width: 85%;
+    
+}
+.Dashboard .dashboar-flex-boxes {
+    width: 100%;
+    margin: 10px 0% 10px 0%;
+}
+
+.res-float .live-token-div {
+    width: 100%;
+    margin-left: 0%;
+}
+
+.Dashboard .trending-blog-div {
+    width: 100%;
+    margin-left: 0%;
+}
+
+.top-header-bar .header-search {
+        width:200px;
+}
+
+
+}
+@media (max-width:666px) and (min-width:601px){}
+@media (max-width:600px){}
+@media (max-width:599px) and (min-width:569px){}
+
+@media (width: 568px){
+
+	.remove_field, .remove_field_new {
+    cursor: pointer;
+    margin-top: 10px !important;
+    background: #ccc;
+    padding: 10px;
+    float: right;
+}
+	
+.full-sidebar .top-navigation {
+
+    height: 16vh;
+}
+ .page.page_remove {
+    width: 100%;
+}
+}
+@media (max-width:567px) and (min-width:537px){}
+
+@media (max-width:536px){}
+@media (max-width:535px) and (min-width:415px){}
+@media (max-width:414px){
+
+    div#settings-cat {
+    padding: 0 10px;
+}
+.top-header-bar .header-search {
+        width: 120px;
+}
+.full-sidebar .top-navigation {
+
+    height: 12vh;
+}
+
+.top-header-bar .dropdown.doc_panel {
+    float: none;
+    width: 100%;
+   /* margin-top: -8px;*/
+}
+.appoint-card {
+    padding: 20px 0px 20px 0px !important;
+    width: 100%;
+}
+
+}
+
+
+@media (max-width:413px) and (min-width:385px){}
+@media (max-width:384px){}
+@media (max-width:383px) and (min-width:321px){}
+@media (max-width:320px){}

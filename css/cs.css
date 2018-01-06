@@ -1,0 +1,632 @@
+/* CSS Document */
+#editAarticle .patient-form-input {
+     height: 50px;
+    font-size: 16px;
+    margin: 10px;
+    border: solid 1px #e2e2e2;
+    border-radius: 5px !important;
+    text-align: center;
+}
+
+.remove_field {
+    position: relative;
+    cursor: pointer;
+    
+    background: #ccc;
+    padding: 0px 5px;
+    top: -27px;
+    float: right;
+    text-align: center;
+}
+
+select {
+    overflow: hidden; !important;
+}
+.btn.btn-info.navbar-btn.top-btn {
+    color: #fff;
+    background-color: #132C6D;
+    border-color: #132C6D;
+}
+.remove_field, .remove_field_new {
+    cursor: pointer;
+    margin-top: 0px !important;
+    background: white;
+    padding: 10px;
+    width: 5%;
+    float: right;
+
+}
+.remove_field, .remove_field_new.edu {
+    cursor: pointer;
+    background: white;
+    padding: 10px;
+    width: 10%;
+    float: right;
+    margin-top: 0px !important;
+}
+
+.demo-checkbox table h1 {
+    font-size: 26px;
+}
+
+.demo-checkbox table h3.h3text {
+    font-size: 18px;
+}
+
+.demo-checkbox table .h4text {
+    font-size: 14px;
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	}
+
+::-webkit-scrollbar {
+    width: 8px ; /*  remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible*/ 
+    height:3px;
+}
+
+::-webkit-scrollbar-thumb {
+	width: 8px ;
+	border-radius:10px;
+	background-color: #0c0e6b;
+	height:2px;
+}
+
+::-webkit-scrollbar-button  {
+    height:0px;
+}
+
+
+::-webkit-scrollbar-corner  {
+    display:none;    
+}
+
+/*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar:hover {
+    height: 40px;
+    width: 40px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: blue;
+}
+div:hover::-webkit-scrollbar-corner {
+    width: 40px;
+}
+
+::-webkit-scrollbar-track-piece {
+}
+
+::-webkit-scrollbar-thumb:vertical {
+}*/
+
+*{
+	padding: 0;
+	letter-spacing: 0.3px;
+}
+
+a, a:hover, a:vistied{
+	text-decoration: none;
+}
+
+.logo{
+	/*height:10vh;*/
+	background-color: #132C6D; 
+	font-weight:bold;
+	padding:0px 17px;
+	font-size:20px;
+	color:white;
+}
+
+/* for desktop */
+@media only screen and (min-width: 768px) {
+	.sidebar{
+		height: 100vh;
+	}
+	
+	#sidebar{
+	    height:90vh;
+	    overflow:scroll !important;
+	}
+	
+	.profile{
+        margin-left:30px;
+    }
+    
+    .feed-flex-card{
+        width:30%;
+    }
+    
+    .doc-profile-title-box{
+        padding:0 50px 0 50px;
+    }
+    
+    .doc-about{
+        padding:0 100px 0 100px;
+        text-align:center;
+    }
+    
+    .doc-detail-box{
+        margin-left:30px;
+    }
+    
+    .clinical_note_heading{
+        padding-left:30px;
+    }
+}
+
+/* for phones*/
+@media only screen and (max-width: 768px) {
+    .profile{
+        margin-left:15px;
+    }
+    
+    .fc-center{
+        float:left !important;
+        margin-top:3px !important;
+        margin-bottom:0 !important;
+    }
+    
+    .flex-container{
+        justify-content:space-around;
+    }
+    
+    .feed-flex-card{
+        width:100%;
+    }
+    
+    .doc-profile-title-box{
+        padding:0 10px 0 10px;
+    }
+    
+    .doc-about{
+        padding:0 20px 0 20px;
+        text-align:justify;
+    }
+    
+    .doc-detail-box{
+        margin-left:0;
+    }
+    
+    #settings-cat{
+        height:auto !important;
+    } 
+    
+    .btn-right{
+        float:right;
+        margin-bottom:10px;
+    }
+    
+    .nav-tabs li a{
+        font-size:12px;
+        padding:8px 4px;
+    }
+    
+    .m-left-margin{
+        margin-left:15px;
+    }
+    
+    .clinical_note_heading{
+        padding-left:15px;
+    }
+    
+    .clinical_note_content{
+        padding-left:30px;
+        margin-bottom:5px;
+    }
+    
+    .tab-pane .addPatientButton{
+        margin-top:10px;
+    }
+}   
+
+
+.sidebar{
+	background-color: #2F5894;
+	font-size: 14px !important;
+	padding: 0px !important ;
+    box-shadow: 3px 0px 15px #999999;
+
+}
+
+.sidebar>ul>li >a{
+	padding:10px 0 8px 20px;
+	height: 40px;
+	color: white; 
+}
+.sidebar>ul .active{
+	font-size: 18px;
+	transition: 0.1s ;
+
+}
+.sidebar>ul>li>a:focus, .sidebar>ul>li>a:hover{
+	background-color: #2F5894;
+	transition: 0.1s ;
+	border-left:solid 4px white !important;
+}
+
+#download_graph{
+    background-color:white;
+    border:none;
+    float:right;
+    margin-bottom:10px;
+}
+
+#download_graph .glyphicon{
+    font-size:20px;
+    padding:5px;
+    color:#333;
+}
+
+#download_graph:focus{
+    outline:none;
+}
+
+.icons{
+	color: white;
+	font-size: 14px;
+}
+
+.desc{
+	margin-left: 0px;
+}
+
+.navbar-collapse{
+	padding: 0;
+	margin: 0;
+}
+
+/*.sub-menu >li >a{
+	padding:15px 0 15px 70px;
+	height: 40px;
+	color: white;
+}
+*/
+.top-navigation{
+	height: 18vh;
+	background-color: #F2F2F2;
+    /*box-shadow: 2px 3px 15px #e2e2e2;*/
+
+}
+
+.profile{
+	height: 30px;
+	width: 30px;
+	background-color: #BDBDBD;
+}
+.send{
+	font-size: 30px;
+	color: #BDBDBD;
+}
+
+.profile:hover , .send:hover{
+	cursor: pointer;
+}
+
+
+.box{
+	padding: 70px 40px 30px 40px;
+}
+
+.calender-top-line{
+	margin-top: 25px;
+}
+
+.calender-name{
+	font-size: 24px;
+	font-weight: bold;
+	color: #4F4F4F;
+	margin-left: 0;
+	text-align: left;
+	padding-top: 10px;
+	clear: both;
+}
+.sort-calender{
+	float: right;
+	font-size: 10px;
+	color: #4F4F4F;
+	padding: 0 5px 0 5px;
+	margin-top: 8px;
+}
+.calender-month{
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	clear: both;
+	margin-top: 20px;
+	color: #828282;
+}
+
+#calendar:after{
+	content: '';
+	height: 100%;
+	position: absolute;
+	border-right: solid 1px #d5d3e2;
+	top: 0;
+	right: 0;
+}
+
+.table{
+	border: none;
+	color: #4F4F4F;
+	border-collapse: collapse;
+	margin: 40px auto 0 auto;
+	font-size: 12px;
+}
+.table tr td{
+	border: none ! important;
+	color: #4F4F4F;
+	width: 120px;
+	height: 60px;
+	padding: 10px 20px 10px 50px;
+	overflow-y:  hidden;
+}
+.days{
+	height:40px ! important;
+	text-align: center;
+	font-weight: bold;
+}
+
+.event-circle{
+	height: 10px;
+	width: 10px;
+	float: right;
+	margin: 3px 5px 5px 5px;
+	background-color: #43D4AB;
+}
+
+.appointment-circle{
+	height: 10px;
+	width: 10px;
+	float: right;
+	margin: 3px 5px 5px 5px;
+	background-color: #F5FF06;
+}
+
+/* Q&A page */
+
+.flex-container{
+	display: flex;
+	flex-flow: row wrap;
+	/*justify-content: flex-start;*/
+	width: 100%;
+	/*max-height: 500px;*/
+	overflow: scroll;
+}
+
+.ques-box{
+	width: 200px;
+	background-color: #F2F2F2;
+	margin: 20px;
+	padding: 10px;
+	font-size: 13px;
+	color: #4F4F4F;
+}
+
+.sub-heading{
+	font-size: 15px;
+	color: #828282;
+}
+
+.dropdown-menu > li> a{
+	padding: 8px !important;
+}
+
+
+
+/* Doctor Profile */
+
+.profile-title-box{
+	border: solid 1px #e6e6e6;
+	margin-top: 75px;
+	text-align: center;
+	border-radius:10px; 
+	margin-bottom: 40px;
+}
+
+.profile-page-image{
+	background-color: cyan;
+	width: 100px;
+	height: 100px;
+	margin-top: -50px !important; 
+	margin: auto;
+	border-radius: 50%;
+}
+
+.filled{
+	color: #F5FF06;
+}
+.empty{
+	color: #c4c4c4;
+}
+
+
+.overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #000000;
+	opacity: 0;
+	transition: 0.2s;
+}
+
+.profile-pic, .edit-container{
+	position: relative;
+}
+
+.change-pic-button, .edit-button{
+	position: absolute;
+	opacity: 0;
+	background-color: transparent;
+	transition: 0.2s;
+	color: #ffffff;
+	display: block;
+	font-weight: bold;
+}
+
+.change-pic-button> a, .change-pic-button> a:hover, .change-pic-button> a:visited,
+.edit-button>a, .edit-button>a:hover,.edit-button>a:visited
+{
+	text-decoration: none;
+	color:#ccc;
+}
+
+
+.profile-pic:hover .overlay{
+	opacity: 0.7;
+}
+
+.profile-pic:hover .change-pic-button{
+	opacity: 1;
+}
+
+.patient-card{
+	border: solid 1px #e6e6e6;
+	margin: 20px;
+	height:140px;
+	border-radius:5px; 
+	overflow:hidden;
+
+}
+
+.patient-card:hover{
+    box-shadow: 0px 0px 10px #b4b4b4;
+}
+
+.patient-card-id{
+	background-color: #2F5894;
+	color: white;
+	height:30px;
+	margin-top: -15px !important; 
+	border-radius: 2px;
+	float: right;
+	right: 20px;
+	text-align: center;
+	padding: 5px;
+}
+
+.patient-form-input{
+	    height: 40px;
+    font-size: 12px;
+    margin: 10px;
+    border: solid 1px #e2e2e2;
+    border-radius: 5px !important;
+    text-align: center;
+}
+
+.patient-form-input:focus, .add-event-input:focus{
+	outline: none;
+}
+
+.add-event-input{
+	border: none; 
+	width: 100%;
+	height: 33px;
+	text-align:center;
+}
+
+.add-event-input-tag{
+	margin: -11px 0 0 20px; 
+	padding: 0 10px 0 10px; 
+	background-color: white; 
+	display: inline-block;
+}
+
+.patient-detail-info{
+	height: 50px;
+	font-size: 16px;
+	margin: 10px;
+}
+
+.patient-profile-tables thead tr th,.patient-profile-tables tbody tr td{
+	height: 20px !important;
+	font-size: 14px !important;
+	vertical-align: top !important;
+	border-bottom: none !important;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    color: #fff!important;
+    background-color: #4f7cbd!important;
+    border: 1px solid #4f7cbd!important;
+}
+
+.nav-tabs>li>a, .nav-tabs>li>a:focus{
+    color: #555!important;
+    background-color: #fff!important;
+    border: 1px solid #ddd!important;
+}
+
+.nav-tabs>li>a:hover{
+    color: #fff!important;
+    background-color: #fff!important;
+    border: 1px solid #ddd!important;
+}
+
+.pop-width{
+    width:70%!important;   
+    margin: 2% 20%;
+}
+
+.pop-width1 {
+    width: 80%!important;
+    margin: 3% 17%;
+}
+
+.pop-width1 .modal-body, .pop-width .modal-body{
+    max-height:400px;
+    
+}
+
+.select2-container {
+    display: flow-root !important;
+    height:33px;
+}    
+.select2-container--default .select2-selection--single{
+    border:none!important;
+}
+
+select :disabled{
+    color:#ccc;
+}
+
+#editEducation .select2-container{
+
+    border: 1px solid #e2e2e2!important;
+    border-radius: 5px!important;
+    margin: 0px 0px 0px 10px!important;
+    width: 100%!important;
+    height: 50px;
+}
+#editEducation .select2-container--default .select2-selection--single{
+    padding: 2px 10px!important;
+}
+#editEducation .select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 50px!important;
+}
+#editEducation .select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 50px!important;
+}
+
+.edit-container ul{
+    padding-right:70px!important;
+}
+.add-textarea-tag{
+    width: 100%;overflow-x: hidden;border:none;resize:none;
