@@ -117,17 +117,17 @@ p.intro{
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 }
-a{ color: #ea8a3e;}
+a{ color: #684cc4;}
 a:hover,
 a:focus{
 	text-decoration: none;
-	color: #ea8a3e;
+	color: #684cc4;
 }
 ismall{
 	font-size: 14px;
 }
 .section-title hr{
-	border-color: #ea8a3e;
+	border-color: #684cc4;
 	border-width: 4px;
 	width: 60px;
 	text-align: center;
@@ -206,19 +206,19 @@ display: block;
 #tf-menu.navbar-default .navbar-nav > li > ul > li > a:hover{
 	text-transform: uppercase;
 background: transparent;
-	color: #ea8a3e;
+	color: #684cc4;
 	font-size: 12px;
 	letter-spacing: 1px;
 }
 .dropdown-menu{
 	background-color: #222222;
-	color: #ea8a3e;
+	color: #684cc4;
 }
 
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
 	background: transparent;
-	color: #ea8a3e;
+	color: #684cc4;
 }
 
 .on {
@@ -228,7 +228,7 @@ background: transparent;
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-	color: #ea8a3e !important;
+	color: #684cc4 !important;
 	background-color: transparent;
 	font-weight: 700;
 }
@@ -238,8 +238,8 @@ background: transparent;
 	}
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus {
-	background-color: #ea8a3e;
-	border-color: #ea8a3e;
+	background-color: #684cc4;
+	border-color: #684cc4;
 	}
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
@@ -270,12 +270,12 @@ background: transparent;
 	
 }
 .civil{
-	color: #ea8a3e;
+	color: #684cc4;
 	margin-top: 5%;
 }
 @media screen and (max-width: 768px) { 
 .civil{
-	color: #ea8a3e;
+	color: #684cc4;
 	margin-top: 2%;
 }
 }
@@ -285,10 +285,10 @@ background: transparent;
 
 }
 color{
-	color: #ea8a3e;
+	color: #684cc4;
 }
 .color{
-	color: #ea8a3e;
+	color: #684cc4;
 }
 
 a.fa.fa-angle-down {
@@ -312,9 +312,9 @@ a.fa.fa-angle-down {
 }
 }
 a.fa.fa-angle-down:hover{
-	background: #ea8a3e;
+	background: #684cc4;
 	color: #ffffff;
-	border: 2px solid #ea8a3e;
+	border: 2px solid #684cc4;
 }
 /* About Section */
 #tf-about{
@@ -360,7 +360,7 @@ ul.about-list li span{
 	font-weight: 300;
 }
 .section-title.center .line{
-	border-top: 4px solid #ea8a3e;
+	border-top: 4px solid #684cc4;
 	height: 10px;
 	width: 200px;
 	text-align: center;
@@ -369,7 +369,7 @@ ul.about-list li span{
 }
 
 /*.section-title.center .liner{
-	border-top: 2px solid #ea8a3e;
+	border-top: 2px solid #684cc4;
 	height: 5px;
 	width: 60%;
 	text-align: center;
@@ -411,7 +411,7 @@ img.img-circle.team-img.faculty-img {
 	margin-right: 10px;
 }
 #tf-team .item .thumbnail:hover>img.img-circle.team-img{
-	border: 4px solid #ea8a3e;
+	border: 4px solid #684cc4;
 }
 #tf-team .thumbnail {
 	background: transparent;
@@ -444,10 +444,10 @@ text-align: left;
 .owl-theme .owl-controls.clickable .owl-page:hover span {
 	filter: Alpha(Opacity=100);
 	opacity: 1;
-	background: #ea8a3e;
+	background: #684cc4;
 }
 .owl-theme .owl-controls .owl-page.active span{
-	background: #ea8a3e;
+	background: #684cc4;
 }
 
 /* Services Section */
@@ -461,7 +461,7 @@ text-align: left;
 
 #tf-services i.fa {
 	font-size: 40px;
-	border: 4px solid #ea8a3e;
+	border: 4px solid #684cc4;
 	width: 100px;
 	height: 100px;
 	padding: 27px 25px;
@@ -476,7 +476,7 @@ text-align: left;
 }
 
 #tf-services .service:hover>i.fa{
-	background: #ea8a3e;
+	background: #684cc4;
 	color: #ffffff;
 }
 
@@ -614,11 +614,11 @@ ol.type li a.active { font-weight: 700; }
 #tf-works i.fa {
 	height: 30px;
 	width: 30px;
-	border: 1px solid #ea8a3e;
+	border: 1px solid #684cc4;
 	font-size: 20px;
 	padding: 5px;
 	border-radius: 50%;
-	color: #ea8a3e;
+	color: #684cc4;
 }
 /* Testimonials Section */
 #tf-testimonials{
@@ -694,7 +694,7 @@ label {
 
 button.btn.tf-btn.btn-default {
 	float: right;
-	background: #ea8a3e;
+	background: #684cc4;
 	border: 0;
 	border-radius: 0;
 	padding: 10px 40px;
@@ -745,6 +745,6 @@ nav#footer p{
 	transition: all 0.5s;
 }
 #footer i.fa:hover{
-	background: #ea8a3e;
-	border-color: #ea8a3e;
+	background: #684cc4;
+	border-color: #684cc4;
 	color: #ffffff;
