@@ -7,8 +7,6 @@
                     <li><a href="#" name="team">team</a></li>
                     <li><a href="#" name="contact">contact</a></li>
                     <li><a href="#">more links</a></li>
-                </ul>
-            
-                
+                </ul>    
             </div>
 </div>
