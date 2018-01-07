@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
-<title>EVENTS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/navbar.css" type="text/css" rel="stylesheet">
+    <head>
+        <title>EVENTS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="css/navbar.css" type="text/css" rel="stylesheet">
+    </head>
 <style>
 a{
   text-decoration: none;
@@ -16,19 +22,18 @@ a{
  .c{
   background-color: #0A227B;
   display: inline-block;
-  width: 15em;
-  height: 8em;
+  width: 100%;
+  height: 80%;
   padding:0.5em;
   
  }
  .d{
-  margin: 0em 0.2em;
   font-size: 1.2em;
   }
- .b{
-  display: inline-block;
-  margin: 1em;
- }
+    .b{
+        margin-bottom: 1em;
+        height: 15em;
+    }
  .b:hover{
   box-shadow: 0 0.3em 0.5em;
   cursor: pointer;
@@ -44,74 +49,98 @@ a{
  </style>
 <body>
     <?php include("navbar.php"); ?>
-<div class="o">
-  <h1>EVENTS</h1>
-</div>
-
-<div class="a">
-  <div class="b"><a href="#">
-    <div class="c">
-      <img src="#" style="width:100%">
-      </div>
-      <div class="d">
-        <h5>WORKSHOP
-        STAAD PRO</h5>
-        </a>
-      </div>
-  </div>
-
-  <div class="b"><a href="#">
-    <div class="c">
-      <img src="#" style="width:100%">
-      </div>
-      <div class="d">
-        <h5>FRESHER'S</h5>
-      </div>
-      </a>
-  </div>
-
-  <div class="b"><a href="#">
-    <div class="c">
-      <img src="#" style="width:100%">
-      </div>
-      <div class="d">
-        <h5>ANNUAL SPORTS DAY</h5>
+    <div class="col-md-2">
     </div>
-    </a>
-  </div>
-</div>
-
-<div class="a"><a href="#">
-  <div class="e">
-    <div class="c">
-      <img src="#" style="width:100%">
-      </div>
-      <div class="d">
-        <h5>EBULLIENCE</h5>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>EVENTS</h3>
+            </div>
+            <div class="col-md-8">
+            </div>
+        </div>
+        <div class="row">
+    <div class="col-md-4">
+        <div class="b">
+            <a href="#">
+                <div class="c">
+                    <img src="#" style="width:100%">
+                </div>
+                <div class="d">
+                    <h5>content</h5>
+                </div>
+            </a>
+        </div>
     </div>
-    </a>
-  </div>
-
-  <div class="e"><a href="#">
-    <div class="c">
-      <img src="#" style="width:100%">
-      </div>
-      <div class="d">
-        <h5>DEPARTMENTAL COGNI</h5>
-      </div>
-      </a>
-  </div>
-
-  <div class="e"><a href="#">
-    <div class="c">
-      <img src="#" style="width:100%">
-      </div>
-      <div class="d">
-        <h5>FAREWELL</h5>
+    <div class="col-md-4">
+        <div class="b">
+            <a href="#">
+                <div class="c">
+                    <img src="#" style="width:100%">
+                </div>
+                <div class="d">
+                    <h5>content</h5>
+                </div>
+            </a>
+        </div>
     </div>
-    </a>
-  </div>
+  
+    <div class="col-md-4">
+        <div class="b">
+            <a href="#">
+                <div class="c">
+                    <img src="#" style="width:100%">
+                </div>
+                <div class="d">
+                    <h5>content</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+  
 </div>
-
+        <div class="row">
+    <div class="col-md-4">
+        <div class="b">
+            <a href="#">
+                <div class="c">
+                    <img src="#" style="width:100%">
+                </div>
+                <div class="d">
+                    <h5>content</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="b">
+            <a href="#">
+                <div class="c">
+                    <img src="#" style="width:100%">
+                </div>
+                <div class="d">
+                    <h5>content</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+  
+    <div class="col-md-4">
+        <div class="b">
+            <a href="#">
+                <div class="c">
+                    <img src="#" style="width:100%">
+                </div>
+                <div class="d">
+                    <h5>content</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+  
+</div>
+    </div>
+    <div class="col-md-2">
+    </div>
 </body>
 </html>
