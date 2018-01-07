@@ -168,12 +168,11 @@
         </div>
             <!-- Team Page
     ==========================================-->
-    <div id="tf-team" class="text-center">
-        <div class="overlay">
-            <div class="container">
-                <div id="blog">
+    
+        <div id="blog">
                     <div class="paratitle">Team<br></div>
                 </div>
+        <div id="tf-team" class="text-center">
 
                 <div id="team" class="owl-carousel owl-theme row">
                      
@@ -427,10 +426,9 @@
                             </div>
                         </a>
                     </div>
-
-
-    
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+</div>
+            </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.html"></script>
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -446,7 +444,8 @@
 
 
 <script src="js/cobox.js"></script>
-     
+             <?php include("footer.php"); ?>
+           
     </body>
     
 </html>
