@@ -24,11 +24,12 @@ body{
             margin-left:80px;
             text-align: center;
             font-size: 40px;
-            color: #0426d3;
+            color: #3c4298;
             font-weight: 4000;
             
         }
         .navbar ul{
+            font-size: 1.5em;
             float:left;
             display:inline-block;
         }
@@ -62,7 +63,7 @@ body{
             text-decoration-color:#d3c6ff ;
             text-shadow: 10px;
             text-decoration-style:solid;
-            color: black;
+            color: #9da0cb;
         }
         #ceclogo a:link,a:active,a:visited{
             text-decoration: none;

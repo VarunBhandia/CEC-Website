@@ -26,10 +26,8 @@
         .article-header
         {
                 margin-top: -25vh;
-                
-                background-color: blue;
+                background-color: #3c4298;
                 height: 25vh;
-                
         }
         
         .article-heading
