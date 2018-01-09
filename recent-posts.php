@@ -8,45 +8,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
+        <link href="css/recent-posts.css" type="text/css" rel="stylesheet">
     </head>
-<style>
-a{
-  text-decoration: none;
-}
-.o{
-  margin: 5em 15em 0em;
-}
-.a{
-  margin: 0em 14em 0em 14em;
-}
- .c{
-  background-color: #0A227B;
-  display: inline-block;
-  width: 100%;
-  height: 80%;
-  padding:0.5em;
-  
- }
- .d{
-  font-size: 1.2em;
-  }
-    .b{
-        margin-bottom: 1em;
-        height: 15em;
-    }
- .b:hover{
-  box-shadow: 0 0.3em 0.5em;
-  cursor: pointer;
- }
- .e{
-  display: inline-block;
-   margin: 1em;
- }
- .e:hover{
-  box-shadow: 0 0.3em 0.5em;
-  cursor: pointer;
- }
- </style>
 <body>
     <?php include("navbar.php"); ?>
     <div class="col-md-2">

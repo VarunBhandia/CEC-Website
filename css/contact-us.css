@@ -1,0 +1,9 @@
+.col-lg-6.left{
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .col-lg-6.right{
+                padding-top: 150px;
+                font-family: sans-serif;
+            }

@@ -1,0 +1,40 @@
+.blog-image-background
+        {
+            width:70vw;
+            height:60vh;
+            background-image: url("");
+            
+        }
+        .article
+        {
+         width: 50vw;   
+        }
+        
+        .article-header
+        {
+                margin-top: -25vh;
+                background-color: #3c4298;
+                height: 25vh;
+        }
+        
+        .article-heading
+        {
+                color: white;
+    font-size: 2.5em;
+    padding-top: 10vh;
+    padding-left: 2vw;
+        }
+        
+        .article-category
+        {
+            padding-left: 2vw;
+    color: white;
+        }
+        
+        .article-desc
+        {
+/*
+            width: 50vw;
+            margin-left: 25vw;
+*/
+        }

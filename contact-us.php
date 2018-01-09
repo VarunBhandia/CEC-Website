@@ -9,38 +9,7 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style>
-            body{
-                margin:0px;
-            }
-            .navbar{
-                margin: 0px;
-                border:2px black solid;
-                position:relative;
-                width:100%;
-                height:5em;
-            }
-            .container{
-                background-color: #DDDFEE;
-                text-align: center;
-                content:'';
-                margin:0px;
-                height:100%;
-                width:100%;
-            }
-            .col-lg-6.left{
-                padding-top: 10px;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-            .row{
-                margin-top: 15%;
-            }
-            .col-lg-6.right{
-                padding-top: 150px;
-                font-family: sans-serif;
-            }
-    </style>
+        <link rel="stylesheet" href="css/contact-us.css">
     </head>
     <body>
         <div class="navbar"></div>
