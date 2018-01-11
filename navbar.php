@@ -5,10 +5,11 @@
 
 .topnav {
   overflow: hidden;
+    padding-top: 1.5em;
         padding-right: 2em;}
 
 .topnav a {
-  float: right;
+  float: left;
   display: block;
   color: black;
   text-align: center;
@@ -62,7 +63,15 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-    <a href="" data-toggle="dropdown" class="dropdown-toggle">
+    <a href="" style="padding-left: 3em;">HOME</a>
+    <a href="" style="padding-left: 3em;">ABOUT</a>
+    <a href="" style="padding-left: 3em;">BLOG</a>
+    <a href="" style="padding-left: 3em;" >ACTIVITIES</a>
+    <a href="" style="padding-left: 3em;">TEAM</a>
+    <a href="" style="padding-left: 3em;">ALUMINI</a>
+    <a href="" style="padding-left: 3em;">CONTACT</a>
+
+    <a href="" data-toggle="dropdown" class="dropdown-toggle" style="padding-left: 3em;">
         MORE LINKS
         <ul class="dropdown-menu" >
                     <li><a href="http://www.iitr.ac.in/departments/CE/pages/index.html" target="_blank" class="page-scroll">More on Department</a></li>
@@ -71,13 +80,6 @@
                     <li><a href="https://docs.google.com/forms/d/14vWlUQ2_KIhHYIW_gwf3Of353FLmPmMPw9VfHnBC5E0/viewform?embedded=true" target="_blank" class="page-scroll">Survey Form</a></li>
                 </ul>
     </a>
-    <a href="">CONTACT</a>
-    <a href="">ALUMINI</a>
-    <a href="">TEAM</a>
-    <a href="" >ACTIVITIES</a>
-    <a href="">BLOG</a>
-    <a href="">ABOUT</a>
-    <a href="">HOME</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 <script>

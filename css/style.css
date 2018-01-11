@@ -781,6 +781,10 @@ nav#footer p{
             
             margin-left: 150px;
             }
+.img-home{
+        width: 100%;
+    height: auto;
+}
         footer{
             background-color: #0426d3;
             margin-left:0px;

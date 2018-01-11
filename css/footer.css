@@ -1,26 +1,23 @@
 .footer-cec{
-        padding: 1em;
-        height: 14em;
-        background-color:#3c4298;
+    height: auto;
+    background-color:#3c4298;
     }
-    .footer_content{
-        margin-left: 8em;
+.footer_content{
     color: whitesmoke;
-            font-size: 1.2em;
-    }
-    .footer_icons{
-        
-    }
-    .heros
-    {
-         margin-left: 8em;
-        padding-top: 1em;
+    font-size: .7em;
+}
+.footer_icons{
+
+}
+.heros
+{
+
     font-size: 1.5em;
     color: whitesmoke;
 }
-    .link_hover:hover{
-        color: antiquewhite;
-    }
-    .link_hover{
-        color:#030632;
-    }
+.link_hover:hover{
+    color: antiquewhite;
+}
+.link_hover{
+    color:#030632;
+}

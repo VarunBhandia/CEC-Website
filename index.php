@@ -47,6 +47,9 @@
     </style>
     <body>
         <?php include("navbar.php"); ?>
+        <div class="container-fluid ">
+            <img src="Design/home%20page.jpg" class="img-home">
+        </div>
         <div id="about">
             <div class="row">
                 <div class="col-md-1"></div>
