@@ -48,8 +48,15 @@
     <body>
         <?php include("navbar.php"); ?>
         <div id="about">
-            <div class="paratitle">About us</div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+
             <p>Civil Engineering Consortium is a Student Affair Committee of department of Civil Engineering, that is responsible to promote safe and intellectually stimulating learning environment that encourages not only the academic success of civil engineering students but also focus on personal development, sports and other extracurriculars student activities. With the chain of activities going round the year, students get ample opportunity to flash, flourosh and furnish their talents.</p>
+                                    </div>
+                                <div class="col-md-1"></div>
+
+                </div>
         
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

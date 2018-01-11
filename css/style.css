@@ -766,15 +766,16 @@ nav#footer p{
             font-family:sans-serif;
             font-weight:bolder;
             
-        }
+    }
         #about,#blog,#team{
-            position:relative;
-            margin-left:150px;
-            margin-right:150px;
-            display:block;
-            margin-top:50px;
-            font-family:sans-serif;
-            font-size: 20px;
+            position: relative;
+            /* margin-left: 150px; */
+            /* margin-right: 150px; */
+            display: block;
+            /* margin-top: 50px; */
+            font-family: sans-serif;
+            font-size: 1.1em;
+            padding: 2.5em;
         }
         #contact{
             
