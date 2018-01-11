@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--
 <style>
 
 .topnav {
@@ -59,15 +60,16 @@
 
 }
 </style>
+-->
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
-    <a href="" style="padding-left: 3em;">HOME</a>
+    <a href="../CEC-Website/index.php" style="padding-left: 3em;">HOME</a>
     <a href="" style="padding-left: 3em;">ABOUT</a>
-    <a href="/recent-posts.php" style="padding-left: 3em;">BLOG</a>
-    <a href="/events.php" style="padding-left: 3em;" >ACTIVITIES</a>
-    <a href="" style="padding-left: 3em;">TEAM</a>
+    <a href="../CEC-Website/recent-posts.php" style="padding-left: 3em;">BLOG</a>
+    <a href="../CEC-Website/events.php" style="padding-left: 3em;" >ACTIVITIES</a>
+    <a href="../CEC-Website/contact-us.php" style="padding-left: 3em;">TEAM</a>
     <a href="" style="padding-left: 3em;">ALUMINI</a>
     <a href="" style="padding-left: 3em;">CONTACT</a>
 

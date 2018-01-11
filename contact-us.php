@@ -1,23 +1,54 @@
 <html>
     <head>
         <title>CONTACT US</title>
-        <!-- Latest compiled and minified CSS -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-        <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/contact-us.css">
+        <link href="css/navbar.css" type="text/css" rel="stylesheet">
+        <link href="css/recent-posts.css" type="text/css" rel="stylesheet">
+        <link href="css/contact-us.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <div class="navbar"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 left"><div id="para"><span style="color: 	#8C8CA7; font-size: 20; font-family: sans-serif; font-weight: 800;">GET IN TOUCH</span><br><br><br><br><br><br><h4 style="color:black; font-weight: 600;position:relative;left:-35px;">ADDRESS</h4><br><br><p style="position:relative;left:35px;">CIVIL ENGINEERING DEPARTMENT</p><p style="position:relative;left:25px;">IIT ROORKEE,ROORKEE-247667</p><p style="position:relative;left:-10px;">UTTARAKHAND, INDIA</p></div></div>
-                <div class="col-lg-6 right"><p>PHONE +91-99999 99999</p><p>Email ceciitr@yahoo.co.in</p></div>
-            </div>
+            <?php include("navbar.php"); ?>
+        <div class="row grey">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h4 class="getin">GET IN TOUCH</h4>
+                </div>
+                <div class="col-md-3"></div>
         </div>
+            <div class="row grey2">
+                <div class="col-md-3"></div>
+                <div class="col-md-4">
+                    <h4 class="address">
+                        ADDRESS
+                    </h4>
+                    <p class="department">
+                        CIVIL ENGINEERING DEPARTMENT
+                        <br>
+                        IIT ROORKEE,ROORKEE-247667
+                        <br>
+                        UTTARAKHAND, INDIA
+                    </p>
+                </div>      
+                <div class="col-md-3">
+                    <p class="phone">
+                        PHONE +91-99999 99999
+                        <br>
+                        Email ceciitr@yahoo.co.in
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        <div class="row grey">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h4 class="claim">ALL RIGHTS RESERVED BY <a href="https://www.linkedin.com/in/varun-bhandia-934937134/">VARUN BHANDIA</a></h4>
+                </div>
+                <div class="col-md-3"></div>
+        </div>
+        <?php include("footer.php"); ?>
 </body>
 </html>

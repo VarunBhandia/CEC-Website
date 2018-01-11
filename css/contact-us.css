@@ -1,9 +1,41 @@
-.col-lg-6.left{
-                padding-top: 10px;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-            .col-lg-6.right{
-                padding-top: 150px;
-                font-family: sans-serif;
-            }
+.grey{
+    background-color: #d8d5d5;
+}
+
+.grey2{
+    background-color: #d8d5d5;
+    height: 25em;
+}
+
+.getin{
+    padding-top: 7em;
+    padding-bottom: 4em;
+    padding-left: 1em;
+    color: #0c0c9a;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.address{
+    font-size: 1.1em;
+    padding-left: 1em;
+    font-weight: 800;
+}
+
+.department{
+    font-size: .9em;
+    padding-left: 1em;  
+    font-weight: 500;
+    line-height: 200%;
+}
+
+.phone{
+    font-size: .9em;
+    font-weight: 700;
+    line-height: 200%;
+}
+
+.claim{
+    font-size: 1.1em;
+    font-weight: 600;
+}
