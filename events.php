@@ -12,6 +12,7 @@
     </head>
     <body>
     <?php include("navbar.php"); ?>
+        <div class="row">
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
@@ -24,86 +25,86 @@
         </div>
         <div class="row">
     <div class="col-md-4">
-        <div class="b">
+        <div class="thumbnail-posts">
             <a href="#">
-                <div class="c">
+                <div class="thumbnail-posts-img">
                     <img src="#" style="width:100%">
                 </div>
-                <div class="d">
-                    <h5>content</h5>
+                <div class="thumbnail-posts-content">
+                    <h5>WORKSHOP</h5>
                 </div>
             </a>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="b">
+        <div class="thumbnail-posts">
             <a href="#">
-                <div class="c">
+                <div class="thumbnail-posts-img">
                     <img src="#" style="width:100%">
                 </div>
-                <div class="d">
-                    <h5>content</h5>
+                <div class="thumbnail-posts-content">
+                    <h5>WORKSHOP</h5>
                 </div>
             </a>
         </div>
     </div>
-  
-    <div class="col-md-4">
-        <div class="b">
+  <div class="col-md-4">
+        <div class="thumbnail-posts">
             <a href="#">
-                <div class="c">
+                <div class="thumbnail-posts-img">
                     <img src="#" style="width:100%">
                 </div>
-                <div class="d">
-                    <h5>content</h5>
+                <div class="thumbnail-posts-content">
+                    <h5>WORKSHOP</h5>
                 </div>
             </a>
         </div>
     </div>
-  
 </div>
-        <div class="row">
+         <div class="row">
     <div class="col-md-4">
-        <div class="b">
+        <div class="thumbnail-posts">
             <a href="#">
-                <div class="c">
+                <div class="thumbnail-posts-img">
                     <img src="#" style="width:100%">
                 </div>
-                <div class="d">
-                    <h5>content</h5>
+                <div class="thumbnail-posts-content">
+                    <h5>WORKSHOP</h5>
                 </div>
             </a>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="b">
+        <div class="thumbnail-posts">
             <a href="#">
-                <div class="c">
+                <div class="thumbnail-posts-img">
                     <img src="#" style="width:100%">
                 </div>
-                <div class="d">
-                    <h5>content</h5>
+                <div class="thumbnail-posts-content">
+                    <h5>WORKSHOP</h5>
                 </div>
             </a>
         </div>
     </div>
-  
-    <div class="col-md-4">
-        <div class="b">
+  <div class="col-md-4">
+        <div class="thumbnail-posts">
             <a href="#">
-                <div class="c">
+                <div class="thumbnail-posts-img">
                     <img src="#" style="width:100%">
                 </div>
-                <div class="d">
-                    <h5>content</h5>
+                <div class="thumbnail-posts-content">
+                    <h5>WORKSHOP</h5>
                 </div>
             </a>
         </div>
     </div>
-  
 </div>
     </div>
     <div class="col-md-2">
     </div>
+        </div>
+    <div class="col-md-2">
+    </div>
+        <?php include("footer.php"); ?>
 </body>
 </html>

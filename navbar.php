@@ -66,7 +66,7 @@
     <a href="" style="padding-left: 3em;">HOME</a>
     <a href="" style="padding-left: 3em;">ABOUT</a>
     <a href="/recent-posts.php" style="padding-left: 3em;">BLOG</a>
-    <a href="" style="padding-left: 3em;" >ACTIVITIES</a>
+    <a href="/events.php" style="padding-left: 3em;" >ACTIVITIES</a>
     <a href="" style="padding-left: 3em;">TEAM</a>
     <a href="" style="padding-left: 3em;">ALUMINI</a>
     <a href="" style="padding-left: 3em;">CONTACT</a>

@@ -181,5 +181,6 @@
     <div class="col-md-2">
     </div>
         </div>
+    <?php include("footer.php"); ?>
 </body>
 </html>
