@@ -44,103 +44,29 @@
 
 
 <script src="js/cobox.js"></script>
-        
+        <style>
+            .box_shadow{
+                height: 50em;
+                box-shadow: 1px 4px 7px 3px #d2cccc;;}
+
+        </style>
             </head>
     <body>
     <?php include("navbar.php"); ?>
         <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="col-md-4">
-                <h3>EVENTS</h3>
+            <div class="col-md-1">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-3">
+                <img class="alumini_dp" src="" alt="NAME">
             </div>
-        </div>
-        <div class="row">
-    <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
+            <div class="col-md-7">
+                <div class="box_shadow">
                 </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-  <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-         <div class="row">
-    <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-  <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-    </div>
-    <div class="col-md-2">
-    </div>
-        </div>
-    <div class="col-md-2">
-    </div>
+                
+            </div>
+            <div class="col-md-1">
+            </div>
+ </div>
         <?php include("footer.php"); ?>
 </body>
 </html>
