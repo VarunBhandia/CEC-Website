@@ -9,6 +9,22 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
         <link href="css/recent-posts.css" type="text/css" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.html"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    
+    <script src="js/owl.carousel.js"></script>
+  
+    <!-- Javascripts
+    ================================================== -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+<script src="js/cobox.js"></script>
     </head>
     <body>
     <?php include("navbar.php"); ?>
