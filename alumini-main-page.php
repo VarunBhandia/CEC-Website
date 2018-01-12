@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ALUMINI</title>
-        <!-- Basic Page Needs
-        ================================================== -->
+        <title>ACTIVITIES</title>
         <meta charset="utf-8">
         <meta name="google-site-verification" content="PcGjUA_gqUBIOTdXZ2LF2p1tUmzcvVtC2rCb7Mu-V1U" />
         <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
@@ -47,21 +45,18 @@
 
 <script src="js/cobox.js"></script>
         
-                
-    </head>
+            </head>
     <body>
     <?php include("navbar.php"); ?>
         <div class="row">
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
-        <div class="row">
+        <div class="row padding">
             <div class="col-md-4">
-                <h3>EVENTS</h3>
+                <h3>ALUMINI</h3>
             </div>
             <div class="col-md-8">
-            </div>
-        </div>
             </div>
         </div>
         <div class="row">
@@ -140,5 +135,12 @@
         </div>
     </div>
 </div>
-             <?php include("footer.php"); ?></body>
+    </div>
+    <div class="col-md-2">
+    </div>
+        </div>
+    <div class="col-md-2">
+    </div>
+        <?php include("footer.php"); ?>
+</body>
 </html>

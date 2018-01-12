@@ -48,7 +48,7 @@
             </head>
 <body>
     <?php include("navbar.php"); ?>
-    <div class="row">
+    <div class="row padding">
         <ul class="slides">
     <input type="radio" name="radio-btn" id="img-1" checked />
     <li class="slide-container">
@@ -126,7 +126,7 @@
     </li>
 </ul>
     </div>
-    <div class="row">
+    <div class="row padding">
     <div class="col-md-2">
     </div>
     <div class="col-md-8">

@@ -6,9 +6,9 @@
     <a href="" style="padding-left: 3em;">ABOUT</a>
     <a href="../CEC-Website/recent-posts.php" style="padding-left: 3em;">BLOG</a>
     <a href="../CEC-Website/events.php" style="padding-left: 3em;" >ACTIVITIES</a>
-    <a href="../CEC-Website/contact-us.php" style="padding-left: 3em;">TEAM</a>
+    <a href="" style="padding-left: 3em;">TEAM</a>
     <a href="../CEC-Website/alumini-main-page.php" style="padding-left: 3em;">ALUMINI</a>
-    <a href="" style="padding-left: 3em;">CONTACT</a>
+    <a href="../CEC-Website/contact-us.php" style="padding-left: 3em;">CONTACT</a>
     <a href="" data-toggle="dropdown" class="dropdown-toggle" style="padding-left: 3em;">
         MORE LINKS
         <ul class="dropdown-menu" >
