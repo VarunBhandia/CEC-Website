@@ -12,5 +12,4 @@ ini_set("display_errors",'on');
       {
           die("Connection failed: " . mysqli_connect_error());
       }
-    else{echo 'Connected';}
 ?>

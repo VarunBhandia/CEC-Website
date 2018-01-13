@@ -12,7 +12,27 @@ include("serverblog.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <style>
+        .patientsList {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 0px;
+    max-height: 400px;
+    overflow: auto;
+}
 
+ .patientsList td {
+    text-align: left;
+    padding: 15px;
+    font-size: 14px;
+    color: #828282;
+}
+
+
+.patientsList tr:nth-child(odd){
+	background-color: #f2f2f2;
+}
+    </style>
 </head>
 <div class="tab-content">
     <div class="row">
@@ -20,12 +40,13 @@ include("serverblog.php");
 			<div class="col-sm-12 col-xs-12">
 
 <?php
-                
+                $sqltest = "SELECT * FROM `cec-blog`";
+                $resulttest = mysqli_query($conn, $sqltest );
                 if($_POST['update'] == 'Publish')
                 {
                     $row_id = $_POST['id'];
                     echo $row_id;
-                    $sql3 = "UPDATE cec-blog SET status = '1' WHERE id = '$row_id' ";
+                    $sqlblog = "UPDATE cec-blog SET status = '1' WHERE id = '$row_id' ";
                     $resultblog = mysqli_query($conn, $sqlblog );
                     $rowblog = mysqli_fetch_assoc($resultblog);
                     $result3 = mysqli_query($conn,$sql3);                                        
@@ -44,39 +65,10 @@ include("serverblog.php");
                         <h1><strong>Recent Blogs</strong></h1>
                     </div>
                     <div class="col-md-1">
-                        <h5><a href="" class="btn btn-info">Create a Blog</a></h5>
+                        <h5><a href="http://localhost/cec-Website/admin/blog-writing.php" class="btn btn-info">Create a Blog</a></h5>
                     </div>
                 </div>
                 </div></div></div>
-    <div>
-        <form id="searchForm" method="post">
-            <select id="condition-search" onchange="this.form.submit()" name="search_condition">
-            </select>
-        </form>
-        <script>
-            $("#condition-search").select2({
-                ajax: {
-                    url: "http://localhost/cec-Website/admin/get_category.php",
-                    dataType: 'json',
-                    delay: 250,
-                    data: function (params) {
-                        return {condi: params.term};
-                    },
-                    processResults: function (data, params) {
-                        var data =$.map(data, function(obj) {
-                            obj.text = obj.text || obj.name ;
-                            return obj;
-                        });
-                        return {results: data,};
-                    },
-                    cache: true
-                },
-                placeholder: 'Search for a blog',
-            });
-            document.getElementById('condition-search').nextSibling.style.width="70%";
-            $("#condition-search").on("select2:select", function (e) {console.log(document.getElementById("condition-search").options[document.getElementById("condition-search").selectedIndex].value);});
-        </script>
-    </div>
     <div class="row">			
         <hr>
         <div class="col-md-2"></div>
@@ -96,33 +88,32 @@ include("serverblog.php");
                         </thead>
                         <tbody>
                             <?php
-                            if ($result) 
+                            if ($resulttest) 
                             {
-                                while($row = $result->fetch_assoc()) { 
-                                    ?>
+                                while($rowtest = mysqli_fetch_assoc($resulttest)){    ?>
                             <tr>
-                                <td><?php echo $row['id'] ?></td>		
-                                <td ><?php echo $row['Topic'] ?></td>
+                                <td><?php echo $rowtest['id'] ?></td>		
+                                <td ><?php echo $rowtest['Topic'] ?></td>
                                 <td><?php
-                                        $category = $row['Category'];
+                                        $category = $rowtest['Category'];
                                         $sql1 = "SELECT * FROM `category` WHERE id = $category";
                                         $result1 = mysqli_query($conn,$sql1);
-                                    while($row1 = mysqli_fetch_assoc())
+                                    while($row1 = mysqli_fetch_assoc($result1))
                                     {echo $row1['name'] ;} ?>
                                 </td>
-                                <td ><?php echo $row['modified_time'] ?></td>
+                                <td ><?php echo $rowtest['modified_time'] ?></td>
                                 <td ><?php 
-                                        if( $row['status'] == 1)
+                                        if( $rowtest['status'] == 1)
                                         {echo "Published";}
                                     else {echo "Saved";}?>
                                 </td>
                                 <td>
                                     <?php 
-                                    if( $row['status'] == 1)
+                                    if( $rowtest['status'] == 1)
                                     {
                                     ?>
-                                    <form method="post" action="<?php echo base_url_admin; ?>admin-blog/Doctor_Tip-writing.php">
-                                        <input class="btn btn-info" type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                    <form method="post" action="http://localhost/cec-Website/admin/blog-writing.php">
+                                        <input class="btn btn-info" type="hidden" name="id" value="<?php echo $rowtest['id']; ?>">
                                         <input class="btn btn-info" type="submit" name="edit" value="Edit">
                                     </form><?php
                                     }
@@ -130,8 +121,8 @@ include("serverblog.php");
                                     {
                                     ?>
                                     <form method="post">
-                                        <input class="btn btn-info" type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                        <input formaction="<?php echo base_url_admin; ?>admin-blog/Doctor_Tip-writing.php" class="btn btn-info" type="submit" name="edit" value="Edit"><br>
+                                        <input class="btn btn-info" type="hidden" name="id" value="<?php echo $rowtest['id']; ?>">
+                                        <input formaction="http://localhost/cec-Website/admin/blog-writing.php" class="btn btn-info" type="submit" name="edit" value="Edit"><br>
                                         <input class="btn btn-info" type="submit" name="update" value="Publish">
                                     </form>
                                     <?php
@@ -139,7 +130,7 @@ include("serverblog.php");
                                     ?>
                                 </td>
                             </tr>
-                            <?php  }}  ?>
+                            <?php }}  ?>
                         </tbody>
                     </table>
                 </div>
