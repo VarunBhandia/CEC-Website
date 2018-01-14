@@ -6,11 +6,6 @@
     $sqltest = "SELECT * FROM cec-blog";
     $resulttest = mysqli_query($conn, $sqltest );
     $rowtest = mysqli_fetch_assoc($resulttest);
-    var_dump($resultcat);
-    echo '<br>';
-    var_dump($rowcat); 
-    echo $rowcat['name'];
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -117,13 +112,9 @@
                     <input id="blogSubmit" name="edit_submit" type="submit" class="btn btn-primary submit_data" value="Submit">
                     <input id="blogSave" name="edit_submit" type="submit" class="btn btn-primary submit_data" value="Save">
                     <?php }?>
-                    
-                    
-                    
                     <input type="hidden" name="texteditor" value="<?php echo $row['Texteditor']; ?>" id="texteditor">
                 </form>
             </div>
-            <div class="col-md-3"></div>
         </div>
         <script>
 			$(document).ready(function() {
@@ -164,7 +155,7 @@
             $Topic = $_POST['title'];
             $Texteditor = htmlspecialchars($_POST['texteditor']);
             $imagename = $image_name;
-            $Category = $_POST['Category'];
+            //$Category = $_POST['Category'];
             $edit_id = $_POST['edit_id'];
             $sqlcond = "SELECT * FROM cec-blog where Category = '$Category'";
             $resultcond = mysqli_query($conn, $sqlcond);
@@ -173,7 +164,7 @@
             if($_POST['edit_submit'] == 'Update')
             {
                 $status = 1;
-                $sql = "update cec-blog set Topic = '$Topic', Texteditor = '$Texteditor', imagename = '$imagename', status = '$status', Category = '$Category', modified_time=now() where id = '$edit_id' ";
+                $sql = "update cec-blog set Topic = '$Topic', Texteditor = '$Texteditor', imagename = '$imagename', status = '$status', modified_time=now() where id = '$edit_id' ";
                 $message = "Successfully Update !! ";
             }
             else
@@ -181,31 +172,33 @@
                 if($_POST['edit_submit'] == 'Submit')
                 {
                     $status = 1;
-                    $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
-                    if (mysqli_query($sql) === TRUE) 
+                    print $sql = "INSERT INTO `cec-blog` (Topic,Texteditor,imagename,status, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW())";
+                    if (mysqli_query($conn,$sql) === TRUE) 
                     {
-                        //print $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
+                        print $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW())";
                         $message = "New record created successfully ";
                         echo $message; 
                         echo $status;
-                        $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
+                        $url_re =  "http://localhost/cec-Website/admin/index.php";
                         echo "<script>location.href = '".$url_re."'</script>";
                     }
-                    else {echo "Error: ";}
+                    else {echo "Error1: ";}
                 }
                 
                 elseif($_POST['edit_submit'] == 'Save')
                 {
                     $status = 2;
-                    $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
-                    if (mysqli_query($sql) === TRUE) {
-                        $message = "New record Saveds successfully "; 
-                        //echo $status;
-                        $url_re =  base_url_admin."admin-blog/Doctor_Tip-dashboard.php";
+                    print $sql = "INSERT INTO `cec-blog` (Topic,Texteditor,imagename,status, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW())";
+                    if (mysqli_query($conn,$sql) === TRUE) 
+                    {
+                        print $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW())";
+                        $message = "New record created successfully ";
+                        echo $message; 
+                        echo $status;
+                        $url_re =  "http://localhost/cec-Website/admin/index.php";
                         echo "<script>location.href = '".$url_re."'</script>";
                     }
-                else {echo "Error: ";}
-                } 
+                    else {echo "Error1: ";}                } 
             }
         }      
         ?>
@@ -216,6 +209,6 @@
             }
             //console.log(category_index);
         </script>
-        
+        </div>
     </body>
 </html>
