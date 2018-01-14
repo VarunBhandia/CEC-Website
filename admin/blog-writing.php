@@ -79,13 +79,23 @@
                 ?>
                 <form method="POST" action="" enctype="multipart/form-data" data-toggle="validator" role="form" id="fileForm">
                     <div class="form-group">
-                        <label for="" class="control-label">Topic Title</label>
-                        <input type="text" class="form-control"  name="title" placeholder="Enter Your Title" required value="<?php echo $rowblog['Topic'];?>">
-                        <small id="" class="form-text text-muted">Please Enter Your Topic Title .</small>
-                    </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label for="" class="control-label">Topic Title</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control"  name="title" placeholder="Enter Your Title" required value="<?php echo $rowblog['Topic'];?>">
+                            </div>
+                        </div>
                     <div class="form-group">
-                        <label for="" class="">Please Select An Image For Your Topic Featured Image. </label>
-                        <input type="file" class=""  name="image" id="image">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label for="" class="">Please Select An Image For Your Topic Featured Image. </label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="file" class=""  name="image" id="image">
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="Description" class="control-label">Description/ Content</label>
@@ -172,7 +182,6 @@
                 {
                     $status = 1;
                     $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
-                    print_r($sql);
                     if (mysqli_query($sql) === TRUE) 
                     {
                         //print $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status,Category, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status','$Category', NOW())";
