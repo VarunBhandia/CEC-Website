@@ -1,5 +1,5 @@
 <?php
-include("serverblog.php"); 
+include("serverblog.php");
 ?>
 <head>
     <link href="css/cs.css" rel="stylesheet" type="text/css">

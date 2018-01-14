@@ -1,6 +1,6 @@
 
 <?php 
-ini_set("display_errors",'off');
+ini_set("display_errors",'on');
     $servername = "localhost";
     $username = "root";
     $password = "";

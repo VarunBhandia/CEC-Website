@@ -1,17 +1,5 @@
-
-<?php 
-ini_set("display_errors",'on');
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "cec";
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (!$conn) 
-      {
-          die("Connection failed: " . mysqli_connect_error());
-      }
+<?php
+include("serverblog.php"); 
 
 function searchconditions($parm) {
     $sql = "select distinct t1.name, t1.id from `category` as t1 inner join cec-blog as t2 on t1.id = t2.category where t1.name like '%$parm%' group by t1.name limit 5";
