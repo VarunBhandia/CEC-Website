@@ -23,9 +23,13 @@
             color: #9da0cb;
 }
 
-.active {
-  background-color:;
-  color: white;
+.navactive {
+    text-decoration:line-through;
+            text-decoration-color:#d3c6ff ;
+            text-shadow: 10px;
+            text-decoration-style:solid;
+            color: #9da0cb;
+    color: white;
 }
 
 .topnav .icon {

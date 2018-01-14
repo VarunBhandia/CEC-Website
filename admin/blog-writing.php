@@ -1,7 +1,11 @@
 <?php
-    $sqlcat = "SELECT * FROM category where id=2";
+    include("serverblog.php"); 
+    $sqlcat = "SELECT * FROM category";
     $resultcat = mysqli_query($conn, $sqlcat );
     $rowcat = mysqli_fetch_assoc($resultcat);
+    $sqltest = "SELECT * FROM cec-blog";
+    $resulttest = mysqli_query($conn, $sqltest );
+    $rowtest = mysqli_fetch_assoc($resulttest);
     var_dump($resultcat);
     echo '<br>';
     var_dump($rowcat); 
@@ -55,7 +59,7 @@
             
             <div class="col-md-1">
                 <div class="go-back">
-                    <a href="" class="btn btn-info">Back</a>
+                    <a href="http://localhost/cec-Website/admin/index.php" class="btn btn-info">Back</a>
                 </div>
             </div>
         </div>
@@ -63,7 +67,7 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <?php 
-                $row['id'];
+                $rowtest['id'];
                 $edit_id = $_POST['id'];
                 if(isset($_POST['edit']))
                 {
@@ -76,47 +80,18 @@
                 <form method="POST" action="" enctype="multipart/form-data" data-toggle="validator" role="form" id="fileForm">
                     <div class="form-group">
                         <label for="" class="control-label">Topic Title</label>
-                        <input type="text" class="form-control"  name="title" placeholder="Enter Your Title" required value="<?php echo $row['Topic'];?>">
+                        <input type="text" class="form-control"  name="title" placeholder="Enter Your Title" required value="<?php echo $rowblog['Topic'];?>">
                         <small id="" class="form-text text-muted">Please Enter Your Topic Title .</small>
                     </div>
                     <div class="form-group">
                         <label for="" class="">Please Select An Image For Your Topic Featured Image. </label>
                         <input type="file" class=""  name="image" id="image">
                     </div>
-                        <div class="form-group">
-                            <label for="select" class="control-label">Select A Category:</label>
-                            <select class="form-control" onchange="restore()" id="category" name="Category">                                                          
-                                <option value="">Select A Category</option>
-                                <?php
-                                if(isset($_POST['edit_submit']))
-                                {
-                                    $category = $row['Category'];
-                                    $sql11 = "SELECT * FROM `category` where id = '$category' ";
-                                }else{
-                                    $sql11 = "SELECT * FROM `category`";    
-                                }
-                                
-                                $category_res11 = $functions->htdocs($sql11);
-                                foreach($category_res11 as $cat_r11)
-                                {	
-                                    if($cat_blog11 == $cat_r11['id']){$sel11 = 'selected';}else{$sel11 = '';}				
-                                    echo "<option value='".$cat_r11['id']."' $sel11>".$cat_r11['name']."</option>";
-                                }?>
-                            </select>
-                            <?php if (isset($row['Category'])) {
-                                ?>
-                                    <script>
-                                        $(document).ready(function(){
-                                            document.getElementById('category').value = "<?php echo $row['Category'];?>";
-                                        });
-                                    </script>
-                            <?php } ?>
-                        </div>
                     <div class="form-group">
                         <label for="Description" class="control-label">Description/ Content</label>
                         <div class="col-lg-12 nopadding">
                             <textarea id="txtEditor" class="textdescription" name="texteditor22">
-                                <?php echo $row['Texteditor']; ?><?php if($_GET['action'] == 'edit'){echo $post_content;}?>
+                                <?php echo $rowblog['Texteditor']; ?><?php if($_GET['action'] == 'edit'){echo $post_content;}?>
                             </textarea>
                         </div>
                         <small id="emailHelp" class="form-text text-muted">Please Enter Your Topic Descriptions. </small>
