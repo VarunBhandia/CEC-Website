@@ -169,24 +169,23 @@ function myFunction() {
             </div>
         </div>
         <?php
-        $all_category = get_category_index($conn);
-        $cnt_category = count($all_category);
-        for($i = 0; $i < $cnt_category; $i++)
+        $all_topics = get_category_index($conn);
+        $all_catid = get_category_id($conn);
+        $cnt_topics = count($all_topics);
+        for($i = 0; $i < $cnt_topics; $i++)
         {
-            $sql44 = "SELECT * FROM `category` WHERE name = '$all_category[$i]'";
+            $sql44 = "SELECT * FROM `category` WHERE id = '$all_catid[$i]'";
             $result44 = mysqli_query($conn, $sql44 ); 
             $row44 = mysqli_fetch_assoc($result44);
             $cate_id = $row44['id'];
-            $cur_cat1 = preg_replace("![^a-z0-9]+!i", "-", $all_category[$i]);
-            $cur_cat_cnt = strlen($all_category[$i]);                    
             print "<div class='col-md-4'>
             <div class='thumbnail-posts'>
-            <a href='#'>
+            <a href='http://localhost/cec-Website/blog.php?id=".($i+1)."&category=".$row44['name']."&topic=".$all_topics[$i]."' target='_blank'>
                 <div class='thumbnail-posts-img'>
                     <img src='#' style='width:100%'>
                 </div>
                 <div class='thumbnail-posts-content'>
-                    <h5>$all_category[$i]</h5>
+                    <h5>".$all_topics[$i]."</h5>
                 </div>
             </a>
         </div>

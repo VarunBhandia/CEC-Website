@@ -1,6 +1,12 @@
+<?php include("admin/functions.php"); 
+    $topic = $_GET['topic'];
+    $blog_id = $_GET['id'];
+    $category = $_GET['category'];
+    ?>
+
 <html>
     <head>
-        <title>CEC HOMEPAGE</title> 
+        <title><?php echo $topic; ?></title> 
 <!--
         <link href="navbar.css" type="text/css" rel="stylesheet">
         <link href="blog.css" type="text/css" rel="stylesheet">
@@ -64,10 +70,10 @@ function myFunction() {
                     <div class="article">
                         <div class="article-header">
                             <div class="article-heading">
-                                Article Name
+                                <?php echo $topic; ?>
                             </div>
                             <div class="article-category">
-                                CATEGORY
+                                <?php echo $category; ?>
                             </div>
                         </div>
                         <div class="article-desc">

@@ -36,4 +36,15 @@ function get_category_index($conn){
     return $result;
 }
 
+function get_category_id($conn){
+    $sql = "SELECT * FROM `cec-blog`";
+    $res = mysqli_query($conn, $sql );
+    $result = array();
+    while($data = mysqli_fetch_assoc($res))
+    {
+        $result[] = $data['Category'];
+    }
+    return $result;
+}
+
 ?>
