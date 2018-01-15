@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include("admin/function.php");
+include("admin/functions.php");
 ?>
 <html>
     <head>
@@ -169,95 +169,29 @@ function myFunction() {
             </div>
         </div>
         <?php
-        $all_category = get_category_index();
+        $all_category = get_category_index($conn);
         $cnt_category = count($all_category);
-        //print_r($all_category);
-        for($i = 0; $i <4; $i++)
+        for($i = 0; $i < $cnt_category; $i++)
         {
-            $sql44 = "SELECT * FROM `condition` WHERE name = '$all_category[$i]'";
+            $sql44 = "SELECT * FROM `category` WHERE name = '$all_category[$i]'";
             $result44 = mysqli_query($conn, $sql44 ); 
             $row44 = mysqli_fetch_assoc($result44);
             $cate_id = $row44['id'];
             $cur_cat1 = preg_replace("![^a-z0-9]+!i", "-", $all_category[$i]);
             $cur_cat_cnt = strlen($all_category[$i]);                    
-            print "<div class='col-md-3' style='text-align: center;'><strong><br><a href='".base_url."topics/topics.php?id=".$cate_id."&name=".$cur_cat1."' class='btn btn-primary city_button'style='width: 100%;transition: .5s;overflow:hidden; text-overflow: ellipsis;'>".$all_category[$i]."</a><br></strong></div>";                        
+            print "<div class='col-md-4'>
+            <div class='thumbnail-posts'>
+            <a href='#'>
+                <div class='thumbnail-posts-img'>
+                    <img src='#' style='width:100%'>
+                </div>
+                <div class='thumbnail-posts-content'>
+                    <h5>$all_category[$i]</h5>
+                </div>
+            </a>
+        </div>
+    </div>";                        
         }?>
-        <div class="row">
-    <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-  <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-         <div class="row">
-    <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-  <div class="col-md-4">
-        <div class="thumbnail-posts">
-            <a href="#">
-                <div class="thumbnail-posts-img">
-                    <img src="#" style="width:100%">
-                </div>
-                <div class="thumbnail-posts-content">
-                    <h5>WORKSHOP</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
     </div>
     <div class="col-md-2">
     </div>

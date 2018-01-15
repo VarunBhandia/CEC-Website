@@ -1,19 +1,7 @@
+<?php
+include("serverblog.php"); 
 
-<?php 
-ini_set("display_errors",'on');
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "cec";
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (!$conn) 
-      {
-          die("Connection failed: " . mysqli_connect_error());
-      }
-
-function searchconditions($conn,$parm) {
+function searchconditions($parm) {
     $sql = "select distinct t1.name, t1.id from `category` as t1 inner join cec-blog as t2 on t1.id = t2.category where t1.name like '%$parm%' group by t1.name limit 5";
     $res = mysqli_query($conn, $sql );
     $rows = array();
@@ -25,8 +13,8 @@ function searchconditions($conn,$parm) {
     echo 'test';
 }
 
-function get_category_index($conn){
-    $sql = "SELECT * FROM `cec-blog` INNER JOIN `category` ON `cec-blog`.Category = `category`.id";
+function get_category_index(){
+    $sql = "SELECT * FROM doctor_tip1 INNER JOIN `condition` ON doctor_tip1.Category = `condition`.id";
     $result = mysqli_query($conn, $sql );
     $result = array();
     while($data = mysqli_fetch_assoc($result))
