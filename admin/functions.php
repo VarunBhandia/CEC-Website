@@ -47,4 +47,15 @@ function get_category_id($conn){
     return $result;
 }
 
+function get_related_posts($categoryid,$conn){
+    $sql = "SELECT * FROM `cec-blog` WHERE Category = '$categoryid'";
+    $res = mysqli_query($conn, $sql );
+    $result = array();
+    while($data = mysqli_fetch_assoc($res))
+    {
+        $result[] = $data['id'];
+    }
+    return $result;
+}
+
 ?>

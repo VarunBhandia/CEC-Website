@@ -2,6 +2,7 @@
     $topic = $_GET['topic'];
     $blog_id = $_GET['id'];
     $category = $_GET['category'];
+    $categoryid = $_GET['catid'];
     $sql = "SELECT * FROM `cec-blog` WHERE id = '$blog_id'";
     $result = mysqli_query($conn, $sql ); 
     $row = mysqli_fetch_assoc($result);
@@ -71,7 +72,7 @@ function myFunction() {
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <div class="article">
+                    <div class="">
                         <div class="article-header">
                             <div class="article-heading">
                                 <?php echo $topic; ?>
@@ -85,14 +86,18 @@ function myFunction() {
                                 <?php echo $desc; ?>
                             </p>
                         </div>
-                        <hr>
+                        <div class="greybox">
+                            
+                        </div>                        
                         <div class="next-prev">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <P>PREVIOUS POST</P>
+                                    <a href="">
+                                    <p class="prevpost">PREVIOUS POST</p>
+                                    </a>
                                 </div>
-                                <div class="col-md-6">
-                                    <P>NEXT POST</P>
+                                <div class="col-md-6"><a href="">
+                                    <p class="nxtpost">NEXT POST</p></a>
                                 </div>
                             </div>
                             </div>
@@ -101,7 +106,29 @@ function myFunction() {
                 <div class="col-md-2"></div>
             </div>
             <div class="row">
-                <div class="blog-slider">
+                <div class="related-posts">
+                    <?php
+                    $all_related = get_related_posts($categoryid,$conn);
+                    $cnt_related_posts = count($all_related);
+                    for($i = 0; $i < $cnt_related_posts; $i++)
+                    {
+                        $sql44 = "SELECT * FROM `cec-blog` WHERE id = '$all_related[$i]'";
+                        $result44 = mysqli_query($conn, $sql44 ); 
+                        $row44 = mysqli_fetch_assoc($result44);
+                        print "<div class='col-md-4'>
+                        <div class='thumbnail-posts'>
+                        <a href='http://localhost/cec-Website/blog.php?id=".$all_related[$i]."&category=".$category."&topic=".$row44['Topic']."&catid=".$categoryid."' target='_blank'>
+                        <div class='thumbnail-posts-img'>
+                        <img src='#' style='width:100%'>
+                        </div>
+                        <div class='thumbnail-posts-content'>
+                        <h5>".$row44['Topic']."</h5>
+                        </div>
+                        </a>
+                        </div>
+                        </div>";                        
+                    }?>
+
                 </div>
             </div>
         </div>

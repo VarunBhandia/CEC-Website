@@ -1,40 +1,55 @@
-.blog-image-background
+    .blog-image-background
         {
             width:70vw;
             height:60vh;
             background-image: url("");
             
         }
-        .article
-        {
-         width: 50vw;   
-        }
         
         .article-header
         {
                 margin-top: -25vh;
                 background-color: #3c4298;
-                height: 25vh;
+                height: 12em;
         }
         
         .article-heading
         {
-                color: white;
-    font-size: 2.5em;
-    padding-top: 10vh;
-    padding-left: 2vw;
+            color: white;
+            font-size: 2.5em;
+            padding-top: 1.5em;
+            padding-left: 3vw;
         }
         
         .article-category
         {
-            padding-left: 2vw;
-    color: white;
+            padding-top: .2em;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            padding-left: 3vw;
+            color: white;
         }
         
-        .article-desc
-        {
-/*
-            width: 50vw;
-            margin-left: 25vw;
-*/
-        }
+.article-desc
+{
+    padding-top: 2em;
+}
+
+.greybox{
+    height: .4em;
+    background-color: gainsboro;
+}
+
+.prevpost{
+    float: left;
+    padding-top: 2em;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.nxtpost{
+    float: right;
+    padding-top: 2em;
+    text-transform: uppercase;
+    font-size: 1em;
+}

@@ -180,7 +180,7 @@ function myFunction() {
             $cate_id = $row44['id'];
             print "<div class='col-md-4'>
             <div class='thumbnail-posts'>
-            <a href='http://localhost/cec-Website/blog.php?id=".($i+1)."&category=".$row44['name']."&topic=".$all_topics[$i]."' target='_blank'>
+            <a href='http://localhost/cec-Website/blog.php?id=".($i+1)."&category=".$row44['name']."&topic=".$all_topics[$i]."&catid=".$all_catid[$i]."' target='_blank'>
                 <div class='thumbnail-posts-img'>
                     <img src='#' style='width:100%'>
                 </div>
