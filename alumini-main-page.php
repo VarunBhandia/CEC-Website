@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ACTIVITIES</title>
+        <title>ALUMINI</title>
         <meta charset="utf-8">
         <meta name="google-site-verification" content="PcGjUA_gqUBIOTdXZ2LF2p1tUmzcvVtC2rCb7Mu-V1U" />
         <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->

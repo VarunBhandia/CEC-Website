@@ -46,14 +46,14 @@
     <a href="" style="padding-left: 3em;">TEAM</a>
     <a href="alumini-main-page.php" style="padding-left: 3em;" >ALUMINI</a>
     <a href="contact-us.php" style="padding-left: 3em;" >CONTACT</a>
-    <div class="dropdown">
-        <div onclick="dropdown()" class="dropbtn">Dropdown</div>
+    <a style="padding-left: 3em;">
+        <div onclick="dropdown()" class="dropbtn">MORE LINKS</div>
         <div id="myDropdown" class="dropdown-content">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </div>
-    </div>
+    </a>
 </div>
 <script>
 /* When the user clicks on the button, 

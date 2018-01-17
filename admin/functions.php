@@ -58,4 +58,15 @@ function get_related_posts($categoryid,$conn){
     return $result;
 }
 
+function get_team_name($conn){
+    $sql = "SELECT * FROM `team`";
+    $res = mysqli_query($conn, $sql );
+    $result = array();
+    while($data = mysqli_fetch_assoc($res))
+    {
+        $result[] = $data['name'];
+    }
+    return $result;
+}
+
 ?>

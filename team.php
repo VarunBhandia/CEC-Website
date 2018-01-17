@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<?php
+include("admin/functions.php");
+?>
 <html>
     <head>
-        <title>CONTACT US</title>
+        <title>TEAM</title>
         <meta charset="utf-8">
         <meta name="google-site-verification" content="PcGjUA_gqUBIOTdXZ2LF2p1tUmzcvVtC2rCb7Mu-V1U" />
         <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
@@ -27,8 +31,6 @@
         <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
         <link href="css/blog.css" type="text/css" rel="stylesheet">
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
-                <link href="css/contact-us.css" type="text/css" rel="stylesheet">
-
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.html"></script>
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
@@ -45,16 +47,17 @@
 
 
 <script src="js/cobox.js"></script>
+        
             </head>
-    <body>
-<div class="topnav" id="myTopnav">
+<body>
+    <div class="topnav" id="myTopnav">
     <a href="index.php" style="padding-left: 3em;">HOME</a>
     <a href="" style="padding-left: 3em;">ABOUT</a>
-    <a href="recent-posts.php" style="padding-left: 3em;">BLOG</a>
-    <a href="events.php" style="padding-left: 3em;" >ACTIVITIES</a>
+    <a href="recent-posts.php" style="padding-left: 3em;" class="active">BLOG</a>
+    <a href="events.php" style="padding-left: 3em;">ACTIVITIES</a>
     <a href="" style="padding-left: 3em;">TEAM</a>
     <a href="alumini-main-page.php" style="padding-left: 3em;" >ALUMINI</a>
-    <a href="contact-us.php" style="padding-left: 3em;" class="active">CONTACT</a>
+    <a href="contact-us.php" style="padding-left: 3em;" >CONTACT</a>
     <a href="" data-toggle="dropdown" class="dropdown-toggle" style="padding-left: 3em;">
         MORE LINKS
         <ul class="dropdown-menu" >
@@ -77,43 +80,37 @@ function myFunction() {
 }
 </script>
 
-        <div class="row grey">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h4 class="getin">GET IN TOUCH</h4>
-                </div>
-                <div class="col-md-3"></div>
-        </div>
-            <div class="row grey2">
-                <div class="col-md-3"></div>
-                <div class="col-md-4">
-                    <h4 class="address">
-                        ADDRESS
-                    </h4>
-                    <p class="department">
-                        CIVIL ENGINEERING DEPARTMENT
-                        <br>
-                        IIT ROORKEE,ROORKEE-247667
-                        <br>
-                        UTTARAKHAND, INDIA
-                    </p>
-                </div>      
-                <div class="col-md-3">
-                    <p class="phone">
-                        PHONE +91-99999 99999
-                        <br>
-                        Email ceciitr@yahoo.co.in
-                    </p>
-                </div>
-                <div class="col-md-1"></div>
+    <div class="row padding">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>TEAMS</h3>
             </div>
-        <div class="row grey">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h4 class="claim">ALL RIGHTS RESERVED BY CEC IITR<sup>&copy;</sup></h4>
-                </div>
-                <div class="col-md-3"></div>
+            <div class="col-md-8">
+            </div>
         </div>
-        <?php include("footer.php"); ?>
+        <?php
+        $all_name = get_team_name($conn);
+        $cnt_name = count($all_name);
+        for($i = 0; $i < $cnt_name; $i++)
+        {
+            print "<div class='col-md-4'>
+            <div class='thumbnail-posts'>
+            <a href='' target='_blank'>
+                <div class='thumbnail-posts-img'>
+                    <img src='#' style='width:100%'>
+                </div>
+                <div class='thumbnail-posts-content'>
+                    <h5>".$all_name[$i]."</h5>
+                </div>
+            </a>
+        </div>
+    </div>";                        
+        }?>
+    </div>
+        </div>
+    <?php include("footer.php"); ?>
 </body>
 </html>
