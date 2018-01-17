@@ -32,8 +32,8 @@
     </head>
     <style type="text/css">
         .new-logo{
-            width: 10vh;
-            height: 10vh;
+            width: 6vw;
+            height: 6vw;
         }
         #blog{
             margin-bottom:100px;
@@ -49,19 +49,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>                        
                   </button>
-                  <a class="navbar-brand" href="#"><img src="img/cec-logo-c.png" class="new-logo"  />  </a>
+                  <a class="navbar-brand" style="margin-top: -.5em; padding-left: 5vw;" href="#"><img src="img/cec-logo-c.png" class="new-logo"  />  </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                   <ul class="nav navbar-nav navbar-right">
-                      <li><a href="index.php" style="padding-left: 3em;" class=" active">HOME</a></li>
-                      <li><a href="" style="padding-left: 3em;">ABOUT</a></li>
-                      <li><a href="recent-posts.php" style="padding-left: 3em;">BLOG</a></li>
-                      <li><a href="events.php" style="padding-left: 3em;">ACTIVITIES</a></li>
-                      <li><a href="" style="padding-left: 3em;">TEAM</a></li>
-                      <li><a href="alumini-main-page.php" style="padding-left: 3em;" >ALUMINI</a></li>
-                      <li><a href="contact-us.php" style="padding-left: 3em;" >CONTACT</a></li>
+                      <li><a href="index.php" style="padding-left: 3em;padding-right: 2em;" class=" active">HOME</a></li>
+                      <li><a href="" style="padding-left: 3em;padding-right: 2em;">ABOUT</a></li>
+                      <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
+                      <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
+                      <li><a href="" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
+                      <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>
+                      <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
                       <li class="dropdown">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE LINKS <span class="caret"></span></a>
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-left: 3em;padding-right: 9em;">MORE LINKS <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                           <li><a href="#">Page 1-3</a></li>
                       </ul>

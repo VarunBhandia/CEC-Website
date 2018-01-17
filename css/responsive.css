@@ -1,10 +1,8 @@
 #full-main .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
-    background-color: #2F5894 !important;
 }
 #sidebarhead .nav>li>a:focus, #sidebarhead .nav>li>a:hover {
     text-decoration: none;
-    background-color: #2F5894 !important;
 }
 @media (min-width:2200px) {
 .col-sm-10.full-sidebar, .col-sm-10.page.Dashboard, .col-xs-12.page, .col-sm-10.page {
