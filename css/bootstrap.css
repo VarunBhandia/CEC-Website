@@ -4204,7 +4204,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   outline: 0;
 }
 .navbar-toggle .icon-bar {
-  display: block;
+    color: black;
+    border-color: black;
+    background-color: black;
+    display: block;
   width: 22px;
   height: 2px;
   border-radius: 1px;

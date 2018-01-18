@@ -139,3 +139,9 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
 .padding{
         padding: 2em;
 }
+@media only screen and (max-width: 500px) {
+    .test
+    {
+        display: none;
+    }
+}

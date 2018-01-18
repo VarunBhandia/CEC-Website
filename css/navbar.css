@@ -92,6 +92,10 @@
 
 .show1 {display:block;}
 
+.new-logo{
+            width: 6vw;
+            height: 6vw;
+        }
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}

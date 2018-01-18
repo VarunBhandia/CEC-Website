@@ -31,14 +31,7 @@
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
     </head>
     <style type="text/css">
-        .new-logo{
-            width: 6vw;
-            height: 6vw;
-        }
-        #blog{
-            margin-bottom:100px;
-            position:relative;
-        }
+        
     </style>
     <body>
         <nav class="navbar">
@@ -53,7 +46,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                   <ul class="nav navbar-nav navbar-right">
-                      <li><a href="index.php" style="padding-left: 3em;padding-right: 2em;" class=" active">HOME</a></li>
+                      <li><a href="index.php" style="padding-left: 3em;padding-right: 2em;">HOME</a></li>
                       <li><a href="" style="padding-left: 3em;padding-right: 2em;">ABOUT</a></li>
                       <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
                       <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
