@@ -63,7 +63,7 @@
                       <li><a href="" style="padding-left: 3em;padding-right: 2em;">ABOUT</a></li>
                       <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
                       <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
-                      <li><a href="" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
+                      <li><a href="team.php" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
                       <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>
                       <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
                       <li class="dropdown">
@@ -82,7 +82,7 @@
     <div class="col-md-8">
         <div class="row padding">
             <div class="col-md-4">
-                <h3>ALUMINI</h3>
+                <h3 class="all-heading">ALUMINI</h3>
             </div>
             <div class="col-md-8">
             </div>

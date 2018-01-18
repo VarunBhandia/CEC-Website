@@ -66,7 +66,7 @@ include("admin/functions.php");
                       <li><a href="" style="padding-left: 3em;padding-right: 2em;">ABOUT</a></li>
                       <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
                       <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
-                      <li><a href="" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
+                      <li><a href="team.php" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
                       <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>
                       <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
                       <li class="dropdown">
@@ -80,12 +80,12 @@ include("admin/functions.php");
               </div>
         </nav>
     <div class="row padding">
-    <div class="col-md-2">
+    <div class="col-sm-2">
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
         <div class="row">
             <div class="col-md-4">
-                <h3>TEAMS</h3>
+                <h3 class="all-heading" >TEAMS</h3>
             </div>
             <div class="col-md-8">
             </div>
@@ -109,6 +109,9 @@ include("admin/functions.php");
     </div>";                        
         }?>
     </div>
+            <div class="col-md-2">
+    </div>
+
         </div>
     <?php include("footer.php"); ?>
 </body>

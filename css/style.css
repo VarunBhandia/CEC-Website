@@ -862,3 +862,8 @@ nav#footer p{
             position:relative;
             width:40%;
         }
+.all-heading{
+font-size: 1.3em;
+    font-weight: 550;
+    margin: 2em;
+    color: darkblue;}
