@@ -5,8 +5,17 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
+
+* {
+   font-family: myFirstFont;
+}
+
 html {
-  font-family: sans-serif;
+  font-family: myFirstFont;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -1074,7 +1083,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, myFirstFont;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -5837,7 +5846,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, myFirstFont;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5945,7 +5954,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, myFirstFont;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
