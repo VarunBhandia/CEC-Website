@@ -116,18 +116,47 @@ function myFunction() {
         <div class="container-fluid ">
             <img src="Design/home%20page.jpg" class="img-home">
         </div>
-        <div id="about">
             <div class="row">
                 <div class="col-md-1"></div>
                                 <div class="col-md-10">
 
-            <p>Civil Engineering Consortium is a Student Affair Committee of department of Civil Engineering, that is responsible to promote safe and intellectually stimulating learning environment that encourages not only the academic success of civil engineering students but also focus on personal development, sports and other extracurriculars student activities. With the chain of activities going round the year, students get ample opportunity to flash, flourosh and furnish their talents.</p>
+            <p class="about_r">Civil Engineering Consortium is a Student Affair Committee of department of Civil Engineering, that is responsible to promote safe and intellectually stimulating learning environment that encourages not only the academic success of civil engineering students but also focus on personal development, sports and other extracurriculars student activities. With the chain of activities going round the year, students get ample opportunity to flash, flourosh and furnish their talents.</p>
                                     </div>
                                 <div class="col-md-1"></div>
 
                 </div>
         
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                        <div class="row about">
+            <div class="col-md-3">
+                <div class="eventbox"></div>
+            </div>
+            <div class="col-md-9">
+                <div class="eventbox"></div>
+            </div>
         </div>
+        <div class="row about">
+            <div class="col-md-6">
+                <div class="eventbox"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="eventbox"></div>
+            </div>
+        </div>
+        <div class="row about">
+            <div class="col-md-9">
+                <div class="eventbox"></div>
+            </div>
+            <div class="col-md-3">
+                <div class="eventbox"></div>
+            </div>
+        </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.html"></script>
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
