@@ -32,6 +32,80 @@ include("serverblog.php");
         .patientsList tr:nth-child(odd){
             background-color: #f2f2f2;
         }
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #86adf3;
+            margin: auto;
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-top: .5em;
+            border: 0px solid #888;
+            width: 30%;
+            box-shadow: 4px 16px 13px 5px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: .5s;        
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+        }
+
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+        /* The Close Button */
+        .close {
+            color: #01010e;
+            float: right;
+            font-size: 2.5em;
+            font-weight: 1000;
+            transition: .5s;        
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .modal-body {padding: 2px 16px;}
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+        .team-form{
+            
+        }
     </style>
 </head>
 <div class="tab-content">
@@ -65,7 +139,69 @@ include("serverblog.php");
                         <h1><strong>Team Members</strong></h1>
                     </div>
                     <div class="col-md-1">
-                        <h5><a href="" class="btn btn-info">Add New</a></h5>
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtn" class="btn btn-info">Add New</button>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                              <form class="team-form row" method="POST" action="">
+                                  <span class="close">&times;</span>
+                                  <div class="patient-form-div-border col-sm-12" >
+                                      <div class="patient-form-div-tag" >Name</div>
+                                      <input type="text" class="patient-form-input" name="name1" required>
+                                  </div>
+                                  <div class="patient-form-div-border col-sm-5" >
+                                      <div class="patient-form-div-tag" >Post</div>
+                                      <input type="date" class="patient-form-input" name="dueon1" required >
+                                  </div>
+                                  <div class="patient-form-div-border col-sm-5" >
+                                      <div class="patient-form-div-tag" >Year</div>
+                                      <input type="date" class="patient-form-input" name="dueon1" required >
+                                  </div>
+                                  <div class="patient-form-div-border col-sm-5" >
+                                      <div class="patient-form-div-tag" >Profile Picture</div>
+                                      <input type="date" class="patient-form-input" name="dueon1" required >
+                                  </div>
+                                  <div class="patient-form-div-border col-sm-5" >
+                                      <div class="patient-form-div-tag" >Image Link</div>
+                                      <input type="date" class="patient-form-input" name="dueon1" required >
+                                  </div>
+                              </form>
+
+                          </div>
+
+                        </div>
+
+                        <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+
+                        // Get the button that opens the modal
+                        var btn = document.getElementById("myBtn");
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks the button, open the modal 
+                        btn.onclick = function() {
+                            modal.style.display = "block";
+                        }
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() {
+                            modal.style.display = "none";
+                        }
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                        </script>
+
                     </div>
                 </div>
                 </div></div></div>
