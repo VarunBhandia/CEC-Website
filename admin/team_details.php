@@ -40,7 +40,7 @@ include("serverblog.php");
 			<div class="col-sm-12 col-xs-12">
 
 <?php
-                $sqltest = "SELECT * FROM `cec-team`";
+                $sqltest = "SELECT * FROM `team`";
                 $resulttest = mysqli_query($conn, $sqltest );
 //                if($_POST['update'] == 'Publish')
 //                {
@@ -65,7 +65,7 @@ include("serverblog.php");
                         <h1><strong>Team Members</strong></h1>
                     </div>
                     <div class="col-md-1">
-                        <h5><a href="http://localhost/cec-Website/admin/blog-writing.php" class="btn btn-info">Create a Blog</a></h5>
+                        <h5><a href="" class="btn btn-info">Add New</a></h5>
                     </div>
                 </div>
                 </div></div></div>
@@ -78,12 +78,9 @@ include("serverblog.php");
                     <table class="patientsList" >
                         <thead  style="font-weight: 700">
                             <tr style="color: #333333; background-color: white; cursor:pointer">    
-                                <td>Id</td>		
-                                <td >Post Title</td>
-                                <td>Category</td>
-                                <td >Time</td>
-                                <td >Status</td>
-                                <td>Action</td>
+                                <td>Name</td>
+                                <td>Year</td>
+                                <td>Post</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -92,43 +89,9 @@ include("serverblog.php");
                             {
                                 while($rowtest = mysqli_fetch_assoc($resulttest)){    ?>
                             <tr>
-                                <td><?php echo $rowtest['id'] ?></td>		
-                                <td ><?php echo $rowtest['Topic'] ?></td>
-                                <td><?php
-                                        $category = $rowtest['Category'];
-                                        $sql1 = "SELECT * FROM `category` WHERE id = $category";
-                                        $result1 = mysqli_query($conn,$sql1);
-                                    while($row1 = mysqli_fetch_assoc($result1))
-                                    {echo $row1['name'] ;} ?>
-                                </td>
-                                <td ><?php echo $rowtest['modified_time'] ?></td>
-                                <td ><?php 
-                                        if( $rowtest['status'] == 1)
-                                        {echo "Published";}
-                                    else {echo "Saved";}?>
-                                </td>
-                                <td>
-                                    <?php 
-                                    if( $rowtest['status'] == 1)
-                                    {
-                                    ?>
-                                    <form method="post" action="http://localhost/cec-Website/admin/blog-writing.php">
-                                        <input class="btn btn-info" type="hidden" name="id" value="<?php echo $rowtest['id']; ?>">
-                                        <input class="btn btn-info" type="submit" name="edit" value="Edit">
-                                    </form><?php
-                                    }
-                                    else 
-                                    {
-                                    ?>
-                                    <form method="post">
-                                        <input class="btn btn-info" type="hidden" name="id" value="<?php echo $rowtest['id']; ?>">
-                                        <input formaction="http://localhost/cec-Website/admin/blog-writing.php" class="btn btn-info" type="submit" name="edit" value="Edit"><br>
-                                        <input class="btn btn-info" type="submit" name="update" value="Publish">
-                                    </form>
-                                    <?php
-                                    }
-                                    ?>
-                                </td>
+                                <td><?php echo $rowtest['name'] ?></td>
+                                <td><?php echo $rowtest['year'] ?></td>
+                                <td><?php echo $rowtest['post'] ?></td>
                             </tr>
                             <?php }}  ?>
                         </tbody>
