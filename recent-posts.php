@@ -171,6 +171,7 @@ include("admin/functions.php");
         <?php
         $all_topics = get_category_index($conn);
         $all_catid = get_category_id($conn);
+        $all_blogid = get_blog_id($conn);
         $cnt_topics = count($all_topics);
         for($i = 0; $i < $cnt_topics; $i++)
         {
@@ -180,7 +181,7 @@ include("admin/functions.php");
             $cate_id = $row44['id'];
             print "<div class='col-md-4'>
             <div class='thumbnail-posts'>
-            <a href='http://localhost/cec-Website/blog.php?id=".($i+1)."&category=".$row44['name']."&topic=".$all_topics[$i]."&catid=".$all_catid[$i]."' target='_blank'>
+            <a href='http://localhost/cec-Website/blog.php?id=".$all_blogid[$i]."&category=".$row44['name']."&topic=".$all_topics[$i]."&catid=".$all_catid[$i]."' target='_blank'>
                 <div class='thumbnail-posts-img'>
                     <img src='#' style='width:100%'>
                 </div>

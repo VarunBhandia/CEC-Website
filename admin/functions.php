@@ -26,7 +26,7 @@ function searchconditions($conn,$parm) {
 }
 
 function get_category_index($conn){
-    $sql = "SELECT * FROM `cec-blog`";
+    $sql = "SELECT * FROM `cec-blog` where status = 1";
     $res = mysqli_query($conn, $sql );
     $result = array();
     while($data = mysqli_fetch_assoc($res))
@@ -37,12 +37,23 @@ function get_category_index($conn){
 }
 
 function get_category_id($conn){
-    $sql = "SELECT * FROM `cec-blog`";
+    $sql = "SELECT * FROM `cec-blog` where status = 1";
     $res = mysqli_query($conn, $sql );
     $result = array();
     while($data = mysqli_fetch_assoc($res))
     {
         $result[] = $data['Category'];
+    }
+    return $result;
+}
+
+function get_blog_id($conn){
+    $sql = "SELECT * FROM `cec-blog` where status = 1";
+    $res = mysqli_query($conn, $sql );
+    $result = array();
+    while($data = mysqli_fetch_assoc($res))
+    {
+        $result[] = $data['id'];
     }
     return $result;
 }
