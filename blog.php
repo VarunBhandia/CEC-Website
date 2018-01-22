@@ -11,24 +11,20 @@
 
 <html>
     <head>
-        <title><?php echo $topic; ?></title> 
-<!--
-        <link href="navbar.css" type="text/css" rel="stylesheet">
-        <link href="blog.css" type="text/css" rel="stylesheet">
---><meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title><?php echo $topic; ?></title>
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">    
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+        <!-- Stylesheet
+        ================================================== -->
+        <link rel="stylesheet" type="text/css"  href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" href="css/cobox.css">
+        <script type="text/javascript" src="js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <link href="css/blog.css" type="text/css" rel="stylesheet">
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
-        <link href="css/recent-posts.css" type="text/css" rel="stylesheet">
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.html"></script>
-    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/SmoothScroll.js"></script>
-    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+
         <link href="css/blog_latest.css" type="text/css" rel="stylesheet">
     </head>
     <body>
