@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2018 at 09:49 AM
+-- Generation Time: Feb 01, 2018 at 03:30 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -83,24 +83,26 @@ CREATE TABLE `team` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL
+  `link` varchar(255) NOT NULL,
+  `post` varchar(255) NOT NULL,
+  `year` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `team`
 --
 
-INSERT INTO `team` (`id`, `name`, `img`, `link`) VALUES
-(1, 'varun', '', ''),
-(2, 'varun2', '', ''),
-(3, 'varun3', '', ''),
-(4, 'varun4', '', ''),
-(5, 'varun5', '', ''),
-(6, 'varun6', '', ''),
-(7, 'varun7', '', ''),
-(8, 'varun8', '', ''),
-(9, 'varun9', '', ''),
-(10, 'varun10', '', '');
+INSERT INTO `team` (`id`, `name`, `img`, `link`, `post`, `year`) VALUES
+(1, 'varun', '', '', 'secy', 'Second'),
+(2, 'varun2', '', '', 'secy2', 'second'),
+(3, 'varun3', '', '', '', ''),
+(4, 'varun4', '', '', '', ''),
+(5, 'varun5', '', '', '', ''),
+(6, 'varun6', '', '', '', ''),
+(7, 'varun7', '', '', '', ''),
+(8, 'varun8', '', '', '', ''),
+(9, 'varun9', '', '', '', ''),
+(10, 'varun10', '', '', '', '');
 
 --
 -- Indexes for dumped tables
