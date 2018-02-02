@@ -25,12 +25,11 @@
         <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
         <link href="css/blog.css" type="text/css" rel="stylesheet">
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
-    
-	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
-	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
-	<!--script type="text/javascript" src="engine0/jquery.js"></script-->
-	<!-- End WOWSlider.com HEAD section --></head>
-    <style type="text/css">
+        <!-- Start WOWSlider.com HEAD section -->
+        <link rel="stylesheet" type="text/css" href="engine0/style.css" />
+        <script type="text/javascript" src="engine0/jquery.js"></script>
+        <!-- End WOWSlider.com HEAD section -->
+        <style type="text/css">
         
     </style>
     <body>
@@ -62,25 +61,6 @@
                 </div>
               </div>
         </nav>
-<!--
-<div class="topnav" id="myTopnav">
-    <a href="index.php" style="padding-left: 3em;" class="active">HOME</a>
-    <a href="" style="padding-left: 3em;">ABOUT</a>
-    <a href="recent-posts.php" style="padding-left: 3em;">BLOG</a>
-    <a href="events.php" style="padding-left: 3em;">ACTIVITIES</a>
-    <a href="" style="padding-left: 3em;">TEAM</a>
-    <a href="alumini-main-page.php" style="padding-left: 3em;" >ALUMINI</a>
-    <a href="contact-us.php" style="padding-left: 3em;" >CONTACT</a>
-    <a style="padding-left: 3em;">
-        <div onclick="dropdown()" class="dropbtn">MORE LINKS</div>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </a>
-</div>
--->
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -103,27 +83,13 @@ window.onclick = function(event) {
   }
 }
 </script>
-<!--
-
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
--->
-        
-	<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
-	<div id="wowslider-container0">
-	<div class="ws_images"><ul>
+        <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container0">
+<div class="ws_images"><ul>
 		<li><img src="data0/images/1dscn0355_2017_01_08_16_57_11_utc.jpg" alt="" title="" id="wows0_0"/></li>
 		<li><img src="data0/images/dscn1388_2017_02_23_06_24_06_utc.jpg" alt="" title="" id="wows0_1"/></li>
 		<li><img src="data0/images/dscn1394_2017_02_23_06_24_06_utc.jpg" alt="" title="" id="wows0_2"/></li>
-		<li><a href="http://wowslider.net"><img src="data0/images/dscn1410_2017_02_23_06_24_06_utc.jpg" alt="jquery image slider" title="" id="wows0_3"/></a></li>
+		<li><a href="http://wowslider.net"><img src="data0/images/dscn1410_2017_02_23_06_24_06_utc.jpg" alt="slider jquery" title="" id="wows0_3"/></a></li>
 		<li><img src="data0/images/dscn1411_2017_02_23_06_24_06_utc.jpg" alt="" title="" id="wows0_4"/></li>
 	</ul></div>
 	<div class="ws_bullets"><div>
@@ -133,13 +99,16 @@ function myFunction() {
 		<a href="#" title=""><span><img src="data0/tooltips/dscn1410_2017_02_23_06_24_06_utc.jpg" alt=""/>4</span></a>
 		<a href="#" title=""><span><img src="data0/tooltips/dscn1411_2017_02_23_06_24_06_utc.jpg" alt=""/>5</span></a>
 	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">wow slider</a> by WOWSlider.com v8.8</div>
-	<div class="ws_shadow"></div>
-	</div>	
-	<script type="text/javascript" src="engine0/wowslider.js"></script>
-	<script type="text/javascript" src="engine0/script.js"></script>
-	<!-- End WOWSlider.com BODY section --><div class="container-fluid ">
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine0/wowslider.js"></script>
+<script type="text/javascript" src="engine0/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+<!--
+        <div class="container-fluid ">
             <img src="Design/home%20page.jpg" class="img-home">
         </div>
+-->
             <div class="row">
                 <div class="col-md-1"></div>
                                 <div class="col-md-10">
