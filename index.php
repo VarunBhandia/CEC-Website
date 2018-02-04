@@ -26,8 +26,8 @@
         <link href="css/blog.css" type="text/css" rel="stylesheet">
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
         <!-- Start WOWSlider.com HEAD section -->
-        <link rel="stylesheet" type="text/css" href="engine0/style.css" />
-        <script type="text/javascript" src="engine0/jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+        <script type="text/javascript" src="engine1/jquery.js"></script>
         <!-- End WOWSlider.com HEAD section -->
         <style type="text/css">
         
@@ -83,28 +83,25 @@ window.onclick = function(event) {
   }
 }
 </script>
-        <!-- Start WOWSlider.com BODY section -->
-<div id="wowslider-container0">
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
 <div class="ws_images"><ul>
-		<li><img src="data0/images/1dscn0355_2017_01_08_16_57_11_utc.jpg" alt="" title="" id="wows0_0"/></li>
-		<li><img src="data0/images/dscn1388_2017_02_23_06_24_06_utc.jpg" alt="" title="" id="wows0_1"/></li>
-		<li><img src="data0/images/dscn1394_2017_02_23_06_24_06_utc.jpg" alt="" title="" id="wows0_2"/></li>
-		<li><a href="http://wowslider.net"><img src="data0/images/dscn1410_2017_02_23_06_24_06_utc.jpg" alt="slider jquery" title="" id="wows0_3"/></a></li>
-		<li><img src="data0/images/dscn1411_2017_02_23_06_24_06_utc.jpg" alt="" title="" id="wows0_4"/></li>
+		<li><img src="data1/images/1dscn0355_2017_01_08_16_57_11_utc.jpg" alt="1-DSCN0355 (2017_01_08 16_57_11 UTC)" title="1-DSCN0355 (2017_01_08 16_57_11 UTC)" id="wows1_0"/></li>
+		<li><img src="data1/images/dscn1373_2017_02_23_06_24_06_utc.jpg" alt="DSCN1373 (2017_02_23 06_24_06 UTC)" title="DSCN1373 (2017_02_23 06_24_06 UTC)" id="wows1_1"/></li>
+		<li><a href="http://wowslider.net"><img src="data1/images/dscn1381_2017_02_23_06_24_06_utc.jpg" alt="javascript slider" title="DSCN1381 (2017_02_23 06_24_06 UTC)" id="wows1_2"/></a></li>
+		<li><img src="data1/images/dscn1388_2017_02_23_06_24_06_utc.jpg" alt="DSCN1388 (2017_02_23 06_24_06 UTC)" title="DSCN1388 (2017_02_23 06_24_06 UTC)" id="wows1_3"/></li>
 	</ul></div>
 	<div class="ws_bullets"><div>
-		<a href="#" title=""><span><img src="data0/tooltips/1dscn0355_2017_01_08_16_57_11_utc.jpg" alt=""/>1</span></a>
-		<a href="#" title=""><span><img src="data0/tooltips/dscn1388_2017_02_23_06_24_06_utc.jpg" alt=""/>2</span></a>
-		<a href="#" title=""><span><img src="data0/tooltips/dscn1394_2017_02_23_06_24_06_utc.jpg" alt=""/>3</span></a>
-		<a href="#" title=""><span><img src="data0/tooltips/dscn1410_2017_02_23_06_24_06_utc.jpg" alt=""/>4</span></a>
-		<a href="#" title=""><span><img src="data0/tooltips/dscn1411_2017_02_23_06_24_06_utc.jpg" alt=""/>5</span></a>
-	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">wow slider</a> by WOWSlider.com v8.8</div>
+		<a href="#" title="1-DSCN0355 (2017_01_08 16_57_11 UTC)"><span><img src="data1/tooltips/1dscn0355_2017_01_08_16_57_11_utc.jpg" alt="1-DSCN0355 (2017_01_08 16_57_11 UTC)"/>1</span></a>
+		<a href="#" title="DSCN1373 (2017_02_23 06_24_06 UTC)"><span><img src="data1/tooltips/dscn1373_2017_02_23_06_24_06_utc.jpg" alt="DSCN1373 (2017_02_23 06_24_06 UTC)"/>2</span></a>
+		<a href="#" title="DSCN1381 (2017_02_23 06_24_06 UTC)"><span><img src="data1/tooltips/dscn1381_2017_02_23_06_24_06_utc.jpg" alt="DSCN1381 (2017_02_23 06_24_06 UTC)"/>3</span></a>
+		<a href="#" title="DSCN1388 (2017_02_23 06_24_06 UTC)"><span><img src="data1/tooltips/dscn1388_2017_02_23_06_24_06_utc.jpg" alt="DSCN1388 (2017_02_23 06_24_06 UTC)"/>4</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">slider jquery</a> by WOWSlider.com v8.8</div>
 <div class="ws_shadow"></div>
 </div>	
-<script type="text/javascript" src="engine0/wowslider.js"></script>
-<script type="text/javascript" src="engine0/script.js"></script>
-<!-- End WOWSlider.com BODY section -->
-<!--
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section --><!--
         <div class="container-fluid ">
             <img src="Design/home%20page.jpg" class="img-home">
         </div>
