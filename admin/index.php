@@ -46,20 +46,30 @@ include("serverblog.php");
                 {
                     $row_id = $_POST['id'];
                     echo $row_id;
-                    $sqlblog = "UPDATE cec-blog SET status = '1' WHERE id = '$row_id' ";
+                    $sqlblog = "UPDATE `cec-blog` SET status = '1' WHERE id = '$row_id' ";
+                    print $sqlblog;
                     $resultblog = mysqli_query($conn, $sqlblog );
-                    $rowblog = mysqli_fetch_assoc($resultblog);
-                    $result3 = mysqli_query($conn,$sql3);                                        
+                    //$rowblog = mysqli_fetch_assoc($resultblog);
+                    $result3 = mysqli_query($conn,$sqlblog);                                        
                 }
                 
-                if(isset($_POST['search_condition']))
-                {
-                    $search_id = $_POST['search_condition'];
-                    $search = " where Category = '$search_id' ";
-                }else{$search = '';}
-                $sql = "SELECT * FROM cec-blog $search ";
-                $result = mysqli_query($conn,$sql);
+//                if(isset($_POST['search_condition']))
+//                {
+//                    $search_id = $_POST['search_condition'];
+//                    $search = " where Category = '$search_id' ";
+//                }else{$search = '';}
+//                $sql = "SELECT * FROM cec-blog $search ";
+//                $result = mysqli_query($conn,$sql);
+//                if($_POST['update'] == 'Publish')
+//                {
+//                    $row_id = $_POST['id'];
+//                    echo $row_id;
+//                    $sql3 = "UPDATE `cec-blog` SET status = '1' WHERE id = '$row_id' ";
+//                    $result3= mysqli_query($conn, $sql3 );
+//                }
+
                 ?>
+                
                 <div class="row">
                     <div class="col-md-10">
                         <h1><strong>Recent Blogs</strong></h1>
@@ -109,25 +119,21 @@ include("serverblog.php");
                                 </td>
                                 <td>
                                     <?php 
-                                    if( $rowtest['status'] == 1)
-                                    {
+                                        if( $rowtest['status'] == 1){
                                     ?>
                                     <form method="post" action="http://localhost/cec-Website/admin/blog-writing.php">
                                         <input class="btn btn-info" type="hidden" name="id" value="<?php echo $rowtest['id']; ?>">
                                         <input class="btn btn-info" type="submit" name="edit" value="Edit">
-                                    </form><?php
-                                    }
-                                    else 
-                                    {
+                                    </form>
+                                    <?php
+                                        } else {
                                     ?>
                                     <form method="post">
                                         <input class="btn btn-info" type="hidden" name="id" value="<?php echo $rowtest['id']; ?>">
                                         <input formaction="http://localhost/cec-Website/admin/blog-writing.php" class="btn btn-info" type="submit" name="edit" value="Edit"><br>
                                         <input class="btn btn-info" type="submit" name="update" value="Publish">
                                     </form>
-                                    <?php
-                                    }
-                                    ?>
+                                    <?php } ?>
                                 </td>
                             </tr>
                             <?php }}  ?>
