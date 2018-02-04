@@ -12,15 +12,19 @@
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--
 		<script src="../admin/editor.js"></script>
 		<script>
 			$(document).ready(function() {
 				$("#txtEditor").Editor();
 			});
 		</script>
+-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link href="../admin/editor.css" type="text/css" rel="stylesheet"/>
+<!--		<link href="../admin/editor.css" type="text/css" rel="stylesheet"/>-->
+        <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+        <script>tinymce.init({ selector:'textarea' });</script>
 		<title>Admin-Blog-Writing</title>
         <style>
             .txtarea
@@ -66,7 +70,7 @@
                 $edit_id = $_POST['id'];
                 if(isset($_POST['edit']))
                 {
-                    $sqlblog = "SELECT * FROM cec-blog where id='$edit_id'"; 
+                    $sqlblog = "SELECT * FROM `cec-blog` where id='$edit_id'"; 
                     $resultblog = mysqli_query($conn, $sqlblog );
                     $rowblog = mysqli_fetch_assoc($resultblog);
                 }
@@ -95,7 +99,7 @@
                     <div class="form-group">
                         <label for="Description" class="control-label">Description/ Content</label>
                         <div class="col-lg-12 nopadding">
-                            <textarea id="txtEditor" class="textdescription" name="texteditor22">
+                            <textarea id="txtEditor" name="texteditor22">
                                 <?php echo $rowblog['Texteditor']; ?><?php if($_GET['action'] == 'edit'){echo $post_content;}?>
                             </textarea>
                         </div>
@@ -113,6 +117,7 @@
                     <input id="blogSave" name="edit_submit" type="submit" class="btn btn-primary submit_data" value="Save">
                     <?php }?>
                     <input type="hidden" name="texteditor" value="<?php echo $row['Texteditor']; ?>" id="texteditor">
+                    </div>
                 </form>
             </div>
         </div>
