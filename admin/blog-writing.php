@@ -100,7 +100,7 @@
                         <label for="Description" class="control-label">Description/ Content</label>
                         <div class="col-lg-12 nopadding">
                             <textarea id="txtEditor" name="texteditor22">
-                                <?php echo $rowblog['Texteditor']; ?><?php if($_GET['action'] == 'edit'){echo $post_content;}?>
+                                <?php echo $rowblog['Texteditor']; ?><?php if($_POST['action'] == 'edit'){echo $post_content;}?>
                             </textarea>
                         </div>
                         <small id="emailHelp" class="form-text text-muted">Please Enter Your Topic Descriptions. </small>
@@ -116,53 +116,26 @@
                     <input id="blogSubmit" name="edit_submit" type="submit" class="btn btn-primary submit_data" value="Submit">
                     <input id="blogSave" name="edit_submit" type="submit" class="btn btn-primary submit_data" value="Save">
                     <?php }?>
-                    <input type="hidden" name="texteditor" value="<?php echo $row['Texteditor']; ?>" id="texteditor">
                     </div>
                 </form>
             </div>
         </div>
-        <script>
-			$(document).ready(function() {
-				//$("#txtEditor").Editor();
-				$(".submit_data").click(function(){
-                   var value = $(".Editor-editor").html(); 
-                   $("#texteditor").val(value);
-                });
-			});
-			
-			$("texteditor").val();
-		</script>
-        <script>
-			$(document).ready(function() {
-				<?php
-			    	if(isset($_POST['edit'])){?>
-				 	$("#txtEditor").Editor("setText", '<?php echo $row['Texteditor'];?>');
-				<?php }else
-                    {	?>			
-                        //$("#txtEditor").Editor();
-                    <?php } ?>
-				 $(".submit_data").click(function(){
-                   var value = $(".Editor-editor").html(); 
-                   $("#texteditor").val(value);
-                });
-			});
-			$("texteditor").val();
-		</script>
+        
         
         <?php
         $image_name = $_FILES['image']['name'];
                     $tmp_name = $_FILES['image']['tmp_name'];
-                    $location = 'C:/xampp/htdocs/DocConsult/Doctor-tip-Blog/line-control-master/doctor-tips-images/';
+                    $location = '';
                     move_uploaded_file($tmp_name,$location.$image_name);
                     
         if(isset($_POST['edit_submit']))
         {                      
             $Topic = $_POST['title'];
-            $Texteditor = htmlspecialchars($_POST['texteditor']);
+            $Texteditor = htmlspecialchars($_POST['texteditor22']);
             $imagename = $image_name;
             //$Category = $_POST['Category'];
             $edit_id = $_POST['edit_id'];
-            $sqlcond = "SELECT * FROM cec-blog where Category = '$Category'";
+            $sqlcond = "SELECT * FROM `cec-blog` where Category = '$Category'";
             $resultcond = mysqli_query($conn, $sqlcond);
             $rowcond = mysqli_fetch_assoc($resultcond);
             
