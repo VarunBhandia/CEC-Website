@@ -83,7 +83,7 @@ window.onclick = function(event) {
   }
 }
 </script>
-        <div class="container-fluid ">
+        <div class="">
             <img src="Design/background1.png" class="img-home">
         </div>
             <div class="row">

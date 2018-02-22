@@ -13,7 +13,7 @@ include("serverblog.php");
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <style>
-        .patientsList {
+        .teamsList {
             border-collapse: collapse;
             width: 100%;
             margin-left: 0px;
@@ -21,15 +21,29 @@ include("serverblog.php");
             overflow: auto;
         }
 
-         .patientsList td {
+         .teamsList td {
             text-align: left;
             padding: 15px;
             font-size: 14px;
             color: #828282;
         }
 
-
-        .patientsList tr:nth-child(odd){
+        .team-form-div-border{
+            
+        }
+        
+        .team-form-input{
+                width: 80%;
+    margin-top: 1.2em;
+    height: 2.5em;
+        }
+        
+        .team-form-div-tag{
+            font-family: monospace;
+            font-size: 2em;            
+        }
+        
+        .teamsList tr:nth-child(odd){
             background-color: #f2f2f2;
         }
         .modal {
@@ -48,6 +62,7 @@ include("serverblog.php");
 
         /* Modal Content */
         .modal-content {
+            height: 20em;
             position: relative;
             background-color: #86adf3;
             margin: auto;
@@ -138,7 +153,7 @@ include("serverblog.php");
                     <div class="col-md-10">
                         <h1><strong>Team Members</strong></h1>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-md-1" style="padding-top: 2em;">
                         <!-- Trigger/Open The Modal -->
                         <button id="myBtn" class="btn btn-info">Add New</button>
                         <!-- The Modal -->
@@ -147,26 +162,38 @@ include("serverblog.php");
                           <!-- Modal content -->
                           <div class="modal-content">
                               <form class="team-form row" method="POST" action="">
-                                  <span class="close">&times;</span>
-                                  <div class="patient-form-div-border col-sm-12" >
-                                      <div class="patient-form-div-tag" >Name</div>
-                                      <input type="text" class="patient-form-input" name="name1" required>
+                                  <div class="close">&times;</div>
+                                  <div class="row">
+                                      <div class="team-form-div-border col-sm-4" >
+                                          <div class="team-form-div-tag" >NAME</div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <input type="text" class="team-form-input" name="name" required>
+                                      </div>
                                   </div>
-                                  <div class="patient-form-div-border col-sm-5" >
-                                      <div class="patient-form-div-tag" >Post</div>
-                                      <input type="date" class="patient-form-input" name="dueon1" required >
+                                  <div class="row">
+                                      <div class="team-form-div-border col-sm-4" >
+                                          <div class="team-form-div-tag" >POST</div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <input type="text" class="team-form-input" name="name" required>
+                                      </div>
                                   </div>
-                                  <div class="patient-form-div-border col-sm-5" >
-                                      <div class="patient-form-div-tag" >Year</div>
-                                      <input type="date" class="patient-form-input" name="dueon1" required >
+                                  <div class="row">
+                                      <div class="team-form-div-border col-sm-4" >
+                                          <div class="team-form-div-tag" >YEAR</div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <input type="text" class="team-form-input" name="name" required>
+                                      </div>
                                   </div>
-                                  <div class="patient-form-div-border col-sm-5" >
-                                      <div class="patient-form-div-tag" >Profile Picture</div>
-                                      <input type="date" class="patient-form-input" name="dueon1" required >
-                                  </div>
-                                  <div class="patient-form-div-border col-sm-5" >
-                                      <div class="patient-form-div-tag" >Image Link</div>
-                                      <input type="date" class="patient-form-input" name="dueon1" required >
+                                  <div class="row">
+                                      <div class="team-form-div-border col-sm-4" >
+                                          <div class="team-form-div-tag" >IMAGE</div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <input type="text" class="team-form-input" name="name" required>
+                                      </div>
                                   </div>
                               </form>
 
@@ -211,7 +238,7 @@ include("serverblog.php");
         <div class="col-md-8">
             <div class="row contentTable " > 
                 <div class="table-responsive col-sm-12">
-                    <table class="patientsList" >
+                    <table class="teamsList" >
                         <thead  style="font-weight: 700">
                             <tr style="color: #333333; background-color: white; cursor:pointer">    
                                 <td>Name</td>
