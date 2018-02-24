@@ -52,22 +52,6 @@ include("serverblog.php");
                     //$rowblog = mysqli_fetch_assoc($resultblog);
                     $result3 = mysqli_query($conn,$sqlblog);                                        
                 }
-                
-//                if(isset($_POST['search_condition']))
-//                {
-//                    $search_id = $_POST['search_condition'];
-//                    $search = " where Category = '$search_id' ";
-//                }else{$search = '';}
-//                $sql = "SELECT * FROM cec-blog $search ";
-//                $result = mysqli_query($conn,$sql);
-//                if($_POST['update'] == 'Publish')
-//                {
-//                    $row_id = $_POST['id'];
-//                    echo $row_id;
-//                    $sql3 = "UPDATE `cec-blog` SET status = '1' WHERE id = '$row_id' ";
-//                    $result3= mysqli_query($conn, $sql3 );
-//                }
-
                 ?>
                 
                 <div class="row">
@@ -107,9 +91,11 @@ include("serverblog.php");
                                 <td><?php
                                         $category = $rowtest['Category'];
                                         $sql1 = "SELECT * FROM `category` WHERE id = $category";
+                                        echo $category;                                          
                                         $result1 = mysqli_query($conn,$sql1);
-                                    while($row1 = mysqli_fetch_assoc($result1))
-                                    {echo $row1['name'] ;} ?>
+                                        $row1 = mysqli_fetch_assoc($result1);
+                                        echo $sql1;                                          
+                                        echo $row1['name'] ; ?>
                                 </td>
                                 <td ><?php echo $rowtest['modified_time'] ?></td>
                                 <td ><?php 
