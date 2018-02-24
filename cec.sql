@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2018 at 03:30 PM
+-- Generation Time: Feb 24, 2018 at 07:32 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -63,15 +63,8 @@ CREATE TABLE `cec-blog` (
 --
 
 INSERT INTO `cec-blog` (`id`, `Topic`, `Texteditor`, `Category`, `status`, `imagename`, `modified_time`, `visitorcount`) VALUES
-(1, 'Blog1', 'Test test Test testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest testTest test', '1', 1, '', '2018-01-16 07:37:22', 0),
-(2, 'Varun', 'dhgcdahcfsauyctfsauyctfscjhsvacytsuc', '2', 2, '', '2018-01-13 16:22:58', 0),
-(3, 'Varun', 'dhgcdahcfsauyctfsauyctfscjhsvacytsuc', '2', 2, '', '2018-01-13 16:23:04', 0),
-(4, 'kjkdjkhdgsifyug', 'akjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyakjefheaiugfyvv', '1', 1, '', '2018-01-16 07:36:51', 0),
-(5, 'jhafyagf', 'asjdhgkajdghfhgfttufsadty', '1', 1, '', '2018-01-15 18:05:48', 0),
-(6, 'sdjkcgdsiycf', 'jesfgiyeatsf', '1', 1, '', '2018-01-15 18:05:52', 0),
-(7, 'dskjgciydstc', 'skdjhgcfydtscf', '2', 2, '', '2018-01-15 18:05:55', 0),
-(8, 'GHDFTYD', 'SAGDFTSYA', '2', 1, '', '2018-01-15 18:40:11', 0),
-(9, 'AKJUDGAIYTDF', 'jsjdhfguydsfgiyug', '1', 1, '', '2018-01-15 18:40:16', 0);
+(16, 'ghfdsr', 'Fuck u', '', 1, '', '2018-02-04 14:21:16', 0),
+(17, 'idgcfdygcv', '&lt;p&gt;jxhcghdsc vcj&lt;/p&gt;', '', 1, '', '2018-02-04 14:22:58', 0);
 
 -- --------------------------------------------------------
 
@@ -139,7 +132,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `cec-blog`
 --
 ALTER TABLE `cec-blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `team`
 --
