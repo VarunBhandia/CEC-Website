@@ -25,13 +25,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-1"></div>
+            <div class="col-md-1 mobile"></div>
             <div class="col-md-9">
-                <div class="footer_content">
-                    DESIGNED BY
-                <a href="https://www.behance.net/AKASHSWF" class="link_hover" style="color: #8488bb;"><b>AKASH CHANDRA</b></a> 
-                AND DEVELOPED BY 
+                <div class="number2">
+                DEVELOPED BY 
                 <a href="https://github.com/VarunBhandia/" class="link_hover" style="color: #8488bb;"><b>VARUN BHANDIA</b></a>
+                    AND DESIGNED BY
+                    <a href="https://www.behance.net/AKASHSWF" class="link_hover" style="color: #8488bb;"><b>AKASH CHANDRA</b></a> 
+
                 </div>
             </div>
         </div>

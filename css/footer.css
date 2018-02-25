@@ -41,8 +41,23 @@
 }
 
 .number{
-    font-family: "Helvetica Neue", Helvetica, Arial, myFirstFont;
-    line-height: 150%;
+    line-height: 200%;
+}
+
+.number2{
+    padding-bottom: 1em;   
+    font-weight: 900;
+    font-size: 1em;
+    line-height: 200%;
+}
+
+@media only screen and (max-width: 500px) {
+.number2{
+    padding-bottom: 1em;   
+    font-weight: 900;
+    font-size: .5em;
+    line-height: 200%;
+}
 }
 
 .footer_icons{
@@ -50,7 +65,6 @@
 }
 .heros
 {
-font-family: "Helvetica Neue", Helvetica, Arial, myFirstFont;
     font-size: 1.5em;
     color: whitesmoke;
 }
