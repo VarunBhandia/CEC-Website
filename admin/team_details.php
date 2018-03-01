@@ -72,6 +72,8 @@ include("serverblog.php");
                                           <input type="file" class="team-form-input" name="image" required>
                                       </div>
                                   </div>
+                                  <input id="team" name="team_add" type="submit" class="btn btn-primary submit_data" value="Add">
+
                               </form>
 
                           </div>
@@ -144,16 +146,16 @@ include("serverblog.php");
     <hr>
 </div>
 <?php
-            if($_POST['edit_submit'] == 'Update')
+            if($_POST['team_add'] == 'Add')
             {
-            $Topic = $_POST['name'];
+            $name = $_POST['name'];
             $post = $_POST['post'];
             $year = $_POST['year'];
             $image = $_POST['image'];
-            $imagename = $image_name;
-                $status = 1;
-                $sql = "update cec-blog set Topic = '$Topic', Texteditor = '$Texteditor', imagename = '$imagename', status = '$status', modified_time=now() where id = '$edit_id' ";
-                $message = "Successfully Update !! ";
+                $sqlteam = "INSERT INTO team (name,post,year,img) VALUES ('$name','$post','$year','$image')";
+                print $sqlteam;
+                $resultteam = mysqli_query($conn, $sqlteam);
+
             }
 
 ?>
