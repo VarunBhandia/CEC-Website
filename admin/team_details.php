@@ -25,23 +25,6 @@ include("serverblog.php");
 <?php
                 $sqltest = "SELECT * FROM `team`";
                 $resulttest = mysqli_query($conn, $sqltest );
-//                if($_POST['update'] == 'Publish')
-//                {
-//                    $row_id = $_POST['id'];
-//                    echo $row_id;
-//                    $sqlblog = "UPDATE cec-blog SET status = '1' WHERE id = '$row_id' ";
-//                    $resultblog = mysqli_query($conn, $sqlblog );
-//                    $rowblog = mysqli_fetch_assoc($resultblog);
-//                    $result3 = mysqli_query($conn,$sql3);                                        
-//                }
-                
-//                if(isset($_POST['search_condition']))
-//                {
-//                    $search_id = $_POST['search_condition'];
-//                    $search = " where Category = '$search_id' ";
-//                }else{$search = '';}
-//                $sql = "SELECT * FROM cec-blog $search ";
-//                $result = mysqli_query($conn,$sql);
                 ?>
                 <div class="row">
                     <div class="col-md-10">
@@ -70,7 +53,7 @@ include("serverblog.php");
                                           <div class="team-form-div-tag" >POST</div>
                                       </div>
                                       <div class="col-sm-8">
-                                          <input type="text" class="team-form-input" name="name" required>
+                                          <input type="text" class="team-form-input" name="post" required>
                                       </div>
                                   </div>
                                   <div class="row">
@@ -78,7 +61,7 @@ include("serverblog.php");
                                           <div class="team-form-div-tag" >YEAR</div>
                                       </div>
                                       <div class="col-sm-8">
-                                          <input type="text" class="team-form-input" name="name" required>
+                                          <input type="text" class="team-form-input" name="year" required>
                                       </div>
                                   </div>
                                   <div class="row">
@@ -86,7 +69,7 @@ include("serverblog.php");
                                           <div class="team-form-div-tag" >IMAGE</div>
                                       </div>
                                       <div class="col-sm-8">
-                                          <input type="text" class="team-form-input" name="name" required>
+                                          <input type="file" class="team-form-input" name="image" required>
                                       </div>
                                   </div>
                               </form>
@@ -160,3 +143,21 @@ include("serverblog.php");
     </div>
     <hr>
 </div>
+<?php
+            $Topic = $_POST['title'];
+            $Texteditor = htmlspecialchars($_POST['texteditor22']);
+            $imagename = $image_name;
+            //$Category = $_POST['Category'];
+            $edit_id = $_POST['edit_id'];
+            $sqlcond = "SELECT * FROM `cec-blog` where Category = '$Category'";
+            $resultcond = mysqli_query($conn, $sqlcond);
+            $rowcond = mysqli_fetch_assoc($resultcond);
+
+            if($_POST['edit_submit'] == 'Update')
+            {
+                $status = 1;
+                $sql = "update cec-blog set Topic = '$Topic', Texteditor = '$Texteditor', imagename = '$imagename', status = '$status', modified_time=now() where id = '$edit_id' ";
+                $message = "Successfully Update !! ";
+            }
+
+?>
