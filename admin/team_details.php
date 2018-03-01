@@ -144,17 +144,13 @@ include("serverblog.php");
     <hr>
 </div>
 <?php
-            $Topic = $_POST['title'];
-            $Texteditor = htmlspecialchars($_POST['texteditor22']);
-            $imagename = $image_name;
-            //$Category = $_POST['Category'];
-            $edit_id = $_POST['edit_id'];
-            $sqlcond = "SELECT * FROM `cec-blog` where Category = '$Category'";
-            $resultcond = mysqli_query($conn, $sqlcond);
-            $rowcond = mysqli_fetch_assoc($resultcond);
-
             if($_POST['edit_submit'] == 'Update')
             {
+            $Topic = $_POST['name'];
+            $post = $_POST['post'];
+            $year = $_POST['year'];
+            $image = $_POST['image'];
+            $imagename = $image_name;
                 $status = 1;
                 $sql = "update cec-blog set Topic = '$Topic', Texteditor = '$Texteditor', imagename = '$imagename', status = '$status', modified_time=now() where id = '$edit_id' ";
                 $message = "Successfully Update !! ";
