@@ -1,0 +1,487 @@
+
+						<!DOCTYPE html>
+<html>
+	<head>
+		<title>Varun Bhandia&#039;s online resume </title>
+		<base href="https://uptowork.com" />
+		<meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="View Varun Bhandia&#039;s professional online resume built with Uptowork." />
+		<meta name="robots" content="noindex" />
+
+										
+		<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/creator/1519904516/normalize.css" />
+<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/1519904516/creator.css" />
+<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/1519904516/phantomjs.css" />
+<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/creator/fonts/fonts.css" />
+<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/1519904516/print.css" />
+
+	</head>
+
+	<body class="preload online">
+		<div id="printModeScreen" class="printmode-screen">
+	<div class="printmode-screen__text">
+		If you want to print the document,<br />
+		click the Download button.
+	</div>
+</div>
+
+		
+		<div id="creatorContent" class="online">
+							      <div class="page fFamilyTxtArimo fStyleH1Bold fStyleH1LastBold fStyleH3Bold fStyleH5Bold fStylePersonalTitleBold pagePaddingTop30 pagePaddingRight30 pagePaddingBottom30 pagePaddingLeft30 secSpace15 colSpace20 fSizeH10 fSizeH20 fSizeH30 fSizeH40 fSizeH50 fSizeH60 fSizeText+0 fSizeDate0 fSizeSkillDesc0 fSizePersonalTitle0 fSizePersonalText0 fSizeHeader0 fSizeFooter0 lineHeight-2 pageNumberDisplayTrue" data-template="6" data-id="d8dd61a9-60f0-4e2c-b704-f9d71cef7bab" data-user-id="1629633" data-colorset="264" data-language="en_EN" data-type="cv" data-name="My resume" data-url="VarunBhandia" data-first-name="Varun" data-last-name="Bhandia"><div class="dRow firstRow lastRow"><div class="dCol secTitMarginBottom10 secAccIcoCircle colSpecialLineOn colSpecialBorderPrimoOn dateLinesDouble dateSeparatorDash dateStickSeparatorFrom colorTxtMediumBlack3 colorNamePaleRed2 colorLastNamePaleRed2 colorPositionPaleRed2 colorImgBrdPaleRed2 colorImgBgPaleRed2 colorSecTitPaleRed2 colorSecTitBgWhite3 colorSecTitBrdLightSilver3 colorSecLineLightSilver3 colorSecPointPaleRed2 colorSecPointShadowPaleRed1 colorEntTitMediumBlack3 colorEntSubMediumBlack3 colorEntBoldMediumBlack3 colorEntIcoWhite3 colorEntIcoBgPaleRed3 colorIcoWhite3 colorIcoBgPaleRed3 colorRatOnPaleRed3 colorRatOffLightSilver3 colorRatAddPaleRed3 colorBgWhite3 colorBgHfWhite3 colorDateMediumBlack3 colorDateBgBurntRed2 firstCol" style="width: 69%; height: 2164px;"><div class="section sectionType1 sectionBasic secType1AccCircle secSpecialLineOff fStyleH1Bold fStyleH1LastBold">
+		<div class="entry">
+			<div class="secType1Acc">
+				<div class="secType1AccInitials">vb</div>
+			</div>
+			<div class="secType1Container">
+				<h1>
+					<span class="firstname">Varun</span>
+					<span class="lastname">Bhandia</span>
+				</h1>
+				<h2>Civil Engineer</h2>
+			</div>
+		</div>
+	</div><div class="section sectionType6 sectionExperience secSpecialLineFirst">
+		<h3 class="title"><span class="ico"></span><span class="txt">Experience</span></h3>
+		<div class="entryContainer"><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 22px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates dateHideSeparator" style="margin-top: 2px;">					<span class="dateFrom">2017</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo"></span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Green Concrete</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>Department of Civil Engineering | IITR</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Under the guidance of Dr. Sudipta Sarkar, Assistant Professor, Department of Civil&nbsp;</p>
+
+<p><span>Aim: Using agricultural waste for hardening of concrete and reducing the settling time while retaining the existing</span></p>
+
+<p>strength.</p>
+
+<p>Conducted various laboratory tests on characterization of compressive strength of concrete following the test procedures</p>
+
+<p>as per IS and American Standards.</p>
+
+<p>Helped to increase the productivity of the cement manufacturers</p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 22px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates dateHideSeparator" style="margin-top: 2px;">					<span class="dateFrom">2017</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo"></span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Survey Camp</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>Department of Civil Engineering | IITR</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Estimated the Latitude, Longitude and Altitude of the given Control Points using GPS Controller and receiver.</p>
+
+<p>Surveyed the nearby Area of Control Point Using Total Station. Marked around 700 points.</p>
+
+<p>Used QGIS to make the contour map from the taken Points.</p>
+
+<p><br></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 22px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates dateHideSeparator" style="margin-top: 2px;">					<span class="dateFrom">2017-07</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo"></span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Intern</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>Waste Water Treatment and Supply | Shikhar Aquatech Pvt Lmt.</p></h6>
+					<div class="text desc"><p>Analysed and Observed 5+ STP and ETP&nbsp;</p>
+
+<p><span>Partly worked for the maintenance of commercial Water treatment Plants Located in various&nbsp;</span></p>
+
+<p><span>Carried out test on various water sample before treatment and after treatment.</span></p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 44px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2017-12</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">2018-01</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Developer</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>DocConsult</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Developed Blogging Section using PHP,SQl and AJAX, which contained a blog writing page having a Rich text editor library integrated in it, a Dashboard for the admin to Edit or Publish the saved or Published blog.</p>
+
+<p></p>
+
+<p>Developed a Vaccine Calculator, which calculates the dates for the different vaccines.</p>
+
+<p><span>Developed a OTP based step form, Claimed Profile Form and&nbsp; Report an Error form.</span><span>Email containing the content filled in the form were send to the admin once the form was submitted.</span></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 44px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2018-01</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">2018-02</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Developer</p></h5>
+					<h6 class="subtitle"><p>IntelliAssist</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Developed a Twitter alike website.</p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 44px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2017-09</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">present</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Joint&nbsp;Secretary</p></h5>
+					<h6 class="subtitle"><p>Institute Sports Council | IITR</p></h6>
+					<div class="text desc"><div>Developed Annual Sports website Sangram'18 -&nbsp;http://sangramiitr.in</div>
+
+<p>Maintained and Developed the Council Website -&nbsp;http://www.iitrsports.com.</p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 44px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2016</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">present</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Coordinator</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>Civil Engineering Consortium |iITR</p></h6>
+					<div class="text desc"><p>Developed the new website for the committee -&nbsp;http://ceciitr.000webhostapp.com</p>
+
+<p></p>
+
+<p>Maintained and Updated the previous Website -&nbsp;http://ceciitr.co.nf</p>
+
+<p>Organized and Coordinated various events like Fresher's, Farewell, Departmental Congizance, Various Workshops,etc.</p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 44px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2017</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">present</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Developer</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>Counselling Cell | IITR</p></h6>
+					<div class="text desc"><p>Maintained and Updated the Website -&nbsp;http://iitrcounsellingcell.com</p>
+
+<p>Coordinated in various Workshops and Events that were organized by the Cell.</p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 44px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2016</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">present</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Executive Member</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>Unnat Bharat Abhiyan | IITR</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Organized Bio-gas awareness and LED distribution camp and Sports Day in Village Puranpur .</p>
+
+<p></p>
+
+<p>Conducted surveys in the village of population of 3500 and 500 houses on sanitation, waste management, education, financial condition, employment etc.</p>
+
+<p>Maintained and Updated the group Website -&nbsp;https://www.iitr.ac.in/subdomain/uba/</p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 44px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2016</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">2017</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Executive member</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>National Social Scheme | IITR</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Member of Event Management and Promotion , NSS IITR</p>
+
+<p>Collected Newspaper from Various bhawans and contacted the NGO's for initiative, Employment Generation Drive</p>
+
+<p>Contributed in efficient conduct of the Blood Donation Camp.</p>
+
+<p>Promoted and managed various Events of NSS.</p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 22px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates dateHideSeparator" style="margin-top: 2px;">					<span class="dateFrom">2017-03</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo"></span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Co-Coordinator</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>Sangram&nbsp;2017 | IITR</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Organized Treasure Hunt and Various informal Fun events during the fest.</p>
+
+<p><span>Volunteered in Awarethon (21KMS Marathon) held 3 Weeks before the Fest.</span></p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="" style="min-height: 22px;">
+				<div class="pointer" style="top: 0.9rem; left: -38px;"></div>
+				<div class="dates dateHideSeparator" style="margin-top: 2px;">					<span class="dateFrom">2017-06</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo"></span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Volunteer</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>Cognizance 2017 | IITR</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Volunteered in accommodation management and&nbsp;<span>Promoted the Events .</span></p>
+
+<p></p></div>
+				</div>
+			</div></div>
+	</div></div><div class="dCol secTitMarginBottom10 secAccIcoCircle dateLayoutLine dateSeparatorDash dateStickSeparatorFrom colorTxtMediumBlack3 colorNamePaleRed2 colorLastNamePaleRed2 colorPositionPaleRed2 colorImgBrdPaleRed2 colorImgBgPaleRed2 colorSecTitPaleRed2 colorSecTitBgWhite3 colorSecTitBrdLightSilver3 colorSecLineLightSilver3 colorSecPointPaleRed2 colorSecPointShadowPaleRed1 colorEntTitMediumBlack3 colorEntSubMediumBlack3 colorEntBoldMediumBlack3 colorEntIcoWhite3 colorEntIcoBgPaleRed3 colorIcoWhite3 colorIcoBgPaleRed3 colorRatOnPaleRed3 colorRatOffLightSilver3 colorRatAddPaleRed3 colorBgWhite3 colorBgHfWhite3 colorDateMediumBlack3 colorDateBgBurntRed2 lastCol" style="width: 31%; height: 2164px;"><div class="section sectionType2 sectionPersonal">
+		<h3 class="title"><span class="ico"></span><span class="txt">Personal Info</span></h3>
+		<div class="entryContainer content"><div class="entry personalPhone" data-order="0">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">Phone</h4>
+	<div class="personalText">+91 9001126303</div>
+</div><div class="entry personalEmail entryExample" data-order="1">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">E-mail</h4>
+	<div class="personalText"><a href="mailto:varunbhandia@gmail.com" rel="nofollow">varunbhandia@gmail.com</a></div>
+</div><div class="entry personalAddress" data-order="2">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">Address</h4>
+	<div class="personalText"><div>Room No. -B447</div>
+
+<p>Rajiv Bhawan,</p>
+
+<p></p>
+
+<p>IIT Roorkee</p></div>
+</div><div class="entry personalLinkedin entryExample" data-order="3">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">LinkedIn</h4>
+	<div class="personalText"><a href="https://www.linkedin.com/in/varun-bhandia-934937134/" target="_blank" rel="nofollow">https://www.linkedin.com/in/varun-bhandia-934937134/</a></div>
+</div><div class="entry personalCustom icoGithub" data-order="4">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">GitHub</h4>
+	<div class="personalText"><a href="https://github.com/VarunBhandia" target="_blank" rel="nofollow">https://github.com/VarunBhandia</a></div>
+</div><div class="entry personalTwitter" data-order="5">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">Twitter</h4>
+	<div class="personalText"><a href="https://twitter.com/varun_bhandia" target="_blank" rel="nofollow">https://twitter.com/varun_bhandia</a></div>
+</div><div class="entry dateBirth personalBirthday" data-birth-day="" data-birth-month="" data-birth-year="" data-order="6">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">Date of birth</h4>
+	<div class="personalText">1998-03-06</div>
+</div></div>
+	</div><div class="section sectionType5 sectionEducation">
+		<h3 class="title"><span class="ico"></span><span class="txt">Education</span></h3>
+		<div class="entryContainer"><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2016-08</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">2020-07</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Indian Institute of Technology , Roorkee</p>
+
+<p></p></h5>
+					<div class="text desc"><p>Bachelors of Technology in Civil Engineering, CGPA - 7.39</p>
+
+<p></p></div>
+				</div>
+			</div></div>
+	</div><div class="section sectionType11 sectionInterests">
+		<h3 class="title"><span class="ico"></span><span class="txt">Interests</span></h3>
+		<div class="entryContainer content"><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>Computer Aided Structural Engineering ,&nbsp;Environmental Engineering, Hydraulics Engineering and Construction Materials</p>
+
+<p></p></h4>
+			</div></div>
+	</div><div class="section sectionType9 sectionCourses">
+		<h3 class="title"><span class="ico"></span><span class="txt">Courses</span></h3>
+		<div class="entryContainer"><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates dateHideSeparator" style="margin-top: -1px;">					<span class="dateSingle" style="display: none;"></span>
+					<span class="dateFrom"></span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo"></span>
+				</div>
+				<div class="content">
+					<h4 class="descShort"><p>Ethics,Economics,Python,Web Development</p></h4>
+				</div>
+			</div></div>
+	</div><div class="section sectionType7 sectionSkills ratingCircle ratingTwoLines">
+		<h3 class="title"><span class="ico"></span><span class="txt">Skills</span></h3>
+		<div class="entryContainer content"><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>Time Management</p>
+
+<p></p></h4>
+				<div class="rating rating5">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>Development</p>
+
+<p></p></h4>
+				<div class="rating rating4">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>Leadership</p>
+
+<p></p></h4>
+				<div class="rating rating4">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div></div>
+	</div><div class="section sectionType7 sectionSoftware icoSoftware ratingCircle ratingTwoLines">
+		<h3 class="title"><span class="ico"></span><span class="txt">Software</span></h3>
+		<div class="entryContainer content"><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>ERDAS IMAGINE</p>
+
+<p></p></h4>
+				<div class="rating rating3">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>AutoCAD</p>
+
+<p></p></h4>
+				<div class="rating rating3">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>MS Office</p>
+
+<p></p></h4>
+				<div class="rating rating4">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>QGIS</p>
+
+<p></p></h4>
+				<div class="rating rating4">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>GIT</p>
+
+<p></p></h4>
+				<div class="rating rating4">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>Adobe Illustrator</p>
+
+<p></p></h4>
+				<div class="rating rating2">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>Adobe Photoshop</p>
+
+<p></p></h4>
+				<div class="rating rating2">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div></div>
+	</div><div class="section sectionType7 sectionLanguages ratingCircle ratingTwoLines">
+		<h3 class="title"><span class="ico"></span><span class="txt">Languages</span></h3>
+		<div class="entryContainer content"><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>English</p>
+
+<p></p></h4>
+				<div class="rating rating4">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>Hindi</p>
+
+<p></p></h4>
+				<div class="rating rating4">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div><div class="entry">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>French</p>
+
+<p></p></h4>
+				<div class="rating rating2">					<div></div><div></div><div></div><div></div><div></div>
+				</div>
+				
+			</div></div>
+	</div></div></div></div>
+    
+					</div>
+
+		
+		
+					
+			
+		
+								<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e3b206154e","applicationID":"92799082,92343237,46924997","transactionName":"YgNUZ0sAWkNXBxBQX1tJdUZKFVtdGSUUSWx9EkJDZSJbXkIWC1VcUBRqfFcNXV5TIAtaRVgDWEdKIlteQhYLVVxQFHZcVw1dXlMnMg==","queueTime":0,"applicationTime":1697,"atts":"TkRDEQMaFnNZEQpNQkwvRVx4UxYKFC0qGxwXFFlGTQQaVF8ARgMSYwdERlcjXFFYAA1YEhlEVV9QBFpEfxQiVkJCB0RXXBNyX0RGXldFWQoaEVoNXVVYEC1JEg9EBwIOTwYCAkpVAAQbVwIBG00WRUUBFnB0F1wUAg9TDQYFV0YVEkAVU0F8DFVZWkZeG0ZUFENdWwlVXlINBXlXWAdfXxcCW10USEZJQloCQ1BNQw4SWAtJSVxUCBQfGwBXU1kRCk0SD0RYXBQIUFVXSRNRUUFLQlwUEUFEGwwBS1UXShRGSgRGEgxGElhCQAhUW1gPUFlXJANUUVwKGFBWDBZNGkYFGwpOG0s=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
