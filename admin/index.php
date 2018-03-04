@@ -34,10 +34,9 @@ include("serverblog.php");
 }
         
 .sidenav {
-    height: 100%;
-    width: 200px;
+height: 100%;
+    width: 17em;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: #111;
@@ -46,36 +45,50 @@ include("serverblog.php");
 }
 
 .sidenav a {
-    padding: 6px 6px 6px 32px;
+padding-top: 1em;
+    transition: .5s;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 2em;
     color: #818181;
     display: block;
-}
+    padding-left: 1em;}
 
 .sidenav a:hover {
     color: #f1f1f1;
 }
+        .sidebar_header{
+    text-decoration: none;
+    font-size: 3em;
+    color: white;
+    display: block;
 
+        }
 .main {
-    margin-left: 200px; /* Same as the width of the sidenav */
 }
-
-@media screen and (max-height: 450px) {
+        .white{
+            background-color: white;
+            height: .1em;
+            width: 100%;
+        }
+@media screen and (max-height: 500px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  
 }
-
     </style>
 </head>
-<div class="sidenav">
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+<div class="row">
+    <div class="col-md-2">
+        <div class="sidenav">
+    <center>
+    <h1 class="sidebar_header"> ADMIN PANEL
+    </h1></center><div class="white"></div>
+  <a href="../admin/index.php">Blog Listing</a>
+  <a href="../admin/blog-writing.php">Blog Wrtiting</a>
+  <a href="../admin/team_details.php">Team Details</a>
 </div>
-
-<div class="main">
+</div>
+    <div class="col-md-10">
+        <div class="main">
 
 <div class="tab-content">
     <div class="row">
@@ -176,3 +189,6 @@ include("serverblog.php");
     <hr>
 </div>
 </div>
+    </div>
+</div>
+
