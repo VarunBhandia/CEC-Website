@@ -46,8 +46,6 @@
         </style>
 	</head>
 	<body>
-        <?php ?>
-        <div id="main">
         <script>
             var category_index;
         </script>            
@@ -189,7 +187,6 @@
             }
             //console.log(category_index);
         </script>
-</div>
 
     </body>
 </html>

@@ -32,8 +32,51 @@ include("serverblog.php");
 .patientsList tr:nth-child(odd){
 	background-color: #f2f2f2;
 }
+        
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
     </style>
 </head>
+<div class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="main">
+
 <div class="tab-content">
     <div class="row">
 		<div class="col-sm-12 col-xs-12"> 
@@ -131,4 +174,5 @@ include("serverblog.php");
         <div class="col-md-2"></div>
     </div>
     <hr>
+</div>
 </div>

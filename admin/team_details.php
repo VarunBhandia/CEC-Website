@@ -17,6 +17,9 @@ include("serverblog.php");
         
     </style>
 </head>
+        <?php include("sidebar.php"); ?>
+        <div id="main">
+
 <div class="tab-content">
     <div class="row">
 		<div class="col-sm-12 col-xs-12"> 
@@ -159,3 +162,4 @@ include("serverblog.php");
             }
 
 ?>
+</div>
