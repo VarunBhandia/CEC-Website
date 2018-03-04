@@ -1,10 +1,16 @@
 
 <?php 
 ini_set("display_errors",'on');
+//    $servername = "localhost";
+//    $username = "root";
+//    $password = "";
+//    $dbname = "cec";
+
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "cec";
+    $username = "id4848840_varunbhandia";
+    $password = "varunbhandia";
+    $dbname = "id4848840_varuncec";
+
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     // Check connection

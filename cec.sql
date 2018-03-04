@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2018 at 07:32 AM
+-- Generation Time: Mar 04, 2018 at 08:50 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -95,7 +95,11 @@ INSERT INTO `team` (`id`, `name`, `img`, `link`, `post`, `year`) VALUES
 (7, 'varun7', '', '', '', ''),
 (8, 'varun8', '', '', '', ''),
 (9, 'varun9', '', '', '', ''),
-(10, 'varun10', '', '', '', '');
+(10, 'varun10', '', '', '', ''),
+(11, 'Varun Bhandia', 'WWW.YTS.RE.jpg', '', 'secy108', 'Second'),
+(12, 'Varun Bhandia', 'WWW.YTS.RE.jpg', '', 'cooooo', 'Second'),
+(13, 'Varun Bhandia', 'WWW.YTS.RE.jpg', '', 'cccccc', 'dddddddd'),
+(14, 'Varun Bhandia', 'WWW.YTS.RE.jpg', '', 'cccccc', 'dddddddd');
 
 --
 -- Indexes for dumped tables
@@ -137,7 +141,7 @@ ALTER TABLE `cec-blog`
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
