@@ -26,6 +26,8 @@
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
         <script>tinymce.init({ selector:'textarea' });</script>
 		<title>Admin-Blog-Writing</title>
+            <link href="../admin/sidebar.css" rel="stylesheet" type="text/css">
+
         <style>
             .txtarea
             {
@@ -48,7 +50,21 @@
 	<body>
         <script>
             var category_index;
-        </script>            
+        </script> 
+        <div class="row">
+    <div class="col-md-2">
+        <div class="sidenav">
+    <center>
+    <h1 class="sidebar_header"> ADMIN PANEL
+    </h1></center><div class="white"></div>
+  <a href="../admin/index.php">Blog Listing</a>
+  <a href="../admin/blog-writing.php">Blog Wrtiting</a>
+  <a href="../admin/team_details.php">Team Details</a>
+</div>
+</div>
+    <div class="col-md-10">
+        <div class="main">
+
         <div class="row">
             <div class="col-md-11">
                 <h1 class="main-admin-heading">Admin Blog</h1>
@@ -63,8 +79,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <?php 
                 $rowtest['id'];
                 $edit_id = $_POST['id'];
@@ -187,6 +202,7 @@
             }
             //console.log(category_index);
         </script>
-
+        </div>
+            </div></div>
     </body>
 </html>

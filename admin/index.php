@@ -12,6 +12,8 @@ include("serverblog.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <link href="/admin/sidebar.css" rel="stylesheet" type="text/css">
+
     <style>
         .patientsList {
     border-collapse: collapse;
@@ -33,47 +35,6 @@ include("serverblog.php");
 	background-color: #f2f2f2;
 }
         
-.sidenav {
-height: 100%;
-    width: 17em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidenav a {
-padding-top: 1em;
-    transition: .5s;
-    text-decoration: none;
-    font-size: 2em;
-    color: #818181;
-    display: block;
-    padding-left: 1em;}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-        .sidebar_header{
-    text-decoration: none;
-    font-size: 3em;
-    color: white;
-    display: block;
-
-        }
-.main {
-}
-        .white{
-            background-color: white;
-            height: .1em;
-            width: 100%;
-        }
-@media screen and (max-height: 500px) {
-  .sidenav {padding-top: 15px;}
-  
-}
     </style>
 </head>
 <div class="row">
