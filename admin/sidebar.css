@@ -39,3 +39,23 @@ padding-top: 1em;
   .sidenav {padding-top: 15px;}
   
 }
+
+        .patientsList {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 0px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+ .patientsList td {
+    text-align: left;
+    padding: 15px;
+    font-size: 14px;
+    color: #828282;
+}
+
+
+.patientsList tr:nth-child(odd){
+	background-color: #f2f2f2;
+}

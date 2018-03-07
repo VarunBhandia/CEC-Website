@@ -12,28 +12,9 @@ include("serverblog.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <link href="/admin/sidebar.css" rel="stylesheet" type="text/css">
+    <link href="../admin/sidebar.css" rel="stylesheet" type="text/css">
 
     <style>
-        .patientsList {
-    border-collapse: collapse;
-    width: 100%;
-    margin-left: 0px;
-    max-height: 400px;
-    overflow: auto;
-}
-
- .patientsList td {
-    text-align: left;
-    padding: 15px;
-    font-size: 14px;
-    color: #828282;
-}
-
-
-.patientsList tr:nth-child(odd){
-	background-color: #f2f2f2;
-}
         
     </style>
 </head>

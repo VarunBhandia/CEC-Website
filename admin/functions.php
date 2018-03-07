@@ -1,15 +1,15 @@
 
 <?php 
-ini_set("display_errors",'on');
-//    $servername = "localhost";
-//    $username = "root";
-//    $password = "";
-//    $dbname = "cec";
-
+ini_set("display_errors",'off');
     $servername = "localhost";
-    $username = "id4848840_varunbhandia";
-    $password = "varunbhandia";
-    $dbname = "id4848840_varuncec";
+    $username = "root";
+    $password = "";
+    $dbname = "cec";
+
+//    $servername = "localhost";
+//    $username = "id4848840_varunbhandia";
+//    $password = "varunbhandia";
+//    $dbname = "id4848840_varuncec";
 
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
