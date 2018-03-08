@@ -12,17 +12,8 @@
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!--
-		<script src="../admin/editor.js"></script>
-		<script>
-			$(document).ready(function() {
-				$("#txtEditor").Editor();
-			});
-		</script>
--->
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<!--		<link href="../admin/editor.css" type="text/css" rel="stylesheet"/>-->
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
         <script>tinymce.init({ selector:'textarea' });</script>
 		<title>Admin-Blog-Writing</title>
@@ -112,6 +103,19 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label for="" class="">Please Select An Category For Your Topic. </label>
+                            </div>
+                            <div class="col-md-4">
+                                <select name="department">
+                                    <option value="structure">Structure</option>
+                                    <option value="geomatics">Geomatics</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="Description" class="control-label">Description/ Content</label>
                         <div class="col-lg-12 nopadding">
                             <textarea id="txtEditor" name="texteditor22">
@@ -138,22 +142,17 @@
         
         
         <?php
-//                    $image_name = $_FILES['image']['name'];
-//                    $tmp_name = $_FILES['image']['tmp_name'];
-//                    $location = 'C:/xampp/htdocs/DocConsult/Doctor-tip-Blog/line-control-master/doctor-tips-images/';
-//                    move_uploaded_file($tmp_name,$location.$image_name);
-
-        $image_name = $_FILES['image']['name'];
-                    $tmp_name = $_FILES['image']['tmp_name'];
-                    $location = 'C:/xampp/htdocs/CEC-Website/img/blog/';
-                    move_uploaded_file($tmp_name,$location.$image_name);
+            $image_name = $_FILES['image']['name'];
+            $tmp_name = $_FILES['image']['tmp_name'];
+            $location = '../img/blog/';
+            move_uploaded_file($tmp_name,$location.$image_name);
                     
         if(isset($_POST['edit_submit']))
         {                      
             $Topic = $_POST['title'];
             $Texteditor = htmlspecialchars($_POST['texteditor22']);
             $imagename = $image_name;
-            //$Category = $_POST['Category'];
+            $category = $_POST['department'];
             $edit_id = $_POST['edit_id'];
             $sqlcond = "SELECT * FROM `cec-blog` where Category = '$Category'";
             $resultcond = mysqli_query($conn, $sqlcond);
@@ -173,12 +172,12 @@
                     print $sql = "INSERT INTO `cec-blog` (Topic,Texteditor,imagename,status, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW())";
                     if (mysqli_query($conn,$sql) === TRUE) 
                     {
-                        print $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW())";
+                        print $sql = "INSERT INTO `cec-blog` (Topic,Texteditor,imagename,status, modified_time,Category) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW(),'$category')";
                         $message = "New record created successfully ";
                         echo $message; 
                         echo $status;
-                        $url_re =  "http://localhost/cec-Website/admin/index.php";
-                        echo "<script>location.href = '".$url_re."'</script>";
+//                        $url_re =  "http://localhost/cec-Website/admin/index.php";
+//                        echo "<script>location.href = '".$url_re."'</script>";
                     }
                     else {echo "Error1: ";}
                 }
@@ -189,17 +188,18 @@
                     print $sql = "INSERT INTO `cec-blog` (Topic,Texteditor,imagename,status, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW())";
                     if (mysqli_query($conn,$sql) === TRUE) 
                     {
-                        print $sql = "INSERT INTO cec-blog (Topic,Texteditor,imagename,status, modified_time) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW())";
+                        print $sql = "INSERT INTO `cec-blog` (Topic,Texteditor,imagename,status, modified_time,Category) VALUES ('$Topic','$Texteditor','$imagename','$status', NOW(),'$category')";
                         $message = "New record created successfully ";
                         echo $message; 
                         echo $status;
-                        $url_re =  "http://localhost/cec-Website/admin/index.php";
-                        echo "<script>location.href = '".$url_re."'</script>";
+//                        $url_re =  "http://localhost/cec-Website/admin/index.php";
+//                        echo "<script>location.href = '".$url_re."'</script>";
                     }
                     else {echo "Error1: ";}                } 
             }
         }      
         ?>
+<!--
         <script>
             function restore()
             {
@@ -207,6 +207,7 @@
             }
             //console.log(category_index);
         </script>
+-->
         </div>
             </div></div>
     </body>
