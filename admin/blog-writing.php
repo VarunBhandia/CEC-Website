@@ -20,7 +20,7 @@
 			});
 		</script>
 -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!--		<link href="../admin/editor.css" type="text/css" rel="stylesheet"/>-->
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
@@ -138,9 +138,14 @@
         
         
         <?php
+//                    $image_name = $_FILES['image']['name'];
+//                    $tmp_name = $_FILES['image']['tmp_name'];
+//                    $location = 'C:/xampp/htdocs/DocConsult/Doctor-tip-Blog/line-control-master/doctor-tips-images/';
+//                    move_uploaded_file($tmp_name,$location.$image_name);
+
         $image_name = $_FILES['image']['name'];
                     $tmp_name = $_FILES['image']['tmp_name'];
-                    $location = '';
+                    $location = 'C:/xampp/htdocs/CEC-Website/img/blog/';
                     move_uploaded_file($tmp_name,$location.$image_name);
                     
         if(isset($_POST['edit_submit']))
