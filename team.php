@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <?php
 include("admin/functions.php");
+$conn = new mysqli($servername, $username, $password, $dbname);
+$topic = $_GET['topic'];
+$blog_id = $_GET['id'];
+$category = $_GET['category'];
+$categoryid = $_GET['catid'];
+$sql = "SELECT * FROM `cec-blog` WHERE id = '$blog_id'";
+$result = mysqli_query($conn, $sql ); 
+$row = mysqli_fetch_assoc($result);
+$desc = $row['Texteditor'];
 ?>
 <html>
     <head>
@@ -66,12 +75,14 @@ include("admin/functions.php");
                       <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
                       <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
                       <li><a href="team.php" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
-                      <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>
+                      <!--<li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>-->
                       <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
                       <li class="dropdown morelinks">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE LINKS <span class="caret"></span></a>
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE LINKS<span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="#">Page 1-3</a></li>
+                          <li><a href="#">1st Year</a></li>
+                          <li><a href="#">2nd Year</a></li>
+                          <li><a href="#">3rd Year</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -84,12 +95,13 @@ include("admin/functions.php");
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-4">
-                <h3 class="all-heading" >TEAMS</h3>
+                <h3 class="all-heading" >TEAM</h3>
             </div>
             <div class="col-md-8">
             </div>
         </div>
         <?php
+        $row = mysqli_fetch_row($result);
         $all_name = get_team_name($conn);
         $cnt_name = count($all_name);
         for($i = 0; $i < $cnt_name; $i++)
@@ -98,7 +110,7 @@ include("admin/functions.php");
             <div class='thumbnail-posts'>
             <a href='' target='_blank'>
                 <div class='thumbnail-posts-img'>
-                    <img src='#' style='width:100%'>
+                    <img src='http://localhost/CEC-Website/img/team/".$row['img']."' style='width:100%'>
                 </div>
                 <div class='thumbnail-posts-content'>
                     <h5>".$all_name[$i]."</h5>

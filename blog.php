@@ -39,17 +39,19 @@
                   <a class="navbar-brand" style="margin-top: -.5em; padding-left: 5vw;" href="#"><img src="img/cec-logo-c.png" class="new-logo"  />  </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
-                  <ul class="nav navbar-nav navbar-right">
+                   <ul class="nav navbar-nav navbar-right">
                       <li><a href="index.php" style="padding-left: 3em;padding-right: 2em;">HOME</a></li>
                       <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
                       <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
                       <li><a href="team.php" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
-                      <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>
+                      <!-- <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li> -->
                       <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
                       <li class="dropdown morelinks">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE LINKS <span class="caret"></span></a>
+                      <a class="dropdown-toggle " data-toggle="dropdown" href="#">MORE LINKS<span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="#">Page 1-3</a></li>
+                          <li><a href="1st Year.php">1st Year</a></li>
+                          <li><a href="#">2nd Year</a></li>
+                          <li><a href="#">3rd Year</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -77,9 +79,9 @@
                             </div>
                         </div>
                         <div class="article-desc">
-                            <p>
+                            
                                 <?php echo $desc; ?>
-                            </p>
+                            
                         </div>
                         <div class="greybox">
                             
@@ -105,19 +107,19 @@
                     <?php
                     $all_related = get_related_posts($categoryid,$conn);
                     $cnt_related_posts = count($all_related);
-                    for($i = 0; $i < $cnt_related_posts; $i++)
+                    for($i = 0; $i < 3; $i++)
                     {
-                        $sql44 = "SELECT * FROM `cec-blog` WHERE id = '$all_related[$i]'";
-                        $result44 = mysqli_query($conn, $sql44 ); 
-                        $row44 = mysqli_fetch_assoc($result44);
+                        $sql = "SELECT * FROM `cec-blog` WHERE id = '$all_related[$i]'";
+                        $result = mysqli_query($conn, $sql); 
+                        $row = mysqli_fetch_assoc($result);
                         print "<div class='col-md-4'>
                         <div class='thumbnail-posts'>
-                        <a href='http://localhost/cec-Website/blog.php?id=".$all_related[$i]."&category=".$category."&topic=".$row44['Topic']."&catid=".$categoryid."' target='_blank'>
+                        <a href='http://localhost/cec-Website/blog.php?id=".$all_related[$i]."&category=".$category."&topic=".$row['Topic']."&catid=".$categoryid."' target='_blank'>
                         <div class='thumbnail-posts-img'>
-                        <img src='#' style='width:100%'>
+                        <img src='http://localhost/CEC-Website/img/blog/".$row['imagename']."' style='width:100%'>
                         </div>
                         <div class='thumbnail-posts-content'>
-                        <h5>".$row44['Topic']."</h5>
+                        <h5>".$row['Topic']."</h5>
                         </div>
                         </a>
                         </div>
@@ -127,6 +129,7 @@
                 </div>
             </div>
         </div>
+        <?php include("footer.php"); ?>
             
     </body>
 </html>

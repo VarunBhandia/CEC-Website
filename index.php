@@ -48,13 +48,15 @@
                       <li><a href="index.php" style="padding-left: 3em;padding-right: 2em;">HOME</a></li>
                       <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
                       <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
-                      <li><a href="" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
-                      <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>
+                      <li><a href="team.php" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
+                      <!-- <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li> -->
                       <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
                       <li class="dropdown morelinks">
-                      <a class="dropdown-toggle " data-toggle="dropdown" href="#">MORE LINKS <span class="caret"></span></a>
+                      <a class="dropdown-toggle " data-toggle="dropdown" href="#">MORE LINKS<span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="#">Page 1-3</a></li>
+                          <li><a href="1st Year.php">1st Year</a></li>
+                          <li><a href="#">2nd Year</a></li>
+                          <li><a href="#">3rd Year</a></li>
                       </ul>
                     </li>
                   </ul>

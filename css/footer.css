@@ -47,7 +47,7 @@
 .number2{
     padding-bottom: 1em;   
     font-weight: 900;
-    font-size: 1em;
+    font-size: .6em;
     line-height: 200%;
 }
 
@@ -73,4 +73,21 @@
 }
 .link_hover{
     color:#030632;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.fa-facebook {
+    background:red;
+    color: white;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.social_media{
+    color: aqua;
 }

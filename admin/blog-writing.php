@@ -119,6 +119,7 @@
                         <label for="Description" class="control-label">Description/ Content</label>
                         <div class="col-lg-12 nopadding">
                             <textarea id="txtEditor" name="texteditor22">
+                                <$text=str_ireplace('','',$text);
                                 <?php echo $rowblog['Texteditor']; ?><?php if($_POST['action'] == 'edit'){echo $post_content;}?>
                             </textarea>
                         </div>
@@ -176,8 +177,8 @@
                         $message = "New record created successfully ";
                         echo $message; 
                         echo $status;
-//                        $url_re =  "http://localhost/cec-Website/admin/index.php";
-//                        echo "<script>location.href = '".$url_re."'</script>";
+                        $url_re =  "http://localhost/cec-Website/admin/index.php";
+                        echo "<script>location.href = '".$url_re."'</script>";
                     }
                     else {echo "Error1: ";}
                 }
@@ -192,8 +193,8 @@
                         $message = "New record created successfully ";
                         echo $message; 
                         echo $status;
-//                        $url_re =  "http://localhost/cec-Website/admin/index.php";
-//                        echo "<script>location.href = '".$url_re."'</script>";
+                        $url_re =  "http://localhost/cec-Website/admin/index.php";
+                        echo "<script>location.href = '".$url_re."'</script>";
                     }
                     else {echo "Error1: ";}                } 
             }
