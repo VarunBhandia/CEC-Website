@@ -85,5 +85,26 @@ function get_team_name($conn){
     }
     return $result;
 }
+function get_team_img($conn){
+    $sql = "SELECT * FROM `team`";
+    $res = mysqli_query($conn, $sql );
+    $result = array();
+    while($data = mysqli_fetch_assoc($res))
+    {
+        $result[] = $data['img'];
+    }
+    return $result;
+}
+function get_team_link($conn){
+    $sql = "SELECT * FROM `team`";
+    $res = mysqli_query($conn, $sql );
+    $result = array();
+    while($data = mysqli_fetch_assoc($res))
+    {
+        $result[] = $data['link'];
+    }
+    return $result;
+}
+
 
 ?>

@@ -39,7 +39,7 @@
                     <a href="#" class="fa fa facebook"></a>
                 </div>
             <div class="social_media">
-                <a href="https://www.facebook.com/ceconsortium.iitr/" class="fa facebook">Cec_Fb</a>
+                <a href="https://www.facebook.com/ceconsortium.iitr/"><i class="fa fa facebook"></i></a>
             </div>
             </div>
            

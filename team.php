@@ -91,6 +91,7 @@ $desc = $row['Texteditor'];
         </nav>
     <div class="row padding">
     <div class="col-sm-2">
+
     </div>
     <div class="col-md-8">
         <div class="row">
@@ -103,14 +104,17 @@ $desc = $row['Texteditor'];
         <?php
         $row = mysqli_fetch_row($result);
         $all_name = get_team_name($conn);
+        $all_img = get_team_img($conn);
+        $all_link = get_team_link($conn);
+
         $cnt_name = count($all_name);
         for($i = 0; $i < $cnt_name; $i++)
         {
             print "<div class='col-md-4'>
             <div class='thumbnail-posts'>
-            <a href='' target='_blank'>
+            <a href='".$all_link[$i]."' target='_blank'>
                 <div class='thumbnail-posts-img'>
-                    <img src='http://localhost/CEC-Website/img/team/".$row['img']."' style='width:100%'>
+                    <img src='http://localhost/CEC-Website/img/team/".$all_img[$i]."' style='width:100%'>
                 </div>
                 <div class='thumbnail-posts-content'>
                     <h5>".$all_name[$i]."</h5>
