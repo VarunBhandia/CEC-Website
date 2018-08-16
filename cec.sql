@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2018 at 08:50 AM
+-- Generation Time: Aug 16, 2018 at 04:00 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -86,20 +86,20 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `name`, `img`, `link`, `post`, `year`) VALUES
-(1, 'varun', '', '', 'secy', 'Second'),
-(2, 'varun2', '', '', 'secy2', 'second'),
-(3, 'varun3', '', '', '', ''),
-(4, 'varun4', '', '', '', ''),
-(5, 'varun5', '', '', '', ''),
-(6, 'varun6', '', '', '', ''),
-(7, 'varun7', '', '', '', ''),
-(8, 'varun8', '', '', '', ''),
-(9, 'varun9', '', '', '', ''),
-(10, 'varun10', '', '', '', ''),
-(11, 'Varun Bhandia', 'WWW.YTS.RE.jpg', '', 'secy108', 'Second'),
-(12, 'Varun Bhandia', 'WWW.YTS.RE.jpg', '', 'cooooo', 'Second'),
-(13, 'Varun Bhandia', 'WWW.YTS.RE.jpg', '', 'cccccc', 'dddddddd'),
-(14, 'Varun Bhandia', 'WWW.YTS.RE.jpg', '', 'cccccc', 'dddddddd');
+(1, 'varun', '1.jpg', '', 'secy', 'Second'),
+(2, 'varun2', '1.jpg', '', 'secy2', 'second'),
+(3, 'varun3', '1.jpg', '', '', ''),
+(4, 'varun4', '1.jpg', '', '', ''),
+(5, 'varun5', '1.jpg', '', '', ''),
+(6, 'varun6', '1.jpg', '', '', ''),
+(7, 'varun7', '1.jpg', '', '', ''),
+(8, 'varun8', '1.jpg', '', '', ''),
+(9, 'varun9', '1.jpg', '', '', ''),
+(10, 'varun10', '1.jpg', '', '', ''),
+(11, 'Varun Bhandia', '1.jpg', '', 'secy108', 'Second'),
+(12, 'Varun Bhandia', '1.jpg', '', 'cooooo', 'Second'),
+(13, 'Varun Bhandia', '1.jpg', '', 'cccccc', 'dddddddd'),
+(14, 'Varun Bhandia', '1.jpg', '', 'cccccc', 'dddddddd');
 
 --
 -- Indexes for dumped tables

@@ -22,14 +22,14 @@ $desc = $row['Texteditor'];
         <meta name="keywords" content="civil, consortium, engineering, study, group, engineers, technical, iit ,iit roorkee ,roorkee ,uttrakhand ,Varun Bhandia ,ceciitr.co.nf ,ceciitr.com ">
         <meta name="author" content="Varun Bhandia">
         <!-- Favicons
-    ================================================== -->
+================================================== -->
         <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    
+
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
         <!-- Stylesheet
-        ================================================== -->
+================================================== -->
         <link rel="stylesheet" type="text/css"  href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/responsive.css">
         <link href="css/recent-posts.css" type="text/css" rel="stylesheet">
@@ -41,54 +41,55 @@ $desc = $row['Texteditor'];
         <link href="css/blog.css" type="text/css" rel="stylesheet">
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.html"></script>
-    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/SmoothScroll.js"></script>
-    <script type="text/javascript" src="js/jquery.isotope.js"></script>
-    
-    <script src="js/owl.carousel.js"></script>
-  
-    <!-- Javascripts
-    ================================================== -->
-    <script type="text/javascript" src="js/main.js"></script>
+        <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.html"></script>
+        <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/SmoothScroll.js"></script>
+        <script type="text/javascript" src="js/jquery.isotope.js"></script>
+
+        <script src="js/owl.carousel.js"></script>
+
+        <!-- Javascripts
+================================================== -->
+        <script type="text/javascript" src="js/main.js"></script>
 
 
-<script src="js/cobox.js"></script>
-        
-            </head>
-<body>
+        <script src="js/cobox.js"></script>
+
+    </head>
+    <body>
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>                        
-                  </button>
-                  <a class="navbar-brand" style="margin-top: -.5em; padding-left: 5vw;" href="#"><img src="img/cec-logo-c.png" class="new-logo"  />  </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" style="margin-top: -.5em; padding-left: 5vw;" href="#"><img src="img/cec-logo-c.png" class="new-logo"  />  </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
-                  <ul class="nav navbar-nav navbar-right">
-                      <li><a href="index.php" style="padding-left: 3em;padding-right: 2em;">HOME</a></li>
-                      <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
-                      <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
-                      <li><a href="team.php" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
-                      <!--<li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>-->
-                      <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
-                      <li class="dropdown morelinks">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE LINKS<span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="#">1st Year</a></li>
-                          <li><a href="#">2nd Year</a></li>
-                          <li><a href="#">3rd Year</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.php" style="padding-left: 3em;padding-right: 2em;">HOME</a></li>
+                        <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>
+                        <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
+                        <li><a href="team.php" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
+                        <!--<li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>-->
+                        <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
+                        <li class="dropdown morelinks">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE LINKS<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">1st Year</a></li>
+                                <li><a href="#">2nd Year</a></li>
+                                <li><a href="#">3rd Year</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-              </div>
+            </div>
         </nav>
+<<<<<<< HEAD
     <div class="row padding">
     <div class="col-sm-2">
 
@@ -111,6 +112,30 @@ $desc = $row['Texteditor'];
         for($i = 0; $i < $cnt_name; $i++)
         {
             print "<div class='col-md-4'>
+=======
+        <div class="row padding">
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="all-heading" >TEAM</h3>
+                    </div>
+                    <div class="col-md-8">
+                    </div>
+                </div>
+                <?php
+                $row = mysqli_fetch_row($result);
+                $all_name = get_team_name($conn);
+                $all_img = get_team_img($conn);
+                
+
+                $cnt_name = count($all_name);
+                for($i = 0; $i < $cnt_name; $i++)
+                {
+                    print "<div class='col-md-4'>
+>>>>>>> 5a59232dc2260adcda427f52b9739f33ec4cecbd
             <div class='thumbnail-posts'>
             <a href='".$all_link[$i]."' target='_blank'>
                 <div class='thumbnail-posts-img'>
@@ -122,12 +147,12 @@ $desc = $row['Texteditor'];
             </a>
         </div>
     </div>";                        
-        }?>
-    </div>
+                }?>
+            </div>
             <div class="col-md-2">
-    </div>
+            </div>
 
         </div>
-    <?php include("footer.php"); ?>
-</body>
+        <?php include("footer.php"); ?>
+    </body>
 </html>
