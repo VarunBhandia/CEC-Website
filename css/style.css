@@ -295,9 +295,8 @@ background: transparent;
             margin-left:0px;
             padding:10px;
             line-height: 30px;
-            text-transform:capitalize;
             color:white;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             font-size: 20px;
         }
         .bloghead{

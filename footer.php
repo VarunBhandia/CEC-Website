@@ -34,13 +34,13 @@
         <div class="col-md-9">
             <div class="number2">
                 Developed by 
-                <a href="https://github.com/VarunBhandia/" class="link_hover" style="color: #8488bb;"><b>Varun Bhandia</b></a>
+                <a href="http://linkedin.com/in/varunbhandia" class="link_hover" style="color: #8488bb;" target="_blank"><b>Varun Bhandia</b></a>
                 AND DESIGNED BY
-                <a href="https://www.behance.net/AKASHSWF" class="link_hover" style="color: #8488bb;"><b>Akash Chandra</b></a> 
+                <a href="https://www.behance.net/AKASHSWF" class="link_hover" style="color: #8488bb;" target="_blank"><b>Akash Chandra</b></a> 
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
             </div>
             <div class="social_media">
-                <a href="https://www.facebook.com/ceconsortium.iitr/" class="fa facebook">Cec_Fb</a>
+                <a href="https://www.facebook.com/ceconsortium.iitr/"><i class="fa fa facebook"></i></a>
             </div>
         </div>
 

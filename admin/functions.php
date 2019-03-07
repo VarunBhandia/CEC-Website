@@ -42,6 +42,17 @@ function get_category_index($conn){
     return $result;
 }
 
+function get_marvel_id($conn){
+    $sql = "SELECT * FROM `cec-marvel`";
+    $res = mysqli_query($conn, $sql );
+    $result = array();
+    while($data = mysqli_fetch_assoc($res))
+    {
+        $result[] = $data['id'];
+    }
+    return $result;
+}
+
 function get_category_id($conn){
     $sql = "SELECT * FROM `cec-blog` where status = 1";
     $res = mysqli_query($conn, $sql );
@@ -92,6 +103,16 @@ function get_team_img($conn){
     while($data = mysqli_fetch_assoc($res))
     {
         $result[] = $data['img'];
+    }
+    return $result;
+}
+function get_team_link($conn){
+    $sql = "SELECT * FROM `team`";
+    $res = mysqli_query($conn, $sql );
+    $result = array();
+    while($data = mysqli_fetch_assoc($res))
+    {
+        $result[] = $data['link'];
     }
     return $result;
 }

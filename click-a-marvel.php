@@ -1,6 +1,10 @@
+<!DOCTYPE html>
+<?php
+include("admin/functions.php");
+?>
 <html>
     <head>
-        <title>CONTACT US</title>
+        <title>Click a Marvel</title>
         <meta charset="utf-8">
         <meta name="google-site-verification" content="PcGjUA_gqUBIOTdXZ2LF2p1tUmzcvVtC2rCb7Mu-V1U" />
         <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
@@ -27,8 +31,6 @@
         <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
         <link href="css/blog.css" type="text/css" rel="stylesheet">
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
-                <link href="css/contact-us.css" type="text/css" rel="stylesheet">
-
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.html"></script>
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
@@ -45,8 +47,9 @@
 
 
 <script src="js/cobox.js"></script>
+        
             </head>
-    <body>
+<body>
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -58,54 +61,53 @@
                   <a class="navbar-brand" style="margin-top: -.5em; padding-left: 5vw;" href="#"><img src="img/cec-logo-c.png" class="new-logo"  />  </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
+                  <ul class="nav navbar-nav navbar-right">
                       <li><a href="index.php" style="padding-left: 3em;padding-right: 2em;">HOME</a></li>
-<!--                      <li><a href="recent-posts.php" style="padding-left: 3em;padding-right: 2em;">BLOG</a></li>-->
                       <li><a href="events.php" style="padding-left: 3em;padding-right: 2em;">ACTIVITIES</a></li>
                       <li><a href="team.php" style="padding-left: 3em;padding-right: 2em;">TEAM</a></li>
-                      <!-- <li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li> -->
+                      <!--<li><a href="alumini-main-page.php" style="padding-left: 3em;padding-right: 2em;" >ALUMINI</a></li>-->
                       <li><a href="contact-us.php" style="padding-left: 3em;padding-right: 2em;" >CONTACT</a></li>
                   </ul>
                 </div>
               </div>
         </nav>
-        <div class="row grey">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h4 class="getin">GET IN TOUCH</h4>
-                </div>
-                <div class="col-md-3"></div>
-        </div>
-            <div class="row grey2">
-                <div class="col-md-3"></div>
-                <div class="col-md-4">
-                    <h4 class="address">
-                        ADDRESS
-                    </h4>
-                    <p class="department">
-                        CIVIL ENGINEERING DEPARTMENT
-                        <br>
-                        IIT ROORKEE,ROORKEE-247667
-                        <br>
-                        UTTARAKHAND, INDIA
-                    </p>
-                </div>      
-                <div class="col-md-3">
-                    <p class="phone">
-                        PHONE +91-99999 99999
-                        <br>
-                        Email ceciitr@yahoo.co.in
-                    </p>
-                </div>
-                <div class="col-md-1"></div>
+    <div class="row padding">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="all-heading">CLICK A MARVEL</h3>
             </div>
-        <div class="row grey">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h4 class="claim">ALL RIGHTS RESERVED BY CEC IITR<sup>&copy;</sup></h4>
-                </div>
-                <div class="col-md-3"></div>
+            <div class="col-md-8">
+            </div>
         </div>
-        <?php include("footer.php"); ?>
+        <?php
+        $all_marvel_id = get_marvel_id($conn);
+        $cnt_marvels = count($all_marvel_id);
+        for($i = 0; $i < $cnt_marvels; $i++)
+        {
+            $sql_marvel = "SELECT * FROM `cec-marvel` WHERE id = '$all_marvel_id[$i]'";
+            $result_marvel = mysqli_query($conn, $sql_marvel ); 
+            $row_marvel = mysqli_fetch_assoc($result_marvel);
+            $marvel_id = $row_marvel['id'];
+            print "<div class='col-md-4'>
+            <div class='thumbnail-posts'>
+            <a href='http://localhost/cec-Website/marvel.php?id=".$all_marvel_id[$i].".&caption=".$row_marvel['caption']."' target='_blank'>
+                <div class='thumbnail-posts-img'>
+                    <img src='' style='width:100%'>
+                </div>
+                <div class='thumbnail-posts-content'>
+                    <h5>HELLO</h5>
+                </div>
+            </a>
+        </div>
+    </div>";                        
+        } ?>
+    </div>
+    <div class="col-md-2">
+    </div>
+        </div>
+    <?php include("footer.php"); ?>
 </body>
 </html>
