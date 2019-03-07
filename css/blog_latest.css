@@ -1,35 +1,34 @@
-    .blog-image-background
-        {
-            width:70vw;
-            height:60vh;
-            background-image: url("");
-            
-        }
-        
-        .article-header
-        {
-                margin-top: -25vh;
-                background-color: #3c4298;
-                height: 12em;
-        }
-        
-        .article-heading
-        {
-            color: white;
-            font-size: 2.5em;
-            padding-top: 1.5em;
-            padding-left: 3vw;
-        }
-        
-        .article-category
-        {
-            padding-top: .2em;
-            letter-spacing: .3em;
-            text-transform: uppercase;
-            padding-left: 3vw;
-            color: white;
-        }
-        
+.blog-image-background
+{
+    width:70vw;
+    height:60vh;
+    background-image: url("");
+
+}
+
+.article-header
+{
+    background-color: #3c4298;
+    height: 6em;
+}
+
+.article-heading
+{
+    color: white;
+    font-size: 2.5em;
+    padding-top: 1.5em;
+    padding-left: 3vw;
+}
+
+.article-category
+{
+    padding-top: .2em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    padding-left: 3vw;
+    color: white;
+}
+
 .article-desc
 {
     padding-top: 2em;
