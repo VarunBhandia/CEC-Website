@@ -92,13 +92,14 @@
                 </div>      
                 <div class="col-md-3">
                     <p class="phone">
-                        PHONE +91-99999 99999
+                        PHONE +91-9001126303
                         <br>
-                        Email ceciitr@yahoo.co.in
+                        Email varunbhandia@gmail.com
                     </p>
                 </div>
                 <div class="col-md-1"></div>
             </div>
+<!--
         <div class="row grey">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
@@ -106,6 +107,7 @@
                 </div>
                 <div class="col-md-3"></div>
         </div>
+-->
         <?php include("footer.php"); ?>
 </body>
 </html>

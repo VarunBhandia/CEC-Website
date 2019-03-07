@@ -49,6 +49,30 @@ include("admin/functions.php");
         <script src="js/cobox.js"></script>
 
     </head>
+
+    <style>
+        input[type=text],input[type=number] {
+            padding:5px;
+            height:25px;
+            width:400px;
+            margin-right:10px;
+            border:solid 1px;
+            border-radius:5px;
+            float:right;     
+        }
+        input[type=submit] {
+            height:35px;
+            width:90px;
+            background-color:#3c4298;
+            padding:5px;
+            border:none;
+            border-radius:5px;
+            color:white
+        }
+
+    </style>
+
+
     <body>
         <nav class="navbar">
             <div class="container-fluid">
@@ -77,18 +101,120 @@ include("admin/functions.php");
 
                 <div class="col-md-5"></div>
                 <div class="col-md-2">
-                    <div class="upload">
+                    <div class="upload" data-toggle="modal" data-target="#myModal">
                         <img src="img/upload-cloud.png" style="width: 100%;">
                     </div>
 
                 </div>
                 <div class="col-md-5"></div>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <form enctype='multipart/form-data'  style="width:100%" method="POST" >
+
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Upload Image</h4>
+                                </div>
+                                <div class="modal-body">
+
+                                    <p>
+                                        <label>Name</label>
+                                        <input type="text" name="name">
+                                    </p>
+                                    <p>
+                                        <label>Enrollment No.</label>
+                                        <input type="number" name="enrollment_no">
+                                    </p>
+                                    <p>
+                                        <label>Contact No.</label>
+                                        <input type="text" name="contact">
+                                    </p>
+                                    <p>
+                                        <label>Email Id</label>
+                                        <input type="text" name="email">
+                                    </p>
+                                    <p>
+                                        <label>Caption</label>
+                                        <input type="text" name="caption">
+                                    </p>
+                                    <p>
+                                        <label>Abstract</label>
+                                        <input type="text" name="abstract">
+                                    </p>
+                                    <p>
+                                        <input type='file' name= 'img' id='image' >
+                                    </p>
+                                    <p>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type=submit name="submit" value="Save">
+
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
 
                 <!--                <div class="col-md-4"></div>-->
             </div>
 
             <div class="row">
+
                 <?php
+
+
+                if(isset($_POST['submit'])){
+
+                    $file = $_FILES['file'];
+                    $fileName = $_FILES['file']['name'];
+                    $fileTmpName = $_FILES['file']['tmp_name'];
+                    $fileSize = $_FILES['file']['size'];
+                    $fileType = $_FILES['file']['type'];
+                    $fileError = $_FILES['file']['error'];
+
+                    $name=$_POST['name'];
+                    $image=$_POST['image'];
+                    $enrollment_no=$_POST['enrollment_no'];
+                    $caption=$_POST['caption'];
+                    $contact=$_POST['contact'];
+                    $email=$_POST['email'];
+                    $abstract=$_POST['abstract'];
+
+                    $fileExt=explode('.',$fileName);
+                    $fileActualExt=strtolower(end($fileExt));
+                    $allowed = array('jpg','jpeg','png');
+                    $fileNameNew = uniqid('',true).".".$fileActualExt;
+                    $fileDestination = "img/create_a_marvel/".$fileNameNew;
+                    if(move_uploaded_file($fileTmpName,$fileDestination))
+                    {}
+                    else{
+                    }
+
+                    $result = "INSERT INTO `cec-marvel`(`caption`, `name`, `img`, `enrollment_no`, `abstract`, `contact`, `email`) VALUES ('".$name."','".$fileNameNew."',".$enrollment_no.",'".$caption."','".$contact."','".$email."','".$abstract."');";
+                    //                    print_r($result); 
+                    $result1=mysqli_query($conn,$result);
+
+                    if($result1)
+                    {
+                        //  echo "successfully uploaded";
+                    }
+                    else{
+                        // echo "upload failed";
+                    }}
+
+
+
+
+
+
+
                 $all_marvel_id = get_marvel_id($conn);
                 $cnt_marvels = count($all_marvel_id);
                 for($i = 0; $i < $cnt_marvels; $i++)
@@ -99,7 +225,7 @@ include("admin/functions.php");
                     $marvel_id = $row_marvel['id'];
                     print "<div class='col-md-4'>
             <div class='thumbnail-posts'>
-            <a href='http://localhost/cec-Website/marvel.php?id=".$all_marvel_id[$i]."&caption=".$row_marvel['caption']."' target='_blank'>
+            <a href='http://cec.iitr.ac.in/marvel.php?id=".$all_marvel_id[$i]."&caption=".$row_marvel['caption']."' target='_blank'>
                 <div class='thumbnail-posts-img'>
                     <img src='".$row_marvel['img_compressed']."' style='width:100%'>
                 </div>

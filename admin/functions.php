@@ -7,9 +7,9 @@ ini_set("display_errors",'off');
     $dbname = "cec";
 
 //    $servername = "localhost";
-//    $username = "id4848840_varunbhandia";
-//    $password = "varunbhandia";
-//    $dbname = "id4848840_varuncec";
+//    $username = "constru4";
+//    $password = "ATul@9893399437";
+//    $dbname = "constru4_clone1";
 
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);

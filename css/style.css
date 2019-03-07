@@ -379,6 +379,7 @@ footer{
 }
 
 .upload{
+    cursor: pointer;
     padding: 1em;
     border-color: #3399db;
     border-style: dashed;

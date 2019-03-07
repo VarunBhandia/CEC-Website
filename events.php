@@ -85,7 +85,7 @@
                         <div class="thumbnail-posts">
                             <a href="click-a-marvel.php">
                                 <div class="thumbnail-posts-img">
-                                    <img src="#" style="width:100%">
+                                    <img src="img/activity.jpg" style="width:100%">
                                 </div>
                                 <div class="thumbnail-posts-content">
                                     <h5>Click a Marvel <sup><span class="badge" >LIVE</span></sup></h5>

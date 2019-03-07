@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2018 at 04:00 PM
+-- Generation Time: Mar 07, 2019 at 01:14 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -58,13 +58,22 @@ CREATE TABLE `cec-blog` (
   `visitorcount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `cec-blog`
+-- Table structure for table `cec-marvel`
 --
 
-INSERT INTO `cec-blog` (`id`, `Topic`, `Texteditor`, `Category`, `status`, `imagename`, `modified_time`, `visitorcount`) VALUES
-(16, 'ghfdsr', 'Fuck u', '', 1, '', '2018-02-04 14:21:16', 0),
-(17, 'idgcfdygcv', '&lt;p&gt;jxhcghdsc vcj&lt;/p&gt;', '', 1, '', '2018-02-04 14:22:58', 0);
+CREATE TABLE `cec-marvel` (
+  `id` int(11) NOT NULL,
+  `caption` varchar(255) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `img` varchar(50) NOT NULL,
+  `enrollment_no` varchar(50) NOT NULL,
+  `abstract` varchar(250) NOT NULL,
+  `contact` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -86,20 +95,25 @@ CREATE TABLE `team` (
 --
 
 INSERT INTO `team` (`id`, `name`, `img`, `link`, `post`, `year`) VALUES
-(1, 'varun', '1.jpg', '', 'secy', 'Second'),
-(2, 'varun2', '1.jpg', '', 'secy2', 'second'),
-(3, 'varun3', '1.jpg', '', '', ''),
-(4, 'varun4', '1.jpg', '', '', ''),
-(5, 'varun5', '1.jpg', '', '', ''),
-(6, 'varun6', '1.jpg', '', '', ''),
-(7, 'varun7', '1.jpg', '', '', ''),
-(8, 'varun8', '1.jpg', '', '', ''),
-(9, 'varun9', '1.jpg', '', '', ''),
-(10, 'varun10', '1.jpg', '', '', ''),
-(11, 'Varun Bhandia', '1.jpg', '', 'secy108', 'Second'),
-(12, 'Varun Bhandia', '1.jpg', '', 'cooooo', 'Second'),
-(13, 'Varun Bhandia', '1.jpg', '', 'cccccc', 'dddddddd'),
-(14, 'Varun Bhandia', '1.jpg', '', 'cccccc', 'dddddddd');
+(13, 'Dr.G.D. Ransinchung R.N.', '1.jpg', '', 'Convener', 'Associate Professor'),
+(14, 'Dr. Gargi Singh', '2.jpg', '', 'Co-Convener', 'Associate Professor'),
+(15, 'Pracheer Mehra', '3.JPG', '', 'President', 'IV'),
+(16, 'Srishti Katiyar', '4.jpg', '', 'Vice-President', 'IV'),
+(17, 'Kanchan Shrivastava', '5.jpg', '', 'Vice-President(Events and Culture)', 'IV'),
+(18, 'Sarvesh Gandhi', '6.jpg', '', 'Secretary', 'III'),
+(19, 'Varun Bhandia', '7.jpg', '', 'Manager(Web-D)', 'III'),
+(20, 'Anant Agrawal', '8.jpg', '', 'Manager(Design)', 'III'),
+(21, 'Tapan S. chauhan', '9.jpg', '', 'Manager(Finance)', 'III'),
+(22, 'Surabhi Agarwal', '10.jpg', '', 'Manager(Events and Culture)', 'III'),
+(23, 'Ankit Garg', '11.jpg', '', 'Member', 'II'),
+(25, 'Muneeb Ahmad', '18.JPG', '', 'Member', 'II'),
+(26, 'Rahul Yadav', '17.jpg', '', 'Member', 'II'),
+(27, 'Nikita Singh', '12.jpg', '', 'Member', 'II'),
+(28, 'Vishesh Prakash Srivastava', '21.jpg', '', 'Member', 'II'),
+(29, 'Vedant Kumar', '20.jpg', '', 'Member', 'II'),
+(30, 'Jay Modi', '19.jpg', '', 'Member', 'II'),
+(31, 'Nikhil Raizada', '22.jpg', '', 'Member', 'II'),
+(32, 'Vikas Agarwal', '23.jpg', '', 'Member', 'II');
 
 --
 -- Indexes for dumped tables
@@ -115,6 +129,12 @@ ALTER TABLE `category`
 -- Indexes for table `cec-blog`
 --
 ALTER TABLE `cec-blog`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cec-marvel`
+--
+ALTER TABLE `cec-marvel`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -136,12 +156,17 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `cec-blog`
 --
 ALTER TABLE `cec-blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `cec-marvel`
+--
+ALTER TABLE `cec-marvel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

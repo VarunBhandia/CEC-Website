@@ -78,13 +78,13 @@ window.onclick = function(event) {
 }
 </script>
         <div class="">
-            <img src="Design/background1.png" class="img-home">
+            <img src="img/Artboard 1.png" class="img-home">
         </div>
             <div class="row">
                 <div class="col-md-1"></div>
                                 <div class="col-md-10">
 
-            <p class="about_r">Civil Engineering Consortium is a Student Affair Committee of department of Civil Engineering, that is responsible to promote safe and intellectually stimulating learning environment that encourages not only the academic success of civil engineering students but also focus on personal development, sports and other extracurriculars student activities. With the chain of activities going round the year, students get ample opportunity to flash, flourosh and furnish their talents.</p>
+            <p class="about_r">Civil Engineering Consortium is a Student Affair Committee of department of Civil Engineering, that is responsible to promote safe and intellectually stimulating learning environment that encourages not only the academic success of civil engineering students but also focus on personal development, sports and other extracurriculars student activities. With the chain of activities going round the year, students get ample opportunity to flash, flourish and furnish their talents.</p>
                                     </div>
                                 <div class="col-md-1"></div>
 

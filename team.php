@@ -81,7 +81,6 @@ $desc = $row['Texteditor'];
                 </div>
             </div>
         </nav>
-<<<<<<< HEAD
     <div class="row padding">
     <div class="col-sm-2">
 
@@ -103,35 +102,11 @@ $desc = $row['Texteditor'];
         $cnt_name = count($all_name);
         for($i = 0; $i < $cnt_name; $i++)
         {
-            print "<div class='col-md-4'>
-=======
-        <div class="row padding">
-            <div class="col-sm-2">
-
-            </div>
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3 class="all-heading" >TEAM</h3>
-                    </div>
-                    <div class="col-md-8">
-                    </div>
-                </div>
-                <?php
-                $row = mysqli_fetch_row($result);
-                $all_name = get_team_name($conn);
-                $all_img = get_team_img($conn);
-                
-
-                $cnt_name = count($all_name);
-                for($i = 0; $i < $cnt_name; $i++)
-                {
-                    print "<div class='col-md-4'>
->>>>>>> 5a59232dc2260adcda427f52b9739f33ec4cecbd
+            print "<div class='col-md-6'>
             <div class='thumbnail-posts'>
             <a href='".$all_link[$i]."' target='_blank'>
                 <div class='thumbnail-posts-img'>
-                    <img src='http://localhost/CEC-Website/img/team/".$all_img[$i]."' style='width:100%'>
+                    <img src='http://localhost/CEC-Website/img/team/".$all_img[$i]."' style='height: 32em;width:100%;'>
                 </div>
                 <div class='thumbnail-posts-content'>
                     <h5>".$all_name[$i]."</h5>
