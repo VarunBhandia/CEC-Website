@@ -3879,7 +3879,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
     font-size: 1.1em;
     font-weight: 600;
-    transition: .5s;
+    transition: .2s;
         cursor: pointer;
 }
 .nav > li > a:hover,
